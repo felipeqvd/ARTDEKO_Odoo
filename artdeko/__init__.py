@@ -2,4 +2,4 @@
 
 from . import controllers
 from . import models
-from . import product_product
+from . import product_product_artdeko
