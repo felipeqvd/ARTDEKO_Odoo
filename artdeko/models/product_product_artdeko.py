@@ -3,7 +3,7 @@
 from odoo import api, fields, models
 
 
-class ProductProductArtdeko(models.Model):
+class ProductProduct(models.Model):
     _inherit = 'product.product'
 
     
