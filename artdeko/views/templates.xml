@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <template id="report_saleorder_document_inherit_artdeko" inherit_id="sale.report_saleorder_document">
-      	<xpath expr="/Description" position="before">
-        	 <th>Code</th>
+      	<xpath expr="//table[@class='table-condensed']" position="before">
+        	 <div>Code</div>
       	</xpath>
   	</template>
 </odoo>
