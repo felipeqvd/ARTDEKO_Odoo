@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <template id="report_saleorder_document_inherit_artdeko" inherit_id="sale.report_saleorder_document">
-      	<xpath expr="//t[@t-foreach='doc.order_lines_layouted()']" position="inside">
+      	<xpath expr="//t[@t-foreach='doc.order_lines_layouted()']" position="before">
         	 <div>Code</div>
       	</xpath>
   	</template>
