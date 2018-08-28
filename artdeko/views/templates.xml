@@ -7,7 +7,7 @@
         <xpath expr="//t[@t-foreach='doc.order_lines_layouted()']/table[1]/thead[1]/tr[1]/th[2]" position="before">
         	 <th>Imagen</th>
       	</xpath>
-        <xpath expr="//t[@t-foreach='doc.order_lines_layouted()']/table[1]/thead[1]/tr[1]/th[4]" position="replace">        	 
+        <xpath expr="//t[@t-foreach='doc.order_lines_layouted()']/table[1]/thead[1]/tr[1]/th[5]" position="replace">        	 
       	</xpath>
         <xpath expr="//span[@t-field='l.name']/.." position="before">
         	 <td class="text-right">
@@ -19,7 +19,7 @@
                 <img t-att-src="'/artdeko/static/src/img/view_todo_arrow.png'" />
             </td>
       	</xpath>
-        <xpath expr="//span[@t-field='l.name']/../../th[5]" position="replace">        	 
+        <xpath expr="//span[@t-field='l.name']/../../td[5]" position="replace">        	 
       	</xpath>
   	</template>
 </odoo>
