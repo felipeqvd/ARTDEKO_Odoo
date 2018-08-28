@@ -1,4 +1,4 @@
 # -*- coding: utf-8 -*-
 
 from . import models
-from . import product_product_artdeko
+from . import sale_report

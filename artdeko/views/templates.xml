@@ -11,7 +11,7 @@
       	</xpath>
         <xpath expr="//span[@t-field='l.name']/.." position="before">
         	 <td class="text-right">
-                <span t-field="l.product_uom_qty"/>
+                <span t-field="l.l10n_mx_edi_code_sat_id"/>
             </td>
       	</xpath>
         <xpath expr="//span[@t-field='l.price_unit']/.." position="before">
