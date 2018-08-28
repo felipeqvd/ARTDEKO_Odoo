@@ -9,6 +9,6 @@ class SaleReport(models.Model):
     @api.model
     def _select(self):
         new_select_str = super(SaleReport, self)._select()
-        new_select_str += ",p.l10n_mx_edi_code_sat_id"        
+        new_select_str += ",t.l10n_mx_edi_code_sat_id"        
         return new_select_str
     
