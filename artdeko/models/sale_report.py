@@ -7,8 +7,8 @@ class SaleReport(models.Model):
     _inherit = 'sale.report'
     
     @api.model
-    def _select(self,value):
-        new_select_str = super(sale.report, self)._select(value)
-        new_select_str += ", p.l10n_mx_edi_code_sat_id"        
-        return new_select_str
+    def _select(self,values):
+        record = super(sale.report, self)._select(values)
+        record['_select_str'] += ", p.l10n_mx_edi_code_sat_id"        
+        return record
     
