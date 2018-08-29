@@ -10,16 +10,16 @@
         <xpath expr="//t[@t-foreach='doc.order_lines_layouted()']/table[1]/thead[1]/tr[1]/th[7]" position="replace">        	 
       	</xpath>
         <xpath expr="//span[@t-field='l.name']/.." position="before">
-        	 <td class="text-center">
+            <td class="text-center">
                 <span t-field="l.product_id.l10n_mx_edi_code_sat_id.code"/>
             </td>
       	</xpath>
         <xpath expr="//span[@t-field='l.price_unit']/.." position="before">
-        	 <td class="center-block">                
+            <td align="center">                
                  <span t-field="l.product_id.image_medium" t-field-options='{"widget": "image"}'/>
             </td>
       	</xpath>
-        <xpath expr="//span[@t-field='l.name']/../../td[7]" position="replace">        	 
+        <xpath expr="//span[@t-field='l.name']/../../td[7]" position="replace">
       	</xpath>
   	</template>
 </odoo>
