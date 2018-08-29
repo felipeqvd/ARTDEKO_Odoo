@@ -12,7 +12,7 @@
         />
         <report 
             id="action_report_saleorder_order_artdeko"
-            string="Quotation"
+            string="Order"
             model="sale.order" 
             report_type="qweb-pdf"
             file="artdeko.report_saleorder_order" 
