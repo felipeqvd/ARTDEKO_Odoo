@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <template id="comercial_layout">
+        <t t-if="not o and doc">
+            <t t-set="o" t-value="doc"/>
+        </t>
+
+        <t t-if="o and 'company_id' in o">
+            <t t-set="company" t-value="o.company_id.sudo()"/>
+        </t>
+        <t t-if="not o or not 'company_id' in o">
+            <t t-set="company" t-value="res_company"/>
+        </t>
         <div class="header o_clean_header">
             <div class="row">
                 <div class="col-xs-6">
-                    <img t-if="company.logo" t-att-src="'data:image/png;base64,%s' % to_text(company.logo)"/>
+                    <img class="img img-responsive" src="/artdeko/static/src/img/logo_texto.png"/>                    
                 </div>
                 <div class="col-xs-5 col-xs-offset-1" name="company_address">
                     <ul class="list-unstyled">
