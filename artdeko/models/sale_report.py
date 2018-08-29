@@ -9,7 +9,7 @@ class SaleReport(models.Model):
     @api.model
     def _select(self):
         new_select_str = super(SaleReport, self)._select()
-        new_select_str += ",t.l10n_mx_edi_code_sat_id as sat_id, p.image_medium"     
+        new_select_str += ",t.l10n_mx_edi_code_sat_id as sat_id"     
         return new_select_str
     def _group_by(self):
         new_group_by_str = super(SaleReport, self)._group_by()
@@ -18,7 +18,7 @@ class SaleReport(models.Model):
                     l.order_id,
                     t.uom_id,
                     t.categ_id,
-                    t.l10n_mx_edi_code_sat_id,
+                    t.l10n_mx_edi_code_sat_id,                    
                     s.name,
                     s.date_order,
                     s.confirmation_date,
@@ -29,7 +29,7 @@ class SaleReport(models.Model):
                     s.pricelist_id,
                     s.analytic_account_id,
                     s.team_id,
-                    p.product_tmpl_id,
+                    p.product_tmpl_id,                    
                     partner.country_id,
                     partner.commercial_partner_id
         """
