@@ -15,9 +15,8 @@
             </td>
       	</xpath>
         <xpath expr="//span[@t-field='l.price_unit']/.." position="before">
-        	 <td class="text-center">
-                <!--<img t-att-src="'/artdeko/static/src/img/view_todo_arrow.png'" />-->
-                 <span t-field="l.product_id.image_medium" t-field-options='{"widget": "image"}'/>
+        	 <td>                
+                 <span t-field="l.product_id.image_medium" t-field-options='{"widget": "image"}' style="margin:auto;"/>
             </td>
       	</xpath>
         <xpath expr="//span[@t-field='l.name']/../../td[7]" position="replace">        	 
