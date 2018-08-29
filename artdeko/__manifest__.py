@@ -30,7 +30,7 @@
         'views/views.xml',
         'views/templates.xml',
         'report/artdeko_report.xml',
-        'report/artdeko_report_template.xml',
+        'report/artdeko_report_templates.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
