@@ -9,7 +9,8 @@ class SaleReport(models.Model):
     @api.model
     def _select(self):
         new_select_str = super(SaleReport, self)._select()
-        new_select_str += ",t.l10n_mx_edi_code_sat_id as sat_id, t.image_medium"        
+        #new_select_str += ",t.l10n_mx_edi_code_sat_id as sat_id, t.image_medium"        
+        new_select_str += ", t.image_medium"        
         return new_select_str
     def _group_by(self):
         new_group_by_str = super(SaleReport, self)._group_by()
