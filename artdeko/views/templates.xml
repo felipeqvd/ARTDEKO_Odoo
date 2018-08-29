@@ -10,13 +10,12 @@
         <xpath expr="//t[@t-foreach='doc.order_lines_layouted()']/table[1]/thead[1]/tr[1]/th[7]" position="replace">        	 
       	</xpath>
         <xpath expr="//span[@t-field='l.name']/.." position="before">
-        	 <td class="text-right">
-                <!--<span t-field="l.l10n_mx_edi_code_sat_id"/>-->
+        	 <td class="text-center">
                 <span t-field="l.product_id.l10n_mx_edi_code_sat_id.code"/>
             </td>
       	</xpath>
         <xpath expr="//span[@t-field='l.price_unit']/.." position="before">
-        	 <td class="text-right">
+        	 <td class="text-center">
                 <!--<img t-att-src="'/artdeko/static/src/img/view_todo_arrow.png'" />-->
                  <span t-field="l.product_id.image_medium" t-field-options='{"widget": "image"}'/>
             </td>
