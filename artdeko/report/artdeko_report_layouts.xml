@@ -27,12 +27,15 @@
         </div>
         
         <div class="footer">
-            <div class="row">
+            <div class="row" height="170px">
                 <div class="col-xs-2">                        
                 </div>
                 <div class="col-xs-4">
                     <ul class="list-inline">
-                        <li t-if="company.phone"><i class="fa fa-phone"/> <span t-field="company.phone"/></li>
+                        <li t-if="company.website"><span t-esc="company.website[10:]"/></li>
+                        <li t-if="company.website"><span style="color:rgb(209,65,36);">WEB</span></li>
+                        <li t-if="company.phone"><span t-field="company.phone"/></li>
+                        <li t-if="company.website"><span style="color:rgb(209,65,36);">TELÉFONOS</span></li>
                         <li t-if="company.email"><i class="fa fa-at"/> <span t-field="company.email"/></li>
                         <li t-if="company.website"><i class="fa fa-globe"/> <span t-field="company.website"/></li>
                         <li t-if="company.vat"><i class="fa fa-building-o"/><t t-esc="company.country_id.vat_label or 'TIN'"/>: <span t-field="company.vat"/></li>
