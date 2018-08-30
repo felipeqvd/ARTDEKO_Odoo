@@ -32,8 +32,8 @@
         </div>
 
         <div class="footer">            
-            <div class="row mt8" style="background-color:rgb(209,65,36);height:50px;width:100%;">
-                <img class="img img-responsive" src="/artdeko/static/src/img/logo_footer.png" height="100%"/>
+            <div class="row mt8" style="background-color:rgb(209,65,36);height:100px;">
+                <img class="img" src="/artdeko/static/src/img/logo_footer.png" height="100%"/>
             </div>
         </div>
     </template> 
