@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <template id="comercial_layout">
-        <link rel='stylesheet' href="/web/static/src/less/css/fonts.less" type="text/less"/>
+        
         <t t-if="not o and doc">
             <t t-set="o" t-value="doc"/>
         </t>
