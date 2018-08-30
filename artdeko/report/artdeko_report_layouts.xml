@@ -30,10 +30,10 @@
             </div>
             <div class="col-xs-4">
                 <ul class="list-inline">
-                    <li t-if="company.phone">Tel: <span t-field="company.phone"/></li>
-                    <li t-if="company.email">Mail: <span t-field="company.email"/></li>
-                    <li t-if="company.website">Web: <span t-field="company.website"/></li>
-                    <li t-if="company.vat"><t t-esc="company.country_id.vat_label or 'TIN'"/>: <span t-field="company.vat"/></li>
+                    <li t-if="company.website"><span t-esc="company.website[10:]"/></li>
+                    <li t-if="company.email">WEB<span t-field="company.email"/></li>
+                    <li t-if="company.website"><span t-esc="company.website[10:]"/></li>
+                    <li t-if="company.email">TELÉFONOS<span t-field="company.email"/></li>                    
                 </ul>
             </div>
             <div class="col-xs-6">
