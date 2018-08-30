@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <template id="comercial_layout">
+        <link rel='stylesheet' href="/web/static/src/less/css/fonts.less"/>
         <t t-if="not o and doc">
             <t t-set="o" t-value="doc"/>
         </t>
@@ -24,7 +25,15 @@
         <div class="article o_report_layout_standard">
             <t t-raw="0" />
         </div>
-
+        <div class="row">            
+            <div class="col-xs-2">                
+            </div>
+            <div class="col-xs-4">
+                                
+            </div>
+            <div class="col-xs-6">
+            </div>
+        </div>
         <div class="footer">            
             <div class="row" style="background-color:rgb(209,65,36);height:100px;">
                 <img src="/artdeko/static/src/img/logo_footer.png" height="100px"/>

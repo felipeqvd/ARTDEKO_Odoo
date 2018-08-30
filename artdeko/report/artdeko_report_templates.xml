@@ -150,7 +150,7 @@
                         <table class="table table-condensed" style="min-width: 200px;max-width: 350px;">
                             <tr class="border-black" style="border-bottom:1px solid #dddddd;">
                                 <td>
-                                    <strong>Subtotal <span t-field="doc.pricelist_id.currency_id.name"></span></strong>
+                                    <strong>Subtotal &#40;<span t-field="doc.pricelist_id.currency_id.name"></span>&#41;</strong>
                                 </td>
                                 <td class="text-right">
                                     <span t-field="doc.amount_untaxed"
@@ -181,7 +181,7 @@
                                 </tr>
                             </t>
                             <tr class="border-black">
-                                <td><strong>Total</strong></td>
+                                <td><strong>Total &#40;<span t-field="doc.pricelist_id.currency_id.name"></span>&#41;</strong></td>
                                 <td class="text-right">
                                     <span t-field="doc.amount_total"
                                         t-options='{"widget": "monetary", "display_currency": doc.pricelist_id.currency_id}'/>
