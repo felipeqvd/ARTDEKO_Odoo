@@ -4,7 +4,6 @@
         <t t-if="not o and doc">
             <t t-set="o" t-value="doc"/>
         </t>
-
         <t t-if="o and 'company_id' in o">
             <t t-set="company" t-value="o.company_id.sudo()"/>
         </t>
@@ -33,8 +32,8 @@
         </div>
 
         <div class="footer">            
-            <div class="row mt8" style="background-color:rgb(D7,40,22);height:50px;width:100%;">
-                <img class="img img-responsive" src="/artdeko/static/src/img/logo_footer.png" height="50px"/>
+            <div class="row mt8" style="background-color:rgb(209,65,36);height:50px;width:100%;">
+                <img class="img img-responsive" src="/artdeko/static/src/img/logo_footer.png" height="100%"/>
             </div>
         </div>
     </template> 
