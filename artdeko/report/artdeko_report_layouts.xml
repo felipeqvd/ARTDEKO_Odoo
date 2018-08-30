@@ -32,7 +32,7 @@
         </div>
 
         <div class="footer">            
-            <div class="row mt8" style="background-color:rgb(209,65,36);height:50px;background-image:/artdeko/static/src/img/logo_footer.png">
+            <div class="row mt8" style="background-color:rgb(209,65,36);height:50px;background-image:url('/artdeko/static/src/img/logo_footer.png')">
                 
             </div>
         </div>
