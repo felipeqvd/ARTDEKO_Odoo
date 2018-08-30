@@ -32,8 +32,8 @@
         </div>
 
         <div class="footer">            
-            <div class="row" style="background-color:rgb(209,65,36);height:50px;">
-                <img src="/artdeko/static/src/img/logo_footer.png" height="50px"/>
+            <div class="row" style="background-color:rgb(209,65,36);height:100px;">
+                <img src="/artdeko/static/src/img/logo_footer.png" height="100px"/>
             </div>
         </div>
     </template> 
