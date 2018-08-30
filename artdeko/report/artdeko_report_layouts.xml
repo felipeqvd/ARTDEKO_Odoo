@@ -28,12 +28,9 @@
         
         <div class="footer">            
             <div class="row" style="background-color:rgb(209,65,36);height:100px;">
-                <img src="/artdeko/static/src/img/logo_footer.png" height="100px"/>
-                <p style="font:'Lato';text-align:center;color:#ffffff;">
-                    <span t-field="company.report_header"/>
-                </p>
+                <img src="/artdeko/static/src/img/logo_footer.png" height="100px"/>                
+                    <span style="font:'Lato';text-align:center;color:#ffffff;" t-field="company.report_header"/>                
             </div>
         </div>
-    </template> 
-    
+    </template>
 </odoo>
