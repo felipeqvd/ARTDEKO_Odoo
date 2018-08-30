@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
+        <record id="paperformat_artdeko_letter" model="report.paperformat">
+            <field name="name">Artdeko Letter</field>
+            <field name="default" eval="True" />
+            <field name="format">Letter</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">40</field>
+            <field name="margin_bottom">25</field>
+            <field name="margin_left">7</field>
+            <field name="margin_right">7</field>
+            <field name="header_line" eval="False" />
+            <field name="header_spacing">35</field>
+            <field name="dpi">90</field>
+        </record>
         <report 
             id="action_report_saleorder_quotation_artdeko"
             string="Quotation"
@@ -20,21 +35,6 @@
             name="artdeko.report_saleorder_order"
             print_report_name="'Order - %s' % (object.name)"
             paperformat="paperformat_artdeko_letter"
-        />
-        <record id="paperformat_artdeko_letter" model="report.paperformat">
-            <field name="name">US Letter</field>
-            <field name="default" eval="True" />
-            <field name="format">Letter</field>
-            <field name="page_height">0</field>
-            <field name="page_width">0</field>
-            <field name="orientation">Portrait</field>
-            <field name="margin_top">40</field>
-            <field name="margin_bottom">25</field>
-            <field name="margin_left">7</field>
-            <field name="margin_right">7</field>
-            <field name="header_line" eval="False" />
-            <field name="header_spacing">35</field>
-            <field name="dpi">90</field>
-        </record>
+        />        
     </data>
 </odoo>
