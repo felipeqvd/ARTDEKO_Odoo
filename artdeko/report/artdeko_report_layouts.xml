@@ -21,7 +21,7 @@
                         <li t-if="company.vat"><t t-esc="company.country_id.vat_label or 'TIN'"/>: <span t-field="company.vat"/></li>
                         <li t-if="company.phone">Tel: <span t-field="company.phone"/></li>
                         <li t-if="company.email"><span t-field="company.email"/></li>
-                        <li t-if="company.website"><span t-esc="company.website[7:]"/></li>
+                        <li t-if="company.website"><span t-esc="company.website[7:].upper()"/></li>
                     </ul>
                 </div>
             </div>
@@ -32,8 +32,8 @@
         </div>
 
         <div class="footer">            
-            <div class="row mt8" style="background-color:rgb(209,65,36);height:50px;">
-                <img class="img img-responsive" src="/artdeko/static/src/img/logo_footer.png" height="50px"/>
+            <div class="row mt8" style="background-color:rgb(209,65,36);height:50px;background-image:/artdeko/static/src/img/logo_footer.png">
+                
             </div>
         </div>
     </template> 
