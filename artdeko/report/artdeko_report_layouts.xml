@@ -11,7 +11,7 @@
         <t t-if="not o or not 'company_id' in o">
             <t t-set="company" t-value="res_company"/>
         </t>
-        <div class="header o_clean_header">
+        <div class="header">
             <div class="row" style="vertical-align: text-bottom;">
                 <div class="col-xs-6">
                     <img style="vertical-align: text-bottom;" class="img img-responsive" src="/artdeko/static/src/img/logo_texto.png" width="200px"/>                    
@@ -45,7 +45,7 @@
             </div>            
             <div class="row" style="background-color:rgb(209,65,36);height:100px;">
                 <img src="/artdeko/static/src/img/logo_footer.png" height="100px"/>                
-                    <span style="text-align:center;color:#ffffff;font-family:'Lato';" t-field="company.report_header"/>                
+                    <span style="text-align:center;color:#ffffff;font-family:'rockwell';" t-field="company.report_header"/>                
             </div>
         </div>
     </template>
