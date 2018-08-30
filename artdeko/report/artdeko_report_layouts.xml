@@ -15,19 +15,13 @@
                 <div class="col-xs-6">
                     <img class="img img-responsive" src="/artdeko/static/src/img/logo_texto.png" width="200px"/>                    
                 </div>
-                <div class="col-xs-5 col-xs-offset-1" name="company_address">
-                    <ul class="list-unstyled">
-                        <strong><li t-if="company.name"><span t-field="company.name"/></li></strong>
-                        <li t-if="company.vat"><t t-esc="company.country_id.vat_label or 'TIN'"/>: <span t-field="company.vat"/></li>
-                        <li t-if="company.phone">Tel: <span t-field="company.phone"/></li>
-                        <li t-if="company.email"><span t-field="company.email"/></li>
-                        <li t-if="company.website"><span t-esc="company.website[7:].upper()"/></li>
-                    </ul>
+                <div class="col-xs-5 col-xs-offset-1" name="company_address">                        
+                    <div t-if="company.website"><span t-esc="company.website[7:].upper()"/></div>                 
                 </div>
             </div>
         </div>
 
-        <div class="article o_report_layout_clean">
+        <div class="article o_report_layout_standard">
             <t t-raw="0" />
         </div>
 
