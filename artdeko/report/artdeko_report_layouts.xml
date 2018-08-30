@@ -13,7 +13,7 @@
         <div class="header o_clean_header">
             <div class="row">
                 <div class="col-xs-6">
-                    <img class="img img-responsive" src="/artdeko/static/src/img/logo_texto.png"/>                    
+                    <img class="img img-responsive" src="/artdeko/static/src/img/logo_texto.png" width="200px"/>                    
                 </div>
                 <div class="col-xs-5 col-xs-offset-1" name="company_address">
                     <ul class="list-unstyled">
