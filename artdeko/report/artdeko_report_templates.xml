@@ -152,7 +152,7 @@
                                 <td><strong>Subtotal</strong></td>
                                 <td class="text-right">
                                     <span t-field="doc.amount_untaxed"
-                                        t-options='{"widget": "monetary", "display_currency": doc.pricelist_id.currency_id}'/>
+                                        t-options='{"widget": "monetary", "display_currency": doc.pricelist_id.currency_id.name}'/>
                                 </td>
                             </tr>
                             <t t-foreach="doc._get_tax_amount_by_group()" t-as="amount_by_group">
@@ -164,7 +164,7 @@
                                         </td>
                                         <td class="text-right">
                                             <span t-esc="amount_by_group[1]"
-                                                t-options='{"widget": "monetary", "display_currency": doc.pricelist_id.currency_id}'/>
+                                                t-options='{"widget": "monetary", "display_currency": doc.pricelist_id.currency_id.name}'/>
                                         </td>
                                     </t>
                                     <t t-else ="">
