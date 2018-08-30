@@ -34,6 +34,7 @@
         <div class="footer">            
             <div class="row" style="background-color:rgb(209,65,36);height:100px;">
                 <img src="/artdeko/static/src/img/logo_footer.png" height="100px"/>
+                <span t-field="company.report_header"/>
             </div>
         </div>
     </template> 
