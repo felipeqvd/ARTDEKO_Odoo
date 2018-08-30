@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <template id="comercial_layout">
-        <link rel='stylesheet' href="/web/static/src/less/css/fonts.less" type="text/less"/>
+        <link rel='stylesheet' href="/artdeko/static/src/less/css/fonts.less" type="text/less"/>
         <t t-if="not o and doc">
             <t t-set="o" t-value="doc"/>
         </t>
@@ -31,14 +31,13 @@
                 <div class="col-xs-2">                        
                 </div>
                 <div class="col-xs-4">
-                    <ul class="list-inline">
-                        <li t-if="company.website"><span t-esc="company.website[10:]"/></li>
+                    <ul>
+                        <li t-if="company.website"><span t-esc="company.website[11:]"/></li>
                         <li t-if="company.website"><span style="color:rgb(209,65,36);">WEB</span></li>
                         <li t-if="company.phone"><span t-field="company.phone"/></li>
                         <li t-if="company.website"><span style="color:rgb(209,65,36);">TELÉFONOS</span></li>
-                        <li t-if="company.email"><i class="fa fa-at"/> <span t-field="company.email"/></li>
-                        <li t-if="company.website"><i class="fa fa-globe"/> <span t-field="company.website"/></li>
-                        <li t-if="company.vat"><i class="fa fa-building-o"/><t t-esc="company.country_id.vat_label or 'TIN'"/>: <span t-field="company.vat"/></li>
+                        <li t-if="company.phone"><span t-field="company.phone"/></li>
+                        <li t-if="company.website"><span style="color:rgb(209,65,36);">SUCURSAL</span></li>                        
                     </ul>
                 </div>
                 <div class="col-xs-6">                        
