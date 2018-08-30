@@ -50,6 +50,9 @@
                     </ul>
                 </div>
             </div>
+            <div class="row mt8" style="background-color:rgb(255,0,0);height:20px;width:100%;">
+                <img class="img img-responsive" src="/artdeko/static/src/img/logo_footer.png"/>
+            </div>
         </div>
     </template> 
     
