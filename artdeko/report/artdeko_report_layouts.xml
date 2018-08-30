@@ -32,7 +32,7 @@
                 <ul class="list-inline">
                     <li t-if="company.website"><span t-esc="company.website[10:]"/></li>
                     <li t-if="company.email">WEB<span t-field="company.email"/></li>
-                    <li t-if="company.website"><span t-esc="company.website[10:]"/></li>
+                    <li t-if="company.website"><span t-esc="company.phone"/></li>
                     <li t-if="company.email">TELÉFONOS<span t-field="company.email"/></li>                    
                 </ul>
             </div>
