@@ -239,7 +239,7 @@
                 <div class="col-xs-2">                        
                 </div>
                 <div class="col-xs-8">
-                    <strong t-field="company.name"/><strong> - RFC: </strong><strong t-field="company.vat"/>
+                    <strong t-esc="doc.company_id.name"/><strong> - RFC: </strong><strong t-esc="doc.company_id.vat"/>
                     <table class="table table-condensed">
                         <thead>
                             <tr>
