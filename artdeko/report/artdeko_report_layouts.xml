@@ -32,16 +32,16 @@
                 <div class="col-xs-2">                        
                 </div>
                 <div class="col-xs-8">
-                    <p><span t-esc="company.website[11:]"/><br><span style="color:rgb(209,65,36);">WEB</span></p>
-                    <p><span t-field="company.phone"/><br><span style="color:rgb(209,65,36);">TELÉFONOS</span></p>
+                    <p><span t-esc="company.website[11:]"/><br></br><span style="color:rgb(209,65,36);">WEB</span></p>
+                    <p><span t-field="company.phone"/><br></br><span style="color:rgb(209,65,36);">TELÉFONOS</span></p>
                     <p><span t-field="company.street_name"/>, <span t-field="company.street2"/>, <span t-field="company.street_number2"/>
-                        <br><span t-field="company.street_number2"/>, 
+                        <br></br><span t-field="company.street_number2"/>, 
                         <span t-field="company.l10n_mx_edi_colony"/>, 
                         <span t-field="company.city"/>, 
                         <span t-field="company.state_id"/>, 
                         <span t-field="company.country_id"/>, 
                         <span t-field="company.zip"/>
-                        <br><span style="color:rgb(209,65,36);">SUCURSAL</span>
+                        <br></br><span style="color:rgb(209,65,36);">SUCURSAL</span>
                     </p>                    
                 </div>
                 <div class="col-xs-2">                        
