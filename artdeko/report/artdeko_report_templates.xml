@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 <template id="report_saleorder_quotation_document">
+    <link rel='stylesheet' href="/artdeko/static/src/less/fonts.less" type="text/less"/>
+    <link rel='stylesheet' href="/artdeko/static/src/css/artdeko.css" type="text/css"/>
     <t t-call="artdeko.comercial_layout">
         <t t-set="doc" t-value="doc.with_context({'lang':doc.partner_id.lang})" />
         <div class="page">
@@ -200,7 +202,7 @@
                 <div class="col-xs-1">                        
                 </div>
                 <div class="col-xs-8">
-                    <p>Tipo de moneda de la cotización: <span t-field="doc.pricelist_id.currency_id.currency_unit_label"/> &#40;<span t-field="doc.pricelist_id.currency_id.name"/>&#41;</p>
+                    <p class="condiciones_titulos">Tipo de moneda de la cotización: </p><p><span t-field="doc.pricelist_id.currency_id.currency_unit_label"/> &#40;<span t-field="doc.pricelist_id.currency_id.name"/>&#41;</p>
                     <p>Facturación</p>
                     <ul>
                         <li><span>Indicar si requiere factura.</span></li>
