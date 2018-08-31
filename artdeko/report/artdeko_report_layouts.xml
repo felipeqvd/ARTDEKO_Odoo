@@ -31,7 +31,7 @@
             <div class="row" style="height:170px;">
                 <div class="col-xs-2">                        
                 </div>
-                <div class="col-xs-4">
+                <div class="col-xs-8">
                     <ul>
                         <li t-if="company.website"><span t-esc="company.website[11:]"/></li>
                         <li t-if="company.website"><span style="color:rgb(209,65,36);">WEB</span></li>
@@ -42,7 +42,7 @@
                         <li t-if="company.website"><span style="color:rgb(209,65,36);">SUCURSAL</span></li>                        
                     </ul>
                 </div>
-                <div class="col-xs-6">                        
+                <div class="col-xs-2">                        
                 </div>                              
             </div>            
             <div class="row artdeko_footer" style="background-color:rgb(209,65,36);height:100px;">

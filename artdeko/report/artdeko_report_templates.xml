@@ -6,7 +6,7 @@
         <div class="page">
             <div class="oe_structure"/>
             <h2>
-                <span t-if="doc.state in ['draft','sent']">Quotation # </span>                
+                <span t-if="doc.state in ['draft','sent']">Cotización # </span>                
                 <span t-field="doc.name"/>
             </h2>
             <div t-if="doc.date_order and doc.state in ['draft','sent']" class="col-xs-3">
@@ -288,6 +288,7 @@
                     </ul>
                     <strong>Atentamente,</strong>
                     <strong t-field="doc.user_id"/>
+                    <strong t-esc="doc.company_id.name"/>
                 </div>
                 <div class="col-xs-1">                        
                 </div>                              
