@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+<template id="assets_common" name="artdeko assets" inherit_id="web.assets_common">
+    <xpath expr="." position="inside">
+        <link href="/artdeko/static/src/css/artdeko.css" rel="stylesheet" type="text/css"/>
+        <link rel='stylesheet' href="/artdeko/static/src/less/fonts.less" type="text/less"/>
+    </xpath>
+</template>    
 <template id="report_saleorder_quotation_document">
-    <template id="assets_common" name="artdeko assets" inherit_id="web.assets_common">
-        <xpath expr="." position="inside">
-            <link href="/artdeko/static/src/css/artdeko.css" rel="stylesheet" type="text/css"/>
-            <link rel='stylesheet' href="/artdeko/static/src/less/fonts.less" type="text/less"/>
-        </xpath>
-    </template>
     <t t-call="artdeko.comercial_layout">
         <t t-set="doc" t-value="doc.with_context({'lang':doc.partner_id.lang})" />
         <div class="page">
