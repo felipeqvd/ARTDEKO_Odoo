@@ -34,35 +34,13 @@
                         t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}' />
                     <p t-if="doc.partner_id.vat"><t t-esc="doc.company_id.country_id.vat_label or 'TIN'"/>: <span t-field="doc.partner_id.vat"/></p>
                 </div>
-            </div>
-
-            
+            </div>  
 
             <div class="row mt32 mb32" id="informations">
                 <div t-if="doc.client_order_ref" class="col-xs-3">
                     <strong>Your Reference:</strong>
                     <p t-field="doc.client_order_ref"/>
-                </div>
-                <div t-if="doc.confirmation_date and doc.state not in ['draft','sent']" class="col-xs-3">
-                    <strong>Date Ordered:</strong>
-                    <p t-field="doc.confirmation_date"/>
-                </div>
-                <div t-if="doc.date_order and doc.state in ['draft','sent']" class="col-xs-3">
-                    <strong>Quotation Date:</strong>
-                    <p t-field="doc.date_order"/>
-                </div>
-                <div t-if="doc.user_id.name" class="col-xs-3">
-                    <strong>Salesperson:</strong>
-                    <p t-field="doc.user_id"/>
-                </div>
-                <div name="payment_term" t-if="doc.payment_term_id" class="col-xs-3">
-                    <strong>Payment Terms:</strong>
-                    <p t-field="doc.payment_term_id"/>
-                </div>
-                <div t-if="doc.validity_date and doc.state in ['draft', 'sent']" class="col-xs-3">
-                    <strong>Expiration Date:</strong>
-                    <p t-field="doc.validity_date"/>
-                </div>
+                </div>                
             </div>
 
             <!-- Is there a discount on at least one line? -->
@@ -200,6 +178,38 @@
                 <span t-field="doc.fiscal_position_id.note"/>
             </p>
             <div class="oe_structure"/>
+            
+            
+            <p style="page-break-before:always;"> </p>
+            <div class="row mt32 mb32" id="informations">
+                <div t-if="doc.client_order_ref" class="col-xs-3">
+                    <strong>Your Reference:</strong>
+                    <p t-field="doc.client_order_ref"/>
+                </div>
+                <div t-if="doc.confirmation_date and doc.state not in ['draft','sent']" class="col-xs-3">
+                    <strong>Date Ordered:</strong>
+                    <p t-field="doc.confirmation_date"/>
+                </div>
+                <div t-if="doc.date_order and doc.state in ['draft','sent']" class="col-xs-3">
+                    <strong>Quotation Date:</strong>
+                    <p t-field="doc.date_order"/>
+                </div>
+                <div t-if="doc.user_id.name" class="col-xs-3">
+                    <strong>Salesperson:</strong>
+                    <p t-field="doc.user_id"/>
+                </div>
+                <div name="payment_term" t-if="doc.payment_term_id" class="col-xs-3">
+                    <strong>Payment Terms:</strong>
+                    <p t-field="doc.payment_term_id"/>
+                </div>
+                <div t-if="doc.validity_date and doc.state in ['draft', 'sent']" class="col-xs-3">
+                    <strong>Expiration Date:</strong>
+                    <p t-field="doc.validity_date"/>
+                </div>
+            </div>
+            <p>Esta es otra página
+               
+            </p>
             <p style="page-break-before:always;"> </p>
             <p>Esta es otra página
                
