@@ -32,15 +32,13 @@
                 <div class="col-xs-2">                        
                 </div>
                 <div class="col-xs-8">
-                    <ul>
-                        <li t-if="company.website"><span t-esc="company.website[11:]"/></li>
-                        <li t-if="company.website"><span style="color:rgb(209,65,36);">WEB</span></li>
-                        <li t-if="company.phone"><span t-field="company.phone"/></li>
-                        <li t-if="company.website"><span style="color:rgb(209,65,36);">TELÉFONOS</span></li>
-                        <li t-if="company.street_name"><span t-field="company.street_name"/><span t-field="company.street2"/><span t-field="company.street_number2"/></li>
-                        <li t-if="company.street_name"><span t-field="company.street_number2"/><span t-field="company.l10n_mx_edi_colony"/><span t-field="company.city"/><span t-field="company.state_id"/><span t-field="company.country_id"/><span t-field="company.zip"/></li>
-                        <li t-if="company.website"><span style="color:rgb(209,65,36);">SUCURSAL</span></li>                        
-                    </ul>
+                    <p><span t-esc="company.website[11:]"/></p>
+                    <p><span style="color:rgb(209,65,36);">WEB</span></p>
+                    <p><span t-field="company.phone"/></p>
+                    <p><span style="color:rgb(209,65,36);">TELÉFONOS</span></p>
+                    <p><span t-field="company.street_name"/><span t-field="company.street2"/><span t-field="company.street_number2"/></p>
+                    <p><span t-field="company.street_number2"/><span t-field="company.l10n_mx_edi_colony"/><span t-field="company.city"/><span t-field="company.state_id"/><span t-field="company.country_id"/><span t-field="company.zip"/></p>
+                    <p><span style="color:rgb(209,65,36);">SUCURSAL</span></p>                    
                 </div>
                 <div class="col-xs-2">                        
                 </div>                              
