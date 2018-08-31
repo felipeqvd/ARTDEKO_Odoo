@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <template id="comercial_layout">
-        <link rel='stylesheet' href="/artdeko/static/src/less/fonts.less" type="text/less"/>
-        <link rel='stylesheet' href="/artdeko/static/src/css/artdeko.css" type="text/css"/>
+    <template id="assets_common" name="artdeko assets" inherit_id="report.assets_common">
+        <xpath expr="." position="inside">
+            <link href="/artdeko/static/src/css/artdeko.css" rel="stylesheet" type="text/css"/>
+            <link rel='stylesheet' href="/artdeko/static/src/less/fonts.less" type="text/less"/>
+        </xpath>
+    </template>
+    <template id="comercial_layout">        
         <t t-if="not o and doc">
             <t t-set="o" t-value="doc"/>
         </t>
