@@ -288,7 +288,6 @@
                     </ul>
                     <strong>Atentamente,</strong>
                     <strong t-field="doc.user_id"/>
-                    <strong t-field="company.name"/>
                 </div>
                 <div class="col-xs-1">                        
                 </div>                              
