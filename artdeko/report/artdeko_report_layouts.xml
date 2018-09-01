@@ -2,6 +2,7 @@
 <odoo>    
     <template id="comercial_layout">
         <style type="text/css">
+            <![CDATA[
             @font-face {
                 font-family: 'rockwell';        
                 src: url('../fonts/rockwell/rockwell-reg-webfont.ttf') format('truetype');
@@ -14,6 +15,12 @@
                 font-family: 'rockwell';
                 line-height: 0.9;
             }
+            p.small_titles_footer{
+                font-family: 'rockwell';
+                color:rgb(209,65,36);
+                font-size: 8px;
+            }
+            ]]>
         </style>        
         <t t-if="not o and doc">
             <t t-set="o" t-value="doc"/>
@@ -45,7 +52,7 @@
                 </div>
                 <div class="col-xs-8">
                     <p><span t-esc="company.website[11:]"/><br></br><span style="color:rgb(209,65,36);font-size: 8px;">WEB</span></p>
-                    <p><span t-field="company.phone"/><br></br><span style="color:rgb(209,65,36);font-size: 8px;">TELÉFONOS</span></p>
+                    <p class="small_titles_footer"><span t-field="company.phone"/><br></br><span style="color:rgb(209,65,36);font-size: 8px;">TELÉFONOS</span></p>
                     <p><span t-field="company.street_name"/>, <span t-field="company.street2"/>, <span t-field="company.street_number2"/>
                         <br></br><span t-field="company.street_number2"/>, 
                         <span t-field="company.l10n_mx_edi_colony"/>, 
