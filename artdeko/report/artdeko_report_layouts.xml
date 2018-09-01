@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>    
     <template id="comercial_layout">
-        <link rel='stylesheet' type="text/less" href="/artdeko/static/src/less/artdeko_fonts.less"/>        
+        <style>
+            @font-face {
+                font-family: 'rockwell';        
+                src: url('../fonts/rockwell/rockwell-reg-webfont.ttf') format('truetype');
+            }
+            p.condiciones_titulos{
+                font-family: 'rockwell';
+                text-decoration: underline;
+            }
+            p.info_footer{
+                font-family: 'rockwell';
+                line-height: 0.9;
+            }
+        </style>        
         <t t-if="not o and doc">
             <t t-set="o" t-value="doc"/>
         </t>
