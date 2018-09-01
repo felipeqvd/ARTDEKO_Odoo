@@ -2,21 +2,8 @@
 <odoo>    
     <template id="comercial_layout">
         <style type="text/css">
-            <![CDATA[
-            @font-face {
-                font-family: 'rockwell';        
-                src: url('../fonts/rockwell/rockwell-reg-webfont.ttf') format('truetype');
-            }
-            p.condiciones_titulos{
-                font-family: 'rockwell';
-                text-decoration: underline;
-            }
-            p.info_footer{
-                font-family: 'rockwell';
-                line-height: 0.9;
-            }
-            p.small_titles_footer{
-                font-family: 'rockwell';
+            <![CDATA[  
+            p.small_titles_footer{               
                 color:rgb(209,65,36);
                 font-size: 8px;
             }
