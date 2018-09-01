@@ -12,10 +12,10 @@
         </t>
         <div class="header">
             <div class="row" style="vertical-align: text-bottom;">
-                <div class="col-xs-6">
+                <div class="col-xs-6" style="vertical-align: text-bottom;">
                     <img style="vertical-align: text-bottom;" class="img img-responsive" src="/artdeko/static/src/img/logo_texto.png" width="200px"/>                    
                 </div>
-                <div class="col-xs-5 col-xs-offset-1" name="company_address">                        
+                <div class="col-xs-6" name="company_address" style="vertical-align: text-bottom;">                        
                     <div style="vertical-align: text-bottom;font-size:12px; font-family: 'Lato-Bol'; letter-spacing: 3px;" t-if="company.website"><span t-esc="company.website[7:].upper()"/></div>                 
                 </div>
             </div>
@@ -29,25 +29,43 @@
             <div class="row" style="height:170px;">
                 <div class="col-xs-2">                        
                 </div>
-                <div class="col-xs-8">
-                    <p><span t-esc="company.website[11:]"/><br></br><span style="color:rgb(209,65,36);font-size: 8px;">WEB</span></p>
-                    <p class="small_titles_footer"><span t-field="company.phone"/><br></br><span style="color:rgb(209,65,36);font-size: 8px;">TELÉFONOS</span></p>
-                    <p><span t-field="company.street_name"/>, <span t-field="company.street2"/>, <span t-field="company.street_number2"/>
-                        <br></br><span t-field="company.street_number2"/>, 
-                        <span t-field="company.l10n_mx_edi_colony"/>, 
-                        <span t-field="company.city"/>, 
-                        <span t-field="company.state_id"/>, 
-                        <span t-field="company.country_id"/>, 
-                        <span t-field="company.zip"/>
-                        <br></br><span style="color:rgb(209,65,36);font-size: 8px;">SUCURSAL</span>
+                <div class="col-xs-8" style="font-size:10px;">
+                    <p><span t-esc="company.website[11:]"/><br></br><span style="color:rgb(209,65,36);font-variant:small-caps;">web</span></p>
+                    <p class="small_titles_footer"><span t-field="company.phone"/><br></br><span style="color:rgb(209,65,36);font-variant:small-caps;">teléfonos</span></p>
+                    <p>
+                        <t t-if="company.street_name">
+                            <span t-field="company.street_name"/>, 
+                        </t>
+                        <t t-if="company.street2">
+                            <span t-field="company.street2"/> 
+                        </t>                        
+                        <t t-if="company.street_number2">
+                            <br></br><span t-field="company.street_number2"/>, 
+                        </t>
+                        <t t-if="company.l10n_mx_edi_colony">
+                            <span t-field="company.l10n_mx_edi_colony"/>, 
+                        </t>
+                        <t t-if="company.city">
+                            <span t-field="company.city"/>, 
+                        </t>
+                        <t t-if="company.state_id">
+                            <span t-field="company.state_id"/>, 
+                        </t>
+                        <t t-if="company.country_id">
+                            <span t-field="company.country_id"/>, 
+                        </t>
+                        <t t-if="company.zip">
+                            <span t-field="company.zip"/>
+                        </t>                        
+                        <br></br><span style="color:rgb(209,65,36);font-variant:small-caps;">sucursal</span>
                     </p>                    
                 </div>
                 <div class="col-xs-2">                        
                 </div>                              
             </div>            
-            <div style="background-color:rgb(209,65,36);height:100px;">
+            <div style="background-color:rgb(209,65,36);height:100px;margin-left:-15px;margin-rigth:-15px">
                 <img src="/artdeko/static/src/img/logo_footer.png" height="100px"/>                
-                <span style="padding-left:100px;font-family: 'rockwell';color: #ffffff;font-variant:small-caps;letter-spacing: 3px;" t-field="company.report_header"/>                
+                <span style="text_align:center;color: #ffffff;font-variant:small-caps;letter-spacing: 3px;" t-field="company.report_header"/>                
             </div>
         </div>
     </template>

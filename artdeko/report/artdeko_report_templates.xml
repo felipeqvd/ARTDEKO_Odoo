@@ -180,7 +180,7 @@
             <div class="row">
                 <div class="col-xs-1">                        
                 </div>
-                <div class="col-xs-8">
+                <div class="col-xs-10">
                     <p style="text-decoration: underline;">CONDICIONES GENERALES DE MENUDEO</p>
                     <p style="text-decoration: underline;">Vigencia de la cotización: <span t-field="doc.validity_date"/></p>
                     <ul>
@@ -199,7 +199,7 @@
             <div class="row">
                 <div class="col-xs-1">                        
                 </div>
-                <div class="col-xs-8">
+                <div class="col-xs-10">
                     <p style="text-decoration: underline;">Tipo de moneda de la cotización: </p><p><span t-field="doc.pricelist_id.currency_id.currency_unit_label"/> &#40;<span t-field="doc.pricelist_id.currency_id.name"/>&#41;</p>
                     <p style="text-decoration: underline;">Facturación</p>
                     <ul>
@@ -217,7 +217,7 @@
             <div class="row">
                 <div class="col-xs-1">                        
                 </div>
-                <div class="col-xs-8">
+                <div class="col-xs-10">
                     <p style="text-decoration: underline;">Forma de pago: <span t-field="doc.payment_term_id"/></p>
                     <ul>
                         <li><span>Los pagos pueden hacerse con transferencia bancaria, cheque, depósito en ventanilla o cargo a tarjeta de crédito AMEX.</span></li>
@@ -273,7 +273,7 @@
             <div class="row">
                 <div class="col-xs-1">                        
                 </div>
-                <div class="col-xs-8">
+                <div class="col-xs-10">
                     <p style="text-decoration: underline;">Entrega y resguardo de mercancía</p>
                     <ul>
                         <li><span>Una vez que se confirme la llegada del producto, el cliente dispone de 7 días naturales como máximo de almacenaje sin costo.</span></li>
