@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>    
-    <template id="comercial_layout">
-        <style type="text/css">
-            <![CDATA[  
-            p.small_titles_footer{               
-                color:rgb(209,65,36);
-                font-size: 8px;
-            }
-            ]]>
-        </style>        
+    <template id="comercial_layout">        
         <t t-if="not o and doc">
             <t t-set="o" t-value="doc"/>
         </t>
@@ -24,7 +16,7 @@
                     <img style="vertical-align: text-bottom;" class="img img-responsive" src="/artdeko/static/src/img/logo_texto.png" width="200px"/>                    
                 </div>
                 <div class="col-xs-5 col-xs-offset-1" name="company_address">                        
-                    <div style="vertical-align: text-bottom;" t-if="company.website"><span t-esc="company.website[7:].upper()"/></div>                 
+                    <div style="vertical-align: text-bottom;font-size:12px; font-family: 'Lato-Bol'; letter-spacing: 3px;" t-if="company.website"><span t-esc="company.website[7:].upper()"/></div>                 
                 </div>
             </div>
         </div>
