@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>    
     <template id="comercial_layout">
-        <style>
+        <style type="text/css">
             @font-face {
                 font-family: 'rockwell';        
                 src: url('../fonts/rockwell/rockwell-reg-webfont.ttf') format('truetype');
