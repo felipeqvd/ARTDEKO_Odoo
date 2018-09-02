@@ -60,7 +60,7 @@
                             <th class="text-right price_tax_included" groups="sale.group_show_price_total">Total Price</th>
                         </tr>
                    </thead>
-                   <tbody class="sale_tbody">
+                   <tbody class="sale_tbody" style="border-color: rgb(209,65,36);">
                         <t t-foreach="page" t-as="layout_category">
 
                             <t t-if="layout_category_size > 1 or page_size > 1" groups="sale.group_sale_layout">
