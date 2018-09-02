@@ -200,7 +200,7 @@
                 <div class="col-xs-1">                        
                 </div>
                 <div class="col-xs-10">
-                    <p style="text-decoration: underline;">Tipo de moneda de la cotización: </p><p><span t-field="doc.pricelist_id.currency_id.currency_unit_label"/> &#40;<span t-field="doc.pricelist_id.currency_id.name"/>&#41;</p>
+                    <p><span  style="text-decoration: underline;">Tipo de moneda de la cotización: </span><span t-field="doc.pricelist_id.currency_id.currency_unit_label"/> &#40;<span t-field="doc.pricelist_id.currency_id.name"/>&#41;</p>
                     <p style="text-decoration: underline;">Facturación</p>
                     <ul>
                         <li><span>Indicar si requiere factura.</span></li>
