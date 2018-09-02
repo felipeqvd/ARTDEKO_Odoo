@@ -11,12 +11,12 @@
             <t t-set="company" t-value="res_company"/>
         </t>
         <div class="header">
-            <div class="row" style="">
+            <div class="row" >
                 <div class="col-xs-6">
                     <img class="img img-responsive" src="/artdeko/static/src/img/logo_texto.png" width="200px"/>                    
                 </div>
-                <div class="col-xs-6" name="company_address" style="position: absolute;bottom: 0;">                        
-                    <div style="vertical-align: text-bottom;font-size:12px; font-family: 'Lato-Bol'; letter-spacing: 3px;" t-if="company.website"><span t-esc="company.website[7:].upper()"/></div>                 
+                <div class="col-xs-6" name="company_address">                        
+                    <div style="padding-top:30px; font-size:12px; font-family: 'Lato-Bol'; letter-spacing: 3px;" t-if="company.website"><span t-esc="company.website[7:].upper()"/></div>                 
                 </div>
             </div>
         </div>
