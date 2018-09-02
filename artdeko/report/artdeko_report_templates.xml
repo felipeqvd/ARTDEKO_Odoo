@@ -182,7 +182,7 @@
                 </div>
                 <div class="col-xs-10">
                     <p style="text-decoration: underline;">CONDICIONES GENERALES DE MENUDEO</p>
-                    <p style="text-decoration: underline;">Vigencia de la cotización: <span t-field="doc.validity_date"/></p>
+                    <p style="text-decoration: underline;">Vigencia de la cotización:<span t-field="doc.validity_date"/> </p>
                     <ul>
                         <li><span>Precios más IVA sin excepción.</span></li>
                         <li><span>Los precios son LAB (libre a bordo) en Cancún.</span></li>
@@ -218,7 +218,7 @@
                 <div class="col-xs-1">                        
                 </div>
                 <div class="col-xs-10">
-                    <p style="text-decoration: underline;">Forma de pago: <span t-field="doc.payment_term_id"/></p>
+                    <p style="text-decoration: underline;">Forma de pago:<span t-field="doc.payment_term_id"/> </p>
                     <ul>
                         <li><span>Los pagos pueden hacerse con transferencia bancaria, cheque, depósito en ventanilla o cargo a tarjeta de crédito AMEX.</span></li>
                         <li><span>Las facturas en moneda extranjera (USD o EUR) pueden pagarse en pesos y se aplicará el tipo de cambio a la venta en ventanilla del banco Santander del día de la operación. . Favor confirmar con su asesor.</span></li>
@@ -226,12 +226,20 @@
                         <li><span>Si por alguna razón el pago con cheque presenta devolución por fondos insuficientes, queda sujeto a lo previsto en el artículo 193 de la Ley General de Títulos y Operaciones de Crédito.</span></li>
                         <li><span>Agradecemos confirmar pagos realizados con copia del comprobante bancario vía correo electrónico, para acreditar el pago.</span></li>                        
                     </ul>
-                    <p style="text-decoration: underline;">Datos bancarios:</p>
                 </div>
                 <div class="col-xs-1">                        
                 </div>                              
             </div>
             <p style="page-break-before:always;"> </p>
+            <div class="row">
+                <div class="col-xs-1">                        
+                </div>
+                <div class="col-xs-10">                    
+                    <p style="text-decoration: underline;">Datos bancarios:</p>
+                </div>
+                <div class="col-xs-1">                        
+                </div>                              
+            </div>
             <div class="row">
                 <div class="col-xs-2">                        
                 </div>
