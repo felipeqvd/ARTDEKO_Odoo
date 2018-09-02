@@ -231,6 +231,7 @@
                 <div class="col-xs-1">                        
                 </div>                              
             </div>
+            <p style="page-break-before:always;"> </p>
             <div class="row">
                 <div class="col-xs-2">                        
                 </div>
@@ -283,9 +284,7 @@
                         <li><span>En caso de que no se realice la entrega por causas imputables al cliente, los costos de almacenaje y reprogramación de la entrega correrán a cargo del cliente.</span></li>
                         <li><span>No se hacen entregas parciales de recubrimientos.</span></li>                        
                     </ul>
-                    <strong>Atentamente,</strong>
-                    <strong t-field="doc.user_id"/>
-                    <strong t-esc="doc.company_id.name"/>
+                    <p style="text-align: center;"><strong>Atentamente,</strong><br></br><strong t-field="doc.user_id"/><br></br><strong t-esc="doc.company_id.name"/></p>                    
                 </div>
                 <div class="col-xs-1">                        
                 </div>                              
