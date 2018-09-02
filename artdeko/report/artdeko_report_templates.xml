@@ -47,9 +47,9 @@
             <t t-set="display_discount" t-value="any([l.discount for l in doc.order_line])"/>
 
             <t t-foreach="doc.order_lines_layouted()" t-as="page">
-                <table class="table table-condensed"  style="border-color: rgb(209,65,36);">
+                <table class="table table-condensed" >
                     <thead>
-                        <tr>
+                        <tr style="border-color: rgb(209,65,36);">
                             <th class="text-center">Código</th>
                             <th>Descripción</th>
                             <th class="text-right">Quantity</th>
@@ -245,7 +245,7 @@
                 <div class="col-xs-2">                        
                 </div>
                 <div class="col-xs-8">
-                    <strong t-esc="doc.company_id.name"/><strong> - RFC: </strong><strong t-esc="doc.company_id.vat"/>
+                    <p style="text-align: center;"><strong t-esc="doc.company_id.name"/><strong> - RFC: </strong><strong t-esc="doc.company_id.vat"/><br></br></p>
                     <table class="table table-condensed">
                         <thead>
                             <tr>
