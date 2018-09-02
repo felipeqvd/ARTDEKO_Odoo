@@ -15,7 +15,7 @@
                     </h3>
                     <t t-if="doc.date_order and doc.state in ['draft','sent']">
                         <p>
-                            <strong>Quotation Date: </strong><t t-field="doc.date_order" t-options='{"widget": "date"}'/>
+                            <strong>Quotation Date: </strong><span t-field="doc.date_order" t-options='{"widget": "date"}'/>
                         </p>    
                     </t>    
                 </div>
