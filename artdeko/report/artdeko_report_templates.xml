@@ -5,13 +5,22 @@
         <t t-set="doc" t-value="doc.with_context({'lang':doc.partner_id.lang})" />
         <div class="page">
             <div class="oe_structure"/>
-            <h2>
-                <span t-if="doc.state in ['draft','sent']">Cotización No. </span>                
-                <span t-field="doc.name"/>
-            </h2>
-            <div t-if="doc.date_order and doc.state in ['draft','sent']" class="col-xs-3">
-                <strong>Quotation Date:</strong>
-                <p t-field="doc.date_order" t-options='{"widget": "date"}'/>
+            <div class="row">
+                <div class="col-xs-1">                        
+                </div>
+                <div class="col-xs-10">
+                    <h3 class="text-left">
+                        <span t-if="doc.state in ['draft','sent']">Cotización No. </span>                
+                        <span t-field="doc.name"/>
+                    </h3>
+                    <t t-if="doc.date_order and doc.state in ['draft','sent']">
+                        <p>
+                            <strong>Quotation Date: </strong><t t-field="doc.date_order" t-options='{"widget": "date"}'/>
+                        </p>    
+                    </t>    
+                </div>
+                <div class="col-xs-1">                        
+                </div>                              
             </div>
             <div class="row">
                 <div class="col-xs-6">
@@ -49,7 +58,7 @@
             <t t-foreach="doc.order_lines_layouted()" t-as="page">
                 <table class="table table-condensed" >
                     <thead>
-                        <tr style="border-color: rgb(209,65,36);">
+                        <tr>
                             <th class="text-center">Código</th>
                             <th>Descripción</th>
                             <th class="text-right">Quantity</th>
@@ -60,7 +69,7 @@
                             <th class="text-right price_tax_included" groups="sale.group_show_price_total">Total Price</th>
                         </tr>
                    </thead>
-                   <tbody class="sale_tbody" style="border-color: rgb(209,65,36);">
+                   <tbody class="sale_tbody">
                         <t t-foreach="page" t-as="layout_category">
 
                             <t t-if="layout_category_size > 1 or page_size > 1" groups="sale.group_sale_layout">
@@ -269,7 +278,7 @@
                                 <td class="text-center">014691825006663241</td>
                             </tr>
                             <tr>
-                                <td class="text-center">BANCO MONEX SA DE CV Institución de banca múltiple</td>
+                                <td class="text-center">BANCO MONEX SA DE CV<br></br>Institución de banca múltiple</td>
                                 <td class="text-center">EURO</td>
                                 <td class="text-center"> - </td>
                                 <td class="text-center">112180000010547251</td>
