@@ -318,252 +318,204 @@
                 <div class="col-xs-1">                        
                 </div>                              
             </div>
-            <div style="border-bottom:1px solid rgb(209,65,36) !important; padding:30px">    
-                <div class="row">
-                    <div class="col-xs-6">
-                        <h3>
-                            <span t-esc="doc.company_id.name"/>
-                        </h3>                        
-                    </div>
-                    <div class="col-xs-6">                    
-                        <p>
-                            <t t-if="doc.company_id.street_name">
-                               <span t-esc="doc.company_id.street_name"/> 
-                            </t>
-                            <t t-if="doc.company_id.street2">
-                                <span t-esc="doc.company_id.street2"/> - 
-                            </t>                        
-                            <t t-if="doc.company_id.street_number2">
-                                <br></br><span t-esc="doc.company_id.street_number2"/> 
-                            </t>
-                            <t t-if="doc.company_id.l10n_mx_edi_colony">
-                                <span t-esc="doc.company_id.l10n_mx_edi_colony"/>
-                            </t>
-                        </p>                                            
-                    </div>                                    
-                </div>
-                <div class="row">
-                    <div class="col-xs-5">
-                        <h4>
-                            <span t-esc="doc.company_id.vat"/>
-                        </h4>                        
-                    </div>
-                    <div class="col-xs-3">                    
-                        <p>
-                            <t t-if="doc.company_id.city">
-                                <span t-esc="doc.company_id.city"/><br></br> 
-                            </t>
-                            <t t-if="doc.company_id.l10n_mx_edi_locality">
-                                <span t-esc="doc.company_id.l10n_mx_edi_locality"/><br></br>
-                            </t>
-                            <t t-if="doc.company_id.country_id">
-                                <span t-esc="doc.company_id.country_id.name"/>
-                            </t>                        
-                        </p>                                            
-                    </div>
-                    <div class="col-xs-4">                    
-                        <p>
-                            <t t-if="doc.company_id.zip">
-                                <span t-esc="doc.company_id.zip"/><br></br> 
-                            </t>
-                            <t t-if="doc.company_id.state_id">
-                                <span t-esc="doc.company_id.state_id.name"/>
-                            </t>
-                        </p>                                            
-                    </div>                                    
-                </div>
-            </div>
-            <div style="border-bottom:1px solid rgb(209,65,36) !important; padding:30px">    
-                <div class="row">
-                    <div class="col-xs-2">
-                        <h4>
-                            <strong>Cliente:</strong>
-                        </h4>                        
-                    </div>
-                    <div class="col-xs-10">
-                        <h4>
-                            <span t-field="doc.partner_id"/>
-                        </h4>                        
-                    </div>                                                     
-                </div>
-                <div class="row">
-                    <div class="col-xs-2">
-                        <h4>
-                            <strong><t t-esc="doc.partner_id.country_id.vat_label or 'RFC'"/>:</strong>
-                        </h4>                        
-                    </div>
-                    <div class="col-xs-10">
-                        <h4>
-                            <t t-if="doc.partner_id.vat">
-                                <p t-if="doc.partner_id.vat"><span t-field="doc.partner_id.vat"/></p>
-                            </t>
-                        </h4>                        
-                    </div>                                                     
-                </div>
-                <div class="row">
-                    <div class="col-xs-2">
-                        <h4>
-                            <strong>Domicilio:</strong>
-                        </h4>                        
-                    </div>
-                    <div class="col-xs-6">
-                        <h4>                           
-                            <t t-if="doc.partner_id.street_name">
-                               <span t-esc="doc.partner_id.street_name"/> 
-                            </t>
-                            <t t-if="doc.partner_id.street2">
-                                <span t-esc="doc.partner_id.street2"/> - 
-                            </t>                        
-                            <t t-if="doc.partner_id.street_number2">
-                                <br></br><span t-esc="doc.partner_id.street_number2"/> 
-                            </t>
-                            <t t-if="doc.partner_id.l10n_mx_edi_colony">
-                                <span t-esc="doc.partner_id.l10n_mx_edi_colony"/>
-                            </t>                            
-                        </h4>                        
-                    </div>
-                    <div class="col-xs-2">
-                        <h4>
-                            <strong>Municipio:</strong>
-                        </h4>                        
-                    </div>
-                    <div class="col-xs-2">
-                        <h4>                           
-                                       
-                        </h4>                        
-                    </div>                                                     
-                </div>
-                <div class="row">
-                    <div class="col-xs-2">
-                        <h4>
-                            <strong>Teléfono:</strong>
-                        </h4>                        
-                    </div>
-                    <div class="col-xs-2">
-                        <h4>                 
-                            <t t-if="doc.partner_id.phone">
-                                <span t-esc="doc.partner_id.phone"/>
-                            </t>                            
-                        </h4>                        
-                    </div>
-                    <div class="col-xs-2">
-                        <h4>
-                            <strong>Colonia:</strong>
-                        </h4>                        
-                    </div>
-                    <div class="col-xs-2">
-                        <h4>                
-                            <t t-if="doc.partner_id.l10n_mx_edi_colony">
-                                <span t-esc="doc.partner_id.l10n_mx_edi_colony"/>
-                            </t>                            
-                        </h4>                        
-                    </div>
-                    <div class="col-xs-2">
-                        <h4>
-                            <strong>CP:</strong>
-                        </h4>                        
-                    </div>
-                    <div class="col-xs-2">
-                        <h4>                
-                            <t t-if="doc.partner_id.zip">
-                                <span t-esc="doc.partner_id.zip"/>
-                            </t>                            
-                        </h4>                        
-                    </div>                                    
-                </div>
-                <div class="row">
-                    <div class="col-xs-2">
-                        <h4>
-                            <strong>Ciudad:</strong>
-                        </h4>                        
-                    </div>
-                    <div class="col-xs-2">
-                        <h4>                 
-                            <t t-if="doc.partner_id.city">
-                                <span t-esc="doc.partner_id.city"/>
-                            </t>                            
-                        </h4>                        
-                    </div>
-                    <div class="col-xs-2">
-                        <h4>
-                            <strong>Estado:</strong>
-                        </h4>                        
-                    </div>
-                    <div class="col-xs-2">
-                        <h4>                
-                            <t t-if="doc.partner_id.state_id.name">
-                                <span t-esc="doc.partner_id.state_id.name"/>
-                            </t>                            
-                        </h4>                        
-                    </div>
-                    <div class="col-xs-2">
-                        <h4>
-                            <strong>País:</strong>
-                        </h4>                        
-                    </div>
-                    <div class="col-xs-2">
-                        <h4>                
-                            <t t-if="doc.partner_id.country_id.name">
-                                <span t-esc="doc.partner_id.country_id.name"/>
-                            </t>                            
-                        </h4>                        
-                    </div>                                    
-                </div>
-            </div>         
-            <div class="row">
-                <div class="col-xs-6">
-                    <t t-if="doc.partner_shipping_id == doc.partner_invoice_id
-                             and doc.partner_invoice_id != doc.partner_id
-                             or doc.partner_shipping_id != doc.partner_invoice_id">
-                        <strong t-if="doc.partner_shipping_id == doc.partner_invoice_id">Invoicing and shipping address:</strong>
-                        <strong t-if="doc.partner_shipping_id != doc.partner_invoice_id">Invoicing address:</strong>
-                        <div t-field="doc.partner_invoice_id"
-                        t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True, "phone_icons": True}'/>
-                        <div t-if="doc.partner_shipping_id != doc.partner_invoice_id" class="mt8">
-                            <strong>Shipping address:</strong>
-                            <div t-field="doc.partner_shipping_id"
-                                t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True, "phone_icons": True}'/>
+            <div style="padding:5px 30px 5px 30px;">
+                <div style="border-bottom:1px solid rgb(209,65,36) !important;">    
+                    <div class="row">
+                        <div class="col-xs-5">
+                            <h3>
+                                <span t-esc="doc.company_id.name"/>
+                            </h3>                        
                         </div>
-                    </t>
-                </div>
-                <div class="col-xs-5 col-xs-offset-1">
-                    <div t-field="doc.partner_id"
-                        t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}' />
-                    <p t-if="doc.partner_id.vat"><t t-esc="doc.company_id.country_id.vat_label or 'TIN'"/>: <span t-field="doc.partner_id.vat"/></p>
+                        <div class="col-xs-7">                    
+                            <p>
+                                <t t-if="doc.company_id.street_name">
+                                   <span t-esc="doc.company_id.street_name"/> 
+                                </t>
+                                <t t-if="doc.company_id.street2">
+                                    <span t-esc="doc.company_id.street2"/> - 
+                                </t>                        
+                                <t t-if="doc.company_id.street_number2">
+                                    <br></br><span t-esc="doc.company_id.street_number2"/> 
+                                </t>
+                                <t t-if="doc.company_id.l10n_mx_edi_colony">
+                                    <span t-esc="doc.company_id.l10n_mx_edi_colony"/>
+                                </t>
+                            </p>                                            
+                        </div>                                    
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-5">
+                            <h4>
+                                <span t-esc="doc.company_id.vat"/>
+                            </h4>                        
+                        </div>
+                        <div class="col-xs-3">                    
+                            <p>
+                                <t t-if="doc.company_id.city">
+                                    <span t-esc="doc.company_id.city"/><br></br> 
+                                </t>
+                                <t t-if="doc.company_id.l10n_mx_edi_locality">
+                                    <span t-esc="doc.company_id.l10n_mx_edi_locality"/><br></br>
+                                </t>
+                                <t t-if="doc.company_id.country_id">
+                                    <span t-esc="doc.company_id.country_id.name"/>
+                                </t>                        
+                            </p>                                            
+                        </div>
+                        <div class="col-xs-4">                    
+                            <p>
+                                <t t-if="doc.company_id.zip">
+                                    <span t-esc="doc.company_id.zip"/><br></br> 
+                                </t>
+                                <t t-if="doc.company_id.state_id">
+                                    <span t-esc="doc.company_id.state_id.name"/>
+                                </t>
+                            </p>                                            
+                        </div>                                    
+                    </div>
                 </div>
             </div>
+            <div style="padding:5px 30px 5px 30px;">
+                <div style="border-bottom:1px solid rgb(209,65,36) !important; font-size:12px !important;">    
+                    <div class="row">
+                        <div class="col-xs-2">
+                            <p>
+                                <strong>Cliente:</strong>
+                            </p>                        
+                        </div>
+                        <div class="col-xs-10">
+                            <p>
+                                <span t-field="doc.partner_id"/>
+                            </p>                        
+                        </div>                                                     
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-2">
+                            <p>
+                                <strong><t t-esc="doc.partner_id.country_id.vat_label or 'RFC'"/>:</strong>
+                            </p>                        
+                        </div>
+                        <div class="col-xs-10">
+                            <p>
+                                <t t-if="doc.partner_id.vat">
+                                    <p t-if="doc.partner_id.vat"><span t-field="doc.partner_id.vat"/></p>
+                                </t>
+                            </p>                        
+                        </div>                                                     
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-2">
+                            <p>
+                                <strong>Domicilio:</strong>
+                            </p>                        
+                        </div>
+                        <div class="col-xs-6">
+                            <p>                           
+                                <t t-if="doc.partner_id.street_name">
+                                   <span t-esc="doc.partner_id.street_name"/> 
+                                </t>
+                                <t t-if="doc.partner_id.street2">
+                                    <span t-esc="doc.partner_id.street2"/> - 
+                                </t>                        
+                                <t t-if="doc.partner_id.street_number2">
+                                    <br></br><span t-esc="doc.partner_id.street_number2"/> 
+                                </t>
+                                <t t-if="doc.partner_id.l10n_mx_edi_colony">
+                                    <span t-esc="doc.partner_id.l10n_mx_edi_colony"/>
+                                </t>                            
+                            </p>                        
+                        </div>
+                        <div class="col-xs-2">
+                            <p>
+                                <strong>Municipio:</strong>
+                            </p>                        
+                        </div>
+                        <div class="col-xs-2">
+                            <p>                           
 
-            
-            
-            
-
-            <div class="row mt32 mb32" id="informations">
-                <div t-if="doc.client_order_ref" class="col-xs-3">
-                    <strong>Your Reference:</strong>
-                    <p t-field="doc.client_order_ref"/>
+                            </p>                        
+                        </div>                                                     
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-2">
+                            <p>
+                                <strong>Teléfono:</strong>
+                            </p>                        
+                        </div>
+                        <div class="col-xs-2">
+                            <p>                 
+                                <t t-if="doc.partner_id.phone">
+                                    <span t-esc="doc.partner_id.phone"/>
+                                </t>                            
+                            </p>                        
+                        </div>
+                        <div class="col-xs-2">
+                            <p>
+                                <strong>Colonia:</strong>
+                            </p>                        
+                        </div>
+                        <div class="col-xs-2">
+                            <p>                
+                                <t t-if="doc.partner_id.l10n_mx_edi_colony">
+                                    <span t-esc="doc.partner_id.l10n_mx_edi_colony"/>
+                                </t>                            
+                            </p>                        
+                        </div>
+                        <div class="col-xs-2">
+                            <p>
+                                <strong>CP:</strong>
+                            </p>                        
+                        </div>
+                        <div class="col-xs-2">
+                            <p>                
+                                <t t-if="doc.partner_id.zip">
+                                    <span t-esc="doc.partner_id.zip"/>
+                                </t>                            
+                            </p>                        
+                        </div>                                    
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-2">
+                            <p>
+                                <strong>Ciudad:</strong>
+                            </p>                        
+                        </div>
+                        <div class="col-xs-2">
+                            <p>                 
+                                <t t-if="doc.partner_id.city">
+                                    <span t-esc="doc.partner_id.city"/>
+                                </t>                            
+                            </p>                        
+                        </div>
+                        <div class="col-xs-2">
+                            <p>
+                                <strong>Estado:</strong>
+                            </p>                        
+                        </div>
+                        <div class="col-xs-2">
+                            <p>                
+                                <t t-if="doc.partner_id.state_id.name">
+                                    <span t-esc="doc.partner_id.state_id.name"/>
+                                </t>                            
+                            </p>                        
+                        </div>
+                        <div class="col-xs-2">
+                            <p>
+                                <strong>País:</strong>
+                            </p>                        
+                        </div>
+                        <div class="col-xs-2">
+                            <p>                
+                                <t t-if="doc.partner_id.country_id.name">
+                                    <span t-esc="doc.partner_id.country_id.name"/>
+                                </t>                            
+                            </p>                        
+                        </div>                                    
+                    </div>
                 </div>
-                <div t-if="doc.confirmation_date and doc.state not in ['draft','sent']" class="col-xs-3">
-                    <strong>Date Ordered:</strong>
-                    <p t-field="doc.confirmation_date"/>
-                </div>
-                <div t-if="doc.date_order and doc.state in ['draft','sent']" class="col-xs-3">
-                    <strong>Quotation Date:</strong>
-                    <p t-field="doc.date_order"/>
-                </div>
-                <div t-if="doc.user_id.name" class="col-xs-3">
-                    <strong>Salesperson:</strong>
-                    <p t-field="doc.user_id"/>
-                </div>
-                <div name="payment_term" t-if="doc.payment_term_id" class="col-xs-3">
-                    <strong>Payment Terms:</strong>
-                    <p t-field="doc.payment_term_id"/>
-                </div>
-                <div t-if="doc.validity_date and doc.state in ['draft', 'sent']" class="col-xs-3">
-                    <strong>Expiration Date:</strong>
-                    <p t-field="doc.validity_date"/>
-                </div>
-            </div>
-
+            </div> 
+           
+           
             <!-- Is there a discount on at least one line? -->
             <t t-set="display_discount" t-value="any([l.discount for l in doc.order_line])"/>
 
