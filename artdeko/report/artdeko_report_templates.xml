@@ -37,7 +37,7 @@
             <t t-set="display_discount" t-value="any([l.discount for l in doc.order_line])"/>
 
             <t t-foreach="doc.order_lines_layouted()" t-as="page">
-                <div style="padding:10px">    
+                <div style="padding:20px;">    
                     <table class="table table-condensed">
                         <thead>
                             <tr>
@@ -117,7 +117,7 @@
                 <div class="row" name="total">
                     <div class="col-xs-4 pull-right">
                         <table class="table table-condensed" style="min-width: 200px;max-width: 350px;">
-                            <tr style="border-bottom:1px solid #dddddd;">
+                            <tr style="border-bottom:1px solid #dddddd; border-top:2px solid rgb(209,65,36) !important;">
                                 <td>
                                     <strong>Subtotal &#40;<span t-field="doc.pricelist_id.currency_id.name"></span>&#41;</strong>
                                 </td>
@@ -127,7 +127,7 @@
                                 </td>
                             </tr>
                             <t t-foreach="doc._get_tax_amount_by_group()" t-as="amount_by_group">
-                                <tr style="border-bottom:1px solid #dddddd; border-top:2px solid rgb(209,65,36) !important;">
+                                <tr>
                                     <t t-if="amount_by_group[3] == 1 and doc.amount_untaxed == amount_by_group[2]">
                                         <td>
                                             <span t-esc="amount_by_group[0]"/>
@@ -244,7 +244,7 @@
                         <tbody class="sale_tbody">
                             <tr>
                                 <td class="text-center">SANTANDER</td>
-                                <td class="text-center">MN</td>
+                                <td class="text-center">MXN</td>
                                 <td class="text-center">65504603357</td>
                                 <td class="text-center">014691655046033577</td>
                             </tr>
