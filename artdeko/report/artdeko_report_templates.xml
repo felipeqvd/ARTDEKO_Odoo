@@ -327,17 +327,17 @@
                     </div>
                     <div class="col-xs-6">                    
                         <p>
-                            <t t-if="doc.company.street_name">
-                               <span t-esc="doc.company.street_name"/> 
+                            <t t-if="doc.company_id.street_name">
+                               <span t-esc="doc.company_id.street_name"/> 
                             </t>
-                            <t t-if="doc.company.street2">
-                                <span t-esc="doc.company.street2"/> - 
+                            <t t-if="doc.company_id.street2">
+                                <span t-esc="doc.company_id.street2"/> - 
                             </t>                        
-                            <t t-if="doc.company.street_number2">
-                                <br></br><span t-esc="doc.company.street_number2"/> 
+                            <t t-if="doc.company_id.street_number2">
+                                <br></br><span t-esc="doc.company_id.street_number2"/> 
                             </t>
-                            <t t-if="doc.company.l10n_mx_edi_colony">
-                                <span t-esc="doc.company.l10n_mx_edi_colony"/>
+                            <t t-if="doc.company_id.l10n_mx_edi_colony">
+                                <span t-esc="doc.company_id.l10n_mx_edi_colony"/>
                             </t>
                         </p>                                            
                     </div>                                    
@@ -350,26 +350,54 @@
                     </div>
                     <div class="col-xs-3">                    
                         <p>
-                            <t t-if="doc.company.city">
-                                <span t-esc="doc.company.city"/><br></br> 
+                            <t t-if="doc.company_id.city">
+                                <span t-esc="doc.company_id.city"/><br></br> 
                             </t>
-                            <t t-if="doc.company.l10n_mx_edi_locality">
-                                <span t-esc="doc.company.l10n_mx_edi_locality"/><br></br>
+                            <t t-if="doc.company_id.l10n_mx_edi_locality">
+                                <span t-esc="doc.company_id.l10n_mx_edi_locality"/><br></br>
                             </t>
-                            <t t-if="doc.company.country_id">
-                                <span t-esc="doc.company.country_id"/>
+                            <t t-if="doc.company_id.country_id">
+                                <span t-esc="doc.company_id.country_id"/>
                             </t>                        
                         </p>                                            
                     </div>
                     <div class="col-xs-3">                    
                         <p>
-                            <t t-if="doc.company.zip">
-                                <span t-esc="doc.company.zip"/><br></br> 
+                            <t t-if="doc.company_id.zip">
+                                <span t-esc="doc.company_id.zip"/><br></br> 
                             </t>
-                            <t t-if="doc.company.state_id">
-                                <span t-esc="doc.company.state_id"/>
+                            <t t-if="doc.company_id.state_id">
+                                <span t-esc="doc.company_id.state_id"/>
                             </t>
                         </p>                                            
+                    </div>                                    
+                </div>
+            </div>
+            <div style="border-bottom:2px solid rgb(209,65,36) !important; padding=30px">    
+                <div class="row">
+                    <div class="col-xs-1">
+                        <h3>
+                            <span t-field="doc.partner_id"/>
+                        </h3>                        
+                    </div>
+                    <div class="col-xs-6">
+                        <h3>
+                            <span t-field="doc.partner_id"/>
+                        </h3>                        
+                    </div>
+                    <div class="col-xs-6">                    
+                                                              
+                    </div>                                    
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                                           
+                    </div>
+                    <div class="col-xs-3">                    
+                                                                  
+                    </div>
+                    <div class="col-xs-3">                    
+                                                                   
                     </div>                                    
                 </div>
             </div>         
