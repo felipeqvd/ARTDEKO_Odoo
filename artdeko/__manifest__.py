@@ -29,6 +29,9 @@
         # 'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
+        'report/artdeko_report.xml',
+        'report/artdeko_report_templates.xml',
+        'report/artdeko_report_layouts.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
