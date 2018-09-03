@@ -27,10 +27,10 @@
             paperformat="paperformat_artdeko_letter"
         />
         <report 
-            id="action_report_saleorder_order_artdeko"
+            id="action_report_saleorder_order_artdeko2"
             string="Orden de compra2"
             model="sale.order" 
-            report_type="qweb-pdf"
+            report_type="qweb-html"
             file="artdeko.report_saleorder_order" 
             name="artdeko.report_saleorder_order"
             print_report_name="'Orden de compra - %s' % (object.name)"
