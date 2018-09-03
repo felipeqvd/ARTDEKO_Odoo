@@ -16,7 +16,7 @@
                     <img style="padding-left:100px;" class="img img-responsive" src="/artdeko/static/src/img/logo_texto.png" width="300px"/>                    
                 </div>                
                 <div class="col-xs-6" name="company_address">                        
-                    <div style="padding-left:100px;padding-top:30px; font-size:12px; font-family: 'Enriqueta' !important; letter-spacing: 3px;" t-if="company.website"><span t-esc="company.website[7:].upper()"/></div>                 
+                    <div style="padding-left:100px;padding-top:30px; font-size:12px; font-family: 'Lato-Bol' !important; letter-spacing: 3px;" t-if="company.website"><span t-esc="company.website[7:].upper()"/></div>                 
                 </div>
             </div>
         </div>
