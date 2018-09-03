@@ -63,7 +63,7 @@
 
                             <!-- Lines associated -->
                             <t t-foreach="layout_category['lines']" t-as="l">
-                                <tr style="border-top-color:rgb(209,65,36);">
+                                <tr style="border-top:2px solid rgb(209,65,36);">
                                     <td class="text-center">
                                         <span t-field="l.product_id.l10n_mx_edi_code_sat_id.code"/>
                                     </td>
