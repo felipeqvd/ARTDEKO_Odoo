@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 <template id="report_saleorder_quotation_document">
+    <t t-if="not o and doc">
+        <t t-set="o" t-value="doc"/>
+    </t>
+    <t t-if="o and 'company_id' in o">
+        <t t-set="company" t-value="o.company_id.sudo()"/>
+    </t>
+    <t t-if="not o or not 'company_id' in o">
+        <t t-set="company" t-value="res_company"/>
+    </t>
     <t t-call="artdeko.comercial_layout">
         <t t-set="doc" t-value="doc.with_context({'lang':doc.partner_id.lang})" />
         <div class="page">
@@ -322,22 +331,22 @@
                 <div class="row">
                     <div class="col-xs-6">
                         <h3>
-                            <span t-esc="doc.company_id.name"/>
+                            <span t-field="company.name"/>
                         </h3>                        
                     </div>
                     <div class="col-xs-6">                    
                         <p>
-                            <t t-if="doc.company_id.street_name">
-                               <span t-esc="doc.company_id.street_name"/> 
+                            <t t-if="company.street_name">
+                               <span t-field="company.street_name"/> 
                             </t>
-                            <t t-if="doc.company_id.street2">
-                                <span t-esc="doc.company_id.street2"/> - 
+                            <t t-if="company.street2">
+                                <span t-field="companyd.street2"/> - 
                             </t>                        
-                            <t t-if="doc.company_id.street_number2">
-                                <br></br><span t-esc="doc.company_id.street_number2"/> 
+                            <t t-if="company.street_number2">
+                                <br></br><span t-field="company.street_number2"/> 
                             </t>
-                            <t t-if="doc.company_id.l10n_mx_edi_colony">
-                                <span t-esc="doc.company_id.l10n_mx_edi_colony"/>
+                            <t t-if="company.l10n_mx_edi_colony">
+                                <span t-field="company.l10n_mx_edi_colony"/>
                             </t>
                         </p>                                            
                     </div>                                    
@@ -345,29 +354,29 @@
                 <div class="row">
                     <div class="col-xs-6">
                         <h4>
-                            <span t-esc="doc.company_id.vat"/>
+                            <span t-field="company.vat"/>
                         </h4>                        
                     </div>
                     <div class="col-xs-3">                    
                         <p>
-                            <t t-if="doc.company_id.city">
-                                <span t-esc="doc.company_id.city"/><br></br> 
+                            <t t-if="company.city">
+                                <span t-field="company.city"/><br></br> 
                             </t>
-                            <t t-if="doc.company_id.l10n_mx_edi_locality">
-                                <span t-esc="doc.company_id.l10n_mx_edi_locality"/><br></br>
+                            <t t-if="company.l10n_mx_edi_locality">
+                                <span t-field="company.l10n_mx_edi_locality"/><br></br>
                             </t>
-                            <t t-if="doc.company_id.country_id">
-                                <span t-esc="doc.company_id.country_id"/>
+                            <t t-if="company.country_id">
+                                <span t-field="company.country_id"/>
                             </t>                        
                         </p>                                            
                     </div>
                     <div class="col-xs-3">                    
                         <p>
-                            <t t-if="doc.company_id.zip">
-                                <span t-esc="doc.company_id.zip"/><br></br> 
+                            <t t-if="company_id.zip">
+                                <span t-field="company_id.zip"/><br></br> 
                             </t>
-                            <t t-if="doc.company_id.state_id">
-                                <span t-esc="doc.company_id.state_id"/>
+                            <t t-if="company_id.state_id">
+                                <span t-field="company_id.state_id"/>
                             </t>
                         </p>                                            
                     </div>                                    
