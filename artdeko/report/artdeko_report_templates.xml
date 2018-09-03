@@ -317,7 +317,62 @@
                 </div>
                 <div class="col-xs-1">                        
                 </div>                              
-            </div>            
+            </div>
+            <div style="border-bottom:2px solid rgb(209,65,36) !important;">    
+                <div class="row">
+                    <div class="col-xs-6">
+                        <h3>
+                            <span t-esc="doc.company_id.name"/>
+                        </h3>                        
+                    </div>
+                    <div class="col-xs-6">                    
+                        <p>
+                            <t t-if="doc.company.street_name">
+                               <span t-field="doc.company.street_name"/> 
+                            </t>
+                            <t t-if="doc.company.street2">
+                                <span t-field="doc.company.street2"/> - 
+                            </t>                        
+                            <t t-if="doc.company.street_number2">
+                                <br></br><span t-field="doc.company.street_number2"/> 
+                            </t>
+                            <t t-if="doc.company.l10n_mx_edi_colony">
+                                <span t-field="doc.company.l10n_mx_edi_colony"/>
+                            </t>
+                        </p>                                            
+                    </div>                                    
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <h4>
+                            <span t-esc="doc.company_id.vat"/>
+                        </h4>                        
+                    </div>
+                    <div class="col-xs-3">                    
+                        <p>
+                            <t t-if="doc.company.city">
+                                <span t-field="doc.company.city"/><br></br> 
+                            </t>
+                            <t t-if="doc.company.l10n_mx_edi_locality">
+                                <span t-field="doc.company.l10n_mx_edi_locality"/><br></br>
+                            </t>
+                            <t t-if="doc.company.country_id">
+                                <span t-field="doc.company.country_id"/>
+                            </t>                        
+                        </p>                                            
+                    </div>
+                    <div class="col-xs-3">                    
+                        <p>
+                            <t t-if="doc.company.zip">
+                                <span t-field="doc.company.zip"/><br></br> 
+                            </t>
+                            <t t-if="doc.company.state_id">
+                                <span t-field="doc.company.state_id"/>
+                            </t>
+                        </p>                                            
+                    </div>                                    
+                </div>
+            </div>         
             <div class="row">
                 <div class="col-xs-6">
                     <t t-if="doc.partner_shipping_id == doc.partner_invoice_id
@@ -341,6 +396,8 @@
                 </div>
             </div>
 
+            
+            
             
 
             <div class="row mt32 mb32" id="informations">
