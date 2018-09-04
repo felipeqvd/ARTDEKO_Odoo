@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <template id="assets_common" inherit_id="web.assets_common">
+    <template id="report_assets_common" inherit_id="web.report_assets_common">
         <xpath expr="." position="inside">
             <link href="/artdeko/static/src/css/enriqueta_regular_base64.css" rel="stylesheet" type="text/css"/>
         </xpath>
