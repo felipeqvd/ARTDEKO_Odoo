@@ -5,7 +5,7 @@
         <t t-set="doc" t-value="doc.with_context({'lang':doc.partner_id.lang})" />
         <div class="page">
             <div class="oe_structure"/>
-            <div class="row">
+            <div class="row" style="font-family: 'Rockwell' !important;">
                 <div class="col-xs-1">                        
                 </div>
                 <div class="col-xs-10 text-right">
@@ -22,7 +22,7 @@
                 <div class="col-xs-1">                        
                 </div>                              
             </div>
-            <div class="row" style="padding:10px">                
+            <div class="row" style="padding:10px;font-family: 'Rockwell' !important;">                
                 <div class="col-xs-11 col-xs-offset-1">
                     <div t-field="doc.partner_id"
                         t-options='{"widget": "contact", "fields": ["name", "email", "phone"], "no_marker": True}' />
@@ -37,7 +37,7 @@
             <t t-set="display_discount" t-value="any([l.discount for l in doc.order_line])"/>
 
             <t t-foreach="doc.order_lines_layouted()" t-as="page">
-                <div style="padding:30px;">    
+                <div style="padding:30px;font-family: 'Rockwell' !important;">    
                     <table class="table table-condensed">
                         <thead>
                             <tr>
@@ -115,7 +115,7 @@
 
             <div class="clearfix">
                 <div class="row" name="total">
-                    <div class="col-xs-4 pull-right" style="padding-right:30px;">
+                    <div class="col-xs-4 pull-right" style="padding-right:30px;font-family: 'Rockwell' !important;">
                         <table class="table table-condensed" style="min-width: 200px;max-width: 350px;">
                             <tr style="border-bottom:1px solid #dddddd; border-top:2px solid rgb(209,65,36) !important;">
                                 <td>
@@ -163,7 +163,7 @@
             
                        
             <p style="page-break-before:always;"> </p>
-            <div class="row">
+            <div class="row" style="font-family: 'Rockwell' !important;">
                 <div class="col-xs-1">                        
                 </div>
                 <div class="col-xs-10">
@@ -183,7 +183,7 @@
                 <div class="col-xs-1">                        
                 </div>                              
             </div>
-            <div class="row">
+            <div class="row" style="font-family: 'Rockwell' !important;">
                 <div class="col-xs-1">                        
                 </div>
                 <div class="col-xs-10">
@@ -201,7 +201,7 @@
                 <div class="col-xs-1">                        
                 </div>                              
             </div>
-            <div class="row">
+            <div class="row" style="font-family: 'Rockwell' !important;">
                 <div class="col-xs-1">                        
                 </div>
                 <div class="col-xs-10">
@@ -218,7 +218,7 @@
                 </div>                              
             </div>
             <p style="page-break-before:always;"> </p>
-            <div class="row">
+            <div class="row" style="font-family: 'Rockwell' !important;">
                 <div class="col-xs-1">                        
                 </div>
                 <div class="col-xs-10">                    
@@ -227,7 +227,7 @@
                 <div class="col-xs-1">                        
                 </div>                              
             </div>
-            <div class="row">
+            <div class="row" style="font-family: 'Rockwell' !important;">
                 <div class="col-xs-2">                        
                 </div>
                 <div class="col-xs-8">
@@ -266,7 +266,7 @@
                 <div class="col-xs-2">                        
                 </div>                              
             </div>
-            <div class="row">
+            <div class="row" style="font-family: 'Rockwell' !important;">
                 <div class="col-xs-1">                        
                 </div>
                 <div class="col-xs-10">
