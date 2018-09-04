@@ -16,7 +16,7 @@
                     <img style="padding-left:100px;" class="img img-responsive" src="/artdeko/static/src/img/logo_texto.png" width="300px"/>                    
                 </div>                
                 <div class="col-xs-6" name="company_address">                        
-                    <div style="padding-left:100px;padding-top:30px; font-size:12px; font-family: 'enriquetaregular' !important; letter-spacing: 3px;" t-if="company.website"><span t-esc="company.website[7:].upper()"/></div>                 
+                    <div style="padding-left:100px;padding-top:30px; font-size:12px; font-weight: bold; font-family: 'latoregular' !important; letter-spacing: 3px;" t-if="company.website"><span t-esc="company.website[7:].upper()"/></div>                 
                 </div>
             </div>
         </div>
@@ -57,7 +57,7 @@
                         <t t-if="company.zip">
                             <span t-field="company.zip"/>
                         </t>                        
-                        <br></br><span style="color:rgb(209,65,36);letter-spacing:1px;font-family: 'latoregular' !important; font-variant:small-caps  !important;">sucursal</span>
+                        <br></br><span style="color:rgb(209,65,36);letter-spacing:1px;font-family: 'latosmallcaps' !important;">sucursal</span>
                     </p>                    
                 </div>
                 <div class="col-xs-2">                        
