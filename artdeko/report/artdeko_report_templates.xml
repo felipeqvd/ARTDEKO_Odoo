@@ -301,7 +301,7 @@
         <t t-set="doc" t-value="doc.with_context({'lang':doc.partner_id.lang})" />
         <div class="page">
             <div class="oe_structure"/>            
-            <div class="row">
+            <div class="row" style="font-family: 'Rockwell' !important;">
                 <div class="col-xs-1">                        
                 </div>
                 <div class="col-xs-10 text-right">
@@ -318,15 +318,15 @@
                 <div class="col-xs-1">                        
                 </div>                              
             </div>
-            <div style="padding:5px 30px 5px 30px;">
+            <div style="padding:5px 30px 5px 30px;font-family: 'Rockwell' !important;">
                 <div style="border-bottom:1px solid rgb(209,65,36) !important;">    
-                    <div class="row" style="vertical-align:botton">
-                        <div class="col-xs-5" style="vertical-align:botton">
-                            <h3>
-                                <span t-esc="doc.company_id.name"/>
-                            </h3>                        
+                    <div class="row">
+                        <div class="col-xs-5">
+                            <p>
+                                <span style="font-size:16px;" t-esc="doc.company_id.name"/>
+                            </p>                        
                         </div>
-                        <div class="col-xs-7" style="vertical-align:botton">                    
+                        <div class="col-xs-7">                    
                             <p>
                                 <t t-if="doc.company_id.street_name">
                                    <span t-esc="doc.company_id.street_name"/> 
