@@ -320,7 +320,7 @@
             </div>
             <div style="padding:5px 30px 5px 30px;">
                 <div style="border-bottom:1px solid rgb(209,65,36) !important;">    
-                    <div class="row">
+                    <div class="row" style="vertical-align:botton">
                         <div class="col-xs-5" style="vertical-align:botton">
                             <h3>
                                 <span t-esc="doc.company_id.name"/>
