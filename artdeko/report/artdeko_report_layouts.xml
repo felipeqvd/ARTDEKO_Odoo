@@ -57,7 +57,7 @@
                         <t t-if="company.zip">
                             <span t-field="company.zip"/>
                         </t>                        
-                        <br></br><span style="color:rgb(209,65,36);letter-spacing:1px;font-size:7px;font-family:'latoregular' !important;">SUCURSAL</span>
+                        <br></br><span style="color:rgb(209,65,36);letter-spacing:1px;font-size:8px;font-weight: bold;font-family:'latoregular' !important;">SUCURSAL</span>
                     </p>                    
                 </div>
                 <div class="col-xs-2">                        
