@@ -4,8 +4,7 @@
         <xpath expr="." position="inside">
             <link href="/artdeko/static/src/css/enriqueta_regular_base64.css" rel="stylesheet" type="text/css"/>
             <link href="/artdeko/static/src/css/rockwell_regular_base64.css" rel="stylesheet" type="text/css"/>
-            <link href="/artdeko/static/src/css/lato_regular_base64.css" rel="stylesheet" type="text/css"/>
-            <link href="/artdeko/static/src/css/lato_smallcaps_base64.css" rel="stylesheet" type="text/css"/>
+            <link href="/artdeko/static/src/css/lato_regular_base64.css" rel="stylesheet" type="text/css"/>            
         </xpath>
     </template>    
 </odoo>
