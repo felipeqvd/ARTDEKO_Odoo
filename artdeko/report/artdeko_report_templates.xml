@@ -323,22 +323,22 @@
                     <div class="row">
                         <div class="col-xs-5">
                             <p>
-                                <span style="font-size:16px;" t-esc="doc.company_id.name"/>
+                                <span style="font-size:24px;font-weight: bold;" t-esc="doc.company_id.name"/>
                             </p>                        
                         </div>
                         <div class="col-xs-7">                    
                             <p>
                                 <t t-if="doc.company_id.street_name">
-                                   <span t-esc="doc.company_id.street_name"/> 
+                                   <span t-esc="doc.company_id.street_name.upper()"/> 
                                 </t>
                                 <t t-if="doc.company_id.street2">
-                                    <span t-esc="doc.company_id.street2"/> - 
+                                    <span t-esc="doc.company_id.street2.upper()"/> - 
                                 </t>                        
                                 <t t-if="doc.company_id.street_number2">
-                                    <span t-esc="doc.company_id.street_number2"/> 
+                                    <span t-esc="doc.company_id.street_number2.upper()"/> 
                                 </t>
                                 <t t-if="doc.company_id.l10n_mx_edi_colony">
-                                    <span t-esc="doc.company_id.l10n_mx_edi_colony"/>
+                                    <span t-esc="doc.company_id.l10n_mx_edi_colony.upper()"/>
                                 </t>
                             </p>                                            
                         </div>                                    
