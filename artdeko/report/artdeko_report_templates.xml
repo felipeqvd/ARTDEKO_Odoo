@@ -593,7 +593,7 @@
 
             <div class="clearfix">
                 <div class="row" name="total">
-                    <div class="col-xs-4 pull-right" style="padding-right:30px;">
+                    <div class="col-xs-4 pull-right">
                         <table class="table table-condensed" style="min-width: 200px;max-width: 350px;">
                             <tr class="border-black" style="border-bottom:1px solid #dddddd;">
                                 <td>
@@ -635,6 +635,8 @@
                                 </td>
                             </tr>
                         </table>
+                    </div>
+                    <div class="col-xs-1 pull-right">                        
                     </div>
                 </div>
             </div>
