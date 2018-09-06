@@ -594,11 +594,24 @@
                     <p style="page-break-before:always;"> </p>
                 </t>
             </t>
-
+            
             <div class="clearfix">
                 <div class="row" name="total" style="padding:30px; font-family: 'Rockwell' !important;">
                     <div class="col-xs-7">
-                                                
+                        <table class="table table-condensed" style="min-width: 200px;max-width: 350px;">
+                            <tr>
+                                <th class="text-center">Importe en letras</th>                                               
+                            </tr>
+                            <tr t-if="display_discount" class="border-black" style="border-bottom:1px solid #dddddd;">
+                                <td>
+                                    <strong>Subtotal 1 &#40;<span t-field="doc.pricelist_id.currency_id.name"></span>&#41;</strong>
+                                </td>
+                                <td class="text-right">
+                                    <span t-field="doc.amount_undiscounted"
+                                        t-options='{"widget": "monetary", "display_currency": doc.pricelist_id.currency_id}'/>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
                     <div class="col-xs-5">
                         <table class="table table-condensed" style="min-width: 200px;max-width: 350px;">

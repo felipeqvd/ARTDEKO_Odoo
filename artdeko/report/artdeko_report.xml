@@ -26,7 +26,7 @@
             print_report_name="'Cotización - %s' % (object.name)"
             paperformat="paperformat_artdeko_letter"
         />
-        <report 
+        <!--<report 
             id="action_report_saleorder_quotation_artdeko2"
             string="Cotizacion2"
             model="sale.order" 
@@ -45,7 +45,7 @@
             name="artdeko.report_saleorder_order"
             print_report_name="'Orden de compra - %s' % (object.name)"
             paperformat="paperformat_artdeko_letter"
-        />        
+        /> -->       
         <report 
             id="action_report_saleorder_order_artdeko"
             string="Orden de compra"
