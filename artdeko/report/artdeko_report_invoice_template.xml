@@ -107,7 +107,19 @@
 
                     <div class="clearfix">
                         <div id="total" class="row">
-                            <div class="col-xs-4 pull-right">
+                            <div class="col-xs-7">
+                                <table class="table table-condensed" style="min-width: 200px;max-width: 350px;">
+                                    <tr>
+                                        <th class="text-center">Importe en letras</th>                                               
+                                    </tr>
+                                    <tr class="border-black" style="border-bottom:1px solid #dddddd;">                                
+                                        <td name="importe_letras" class="text-right">
+                                            <span t-esc="doc.sale_amount_to_text()"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="col-xs-5">
                                 <table class="table table-condensed" style="min-width: 250px;max-width: 400px;">
                                     <tr class="border-black" style="border-bottom:1px solid #dddddd;">
                                         <td><strong>Subtotal</strong></td>
@@ -145,10 +157,7 @@
                                 </table>
                             </div>
                         </div>
-                    </div>
-                    <p t-if="o.comment">
-                        <span t-field="o.comment"/>
-                    </p>
+                    </div>                    
                     <p t-if="o.payment_term_id">
                         <span t-field="o.payment_term_id.note"/>
                     </p>

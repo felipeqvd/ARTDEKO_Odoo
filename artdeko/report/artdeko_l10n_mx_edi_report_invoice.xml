@@ -64,11 +64,9 @@
             </t>
         </xpath>
 
-        <xpath expr="//p[@t-if='o.comment']" position="before">
-            <t t-if="o.l10n_mx_edi_cfdi_uuid">
-                <p>
-                    <span t-esc="o.l10n_mx_edi_amount_to_text()"/>
-                </p>
+        <xpath expr="//td[@name='importe_letras']" position="inside">
+            <t t-if="o.l10n_mx_edi_cfdi_uuid">                
+                <span t-esc="o.l10n_mx_edi_amount_to_text()"/>                
             </t>
         </xpath>
         <xpath expr="//p[@t-if='o.fiscal_position_id.note']" position="after">
