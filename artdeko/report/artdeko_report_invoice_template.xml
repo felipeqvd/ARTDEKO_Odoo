@@ -153,7 +153,7 @@
             </t>
         </template>
 
-        <template id="report_invoice_document_with_payments" inherit_id="account.report_invoice_document" primary="True">
+        <template id="report_invoice_document_with_payments" inherit_id="artdeko.report_invoice_document" primary="True">
             <xpath expr="//div[@id='total']/div/table" position="inside">
                 <t t-set="payments_vals" t-value="o._get_payments_vals()"/>
                 <t t-foreach="payments_vals" t-as="payment_vals">
@@ -180,7 +180,7 @@
         <template id="report_invoice">
             <t t-call="web.html_container">
                 <t t-foreach="docs" t-as="o">
-                    <t t-call="account.report_invoice_document" t-lang="o.partner_id.lang"/>
+                    <t t-call="artdeko.report_invoice_document" t-lang="o.partner_id.lang"/>
                 </t>
             </t>
         </template>
@@ -188,7 +188,7 @@
         <template id="report_invoice_with_payments">
             <t t-call="web.html_container">
                 <t t-foreach="docs" t-as="o">
-                    <t t-call="account.report_invoice_document_with_payments" t-lang="o.partner_id.lang"/>
+                    <t t-call="artdeko.report_invoice_document_with_payments" t-lang="o.partner_id.lang"/>
                 </t>
             </t>
         </template>
