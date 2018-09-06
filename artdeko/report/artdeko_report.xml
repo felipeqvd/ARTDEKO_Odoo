@@ -55,6 +55,16 @@
             name="artdeko.report_saleorder_order"
             print_report_name="'Orden de compra - %s' % (object.name)"
             paperformat="paperformat_artdeko_letter"
+        /> 
+        <report 
+            id="action_report_invoice_artdeko"
+            string="Factura Artdeko"
+            model="account.invoice" 
+            report_type="qweb-pdf"
+            file="artdeko.report_invoice" 
+            name="artdeko.report_invoice"
+            print_report_name="'Factura - %s' % (object.name)"
+            paperformat="paperformat_artdeko_letter"
         />        
     </data>
 </odoo>
