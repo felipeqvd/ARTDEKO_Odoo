@@ -592,20 +592,38 @@
             </t>
 
             <div class="clearfix">
-                <div class="row" name="total" style="font-family: 'Rockwell' !important;">
+                <div class="row" name="total" style="padding:30px; font-family: 'Rockwell' !important;">
                     <div class="col-xs-7">                        
                     </div>
-                    <div class="col-xs-4">
+                    <div class="col-xs-5">
                         <table class="table table-condensed" style="min-width: 200px;max-width: 350px;">
                             <tr class="border-black" style="border-bottom:1px solid #dddddd;">
                                 <td>
-                                    <strong>Subtotal &#40;<span t-field="doc.pricelist_id.currency_id.name"></span>&#41;</strong>
+                                    <strong>Subtotal 1 &#40;<span t-field="doc.pricelist_id.currency_id.name"></span>&#41;</strong>
+                                </td>
+                                <td class="text-right">
+                                    <span t-field="doc.amount_undiscounted"
+                                        t-options='{"widget": "monetary", "display_currency": doc.pricelist_id.currency_id}'/>
+                                </td>
+                            </tr>
+                            <tr class="border-black" style="border-bottom:1px solid #dddddd;">
+                                <td>
+                                    <strong>Descuentos &#40;<span t-field="doc.pricelist_id.currency_id.name"></span>&#41;</strong>
+                                </td>
+                                <td class="text-right">
+                                    <span t-esc="doc.amount_undiscounted - doc.amount_untaxed"
+                                        t-options='{"widget": "monetary", "display_currency": doc.pricelist_id.currency_id}'/>
+                                </td>
+                            </tr>
+                            <tr class="border-black" style="border-bottom:1px solid #dddddd;">
+                                <td>
+                                    <strong>Subtotal 2 &#40;<span t-field="doc.pricelist_id.currency_id.name"></span>&#41;</strong>
                                 </td>
                                 <td class="text-right">
                                     <span t-field="doc.amount_untaxed"
                                         t-options='{"widget": "monetary", "display_currency": doc.pricelist_id.currency_id}'/>
                                 </td>
-                            </tr>
+                            </tr>                            
                             <t t-foreach="doc._get_tax_amount_by_group()" t-as="amount_by_group">
                                 <tr style="border-bottom:1px solid #dddddd;">
                                     <t t-if="amount_by_group[3] == 1 and doc.amount_untaxed == amount_by_group[2]">
@@ -637,9 +655,7 @@
                                 </td>
                             </tr>
                         </table>
-                    </div>
-                    <div class="col-xs-1">                        
-                    </div>
+                    </div>                    
                 </div>
             </div>
             
