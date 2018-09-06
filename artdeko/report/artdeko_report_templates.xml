@@ -604,7 +604,7 @@
                             </tr>
                             <tr class="border-black" style="border-bottom:1px solid #dddddd;">                                
                                 <td class="text-right">
-                                    <span t-esc="doc.sale_order_words()"/>
+                                    <span t-esc="doc.sale_amount_to_text()"/>
                                 </td>
                             </tr>
                         </table>
