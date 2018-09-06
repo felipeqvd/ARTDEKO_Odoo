@@ -69,4 +69,73 @@
             </div>
         </div>
     </template>
+    <template id="invoice_layout">        
+        <t t-if="not o and doc">
+            <t t-set="o" t-value="doc"/>
+        </t>
+        <t t-if="o and 'company_id' in o">
+            <t t-set="company" t-value="o.company_id.sudo()"/>
+        </t>
+        <t t-if="not o or not 'company_id' in o">
+            <t t-set="company" t-value="res_company"/>
+        </t>
+        <div class="header">
+            <div class="row" style="padding-top:50px;">
+                <div class="col-xs-6">
+                    <img style="padding-left:100px;" class="img img-responsive" src="/artdeko/static/src/img/logo_texto.png" width="300px"/>                    
+                </div>                
+                <div class="col-xs-6" name="company_address">                        
+                    <div style="padding-left:100px;padding-top:30px; font-size:12px; font-weight: bold; font-family: 'latoregular' !important; letter-spacing: 3px;" t-if="company.website"><span t-esc="company.website[7:].upper()"/></div>                 
+                </div>
+            </div>
+        </div>
+
+        <div class="article o_report_layout_standard">
+            <t t-raw="0" />
+        </div>
+        
+        <div class="footer">
+            <div class="row" style="padding-top:5px;padding-bottom:40px;">
+                <div class="col-xs-2">                        
+                </div>
+                <div class="col-xs-8" style="font-size:11px;line-height: 1; font-family: 'Rockwell'; ">
+                    <p><span t-esc="company.website[11:]"/><br></br><span style="color:rgb(209,65,36);letter-spacing:3px; font-size:8px;font-weight: bold;font-family: 'latoregular' !important; ">WEB</span></p>
+                    <p class="small_titles_footer"><span t-field="company.phone"/><br></br><span style="color:rgb(209,65,36);letter-spacing:3px; font-size:8px;font-weight: bold;font-family: 'latoregular' !important; ">TELÉFONOS</span></p>
+                    <p>
+                        <t t-if="company.street_name">
+                            <span t-field="company.street_name"/>, 
+                        </t>
+                        <t t-if="company.street2">
+                            <span t-field="company.street2"/> 
+                        </t>                        
+                        <t t-if="company.street_number2">
+                            <br></br><span t-field="company.street_number2"/>, 
+                        </t>
+                        <t t-if="company.l10n_mx_edi_colony">
+                            <span t-field="company.l10n_mx_edi_colony"/>, 
+                        </t>
+                        <t t-if="company.city">
+                            <span t-field="company.city"/>, 
+                        </t>
+                        <t t-if="company.state_id">
+                            <span t-field="company.state_id"/>, 
+                        </t>
+                        <t t-if="company.country_id">
+                            <span t-field="company.country_id"/>, CP 
+                        </t>
+                        <t t-if="company.zip">
+                            <span t-field="company.zip"/>
+                        </t>                        
+                        <br></br><span style="color:rgb(209,65,36);letter-spacing:3px;font-size:8px;font-weight: bold;font-family:'latoregular' !important;">SUCURSAL</span>
+                    </p>                    
+                </div>
+                <div class="col-xs-2">                        
+                </div>                              
+            </div>            
+            <div style="background-color:rgb(209,65,36);height:100px;margin-left:-15px;margin-right:-15px">
+                <img src="/artdeko/static/src/img/logo_footer.png" height="100px"/>                
+                <span style="color: #ffffff;letter-spacing: 3px; font-size:12px; font-family: 'Rockwell' !important; " t-esc="company.report_header.upper()"/>
+            </div>
+        </div>
+    </template>
 </odoo>
