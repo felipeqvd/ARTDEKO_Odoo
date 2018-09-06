@@ -603,7 +603,7 @@
                                 <th class="text-center">Importe en letras</th>                                               
                             </tr>
                             <tr class="border-black" style="border-bottom:1px solid #dddddd;">                                
-                                <td class="text-right">
+                                <td class="text-center">
                                     <span t-esc="doc.sale_amount_to_text()"/>
                                 </td>
                             </tr>
