@@ -27,7 +27,7 @@
             paperformat="paperformat_artdeko_letter"
         />
         <report 
-            id="action_report_saleorder_order_artdeko2"
+            id="action_report_saleorder_quotation_artdeko2"
             string="Cotizacion2"
             model="sale.order" 
             report_type="qweb-html"
