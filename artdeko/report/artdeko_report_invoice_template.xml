@@ -113,8 +113,7 @@
                                         <th class="text-center">Importe en letras</th>                                               
                                     </tr>
                                     <tr class="border-black" style="border-bottom:1px solid #dddddd;">                                
-                                        <td name="importe_letras" class="text-right">
-                                            <span t-esc="doc.sale_amount_to_text()"/>
+                                        <td name="importe_letras" class="text-right">                                            
                                         </td>
                                     </tr>
                                 </table>

@@ -63,7 +63,7 @@
                 <td></td>
             </t>
         </xpath>
-
+        <!--En este bloque de xpath se modificaron los atributos expr y position, con respecto a la localización mexicana -->
         <xpath expr="//td[@name='importe_letras']" position="inside">
             <t t-if="o.l10n_mx_edi_cfdi_uuid">                
                 <span t-esc="o.l10n_mx_edi_amount_to_text()"/>                
