@@ -5,7 +5,7 @@
             <t t-call="artdeko.invoice_layout">
                 <t t-set="o" t-value="o.with_context({'lang':o.partner_id.lang})" />
                 <div class="page">
-                    <div class="row">
+                    <div class="row" style="font-family: 'Rockwell' !important;">
                         <div class="col-xs-1">                            
                         </div>
                         <div name="invoice_address" class="col-xs-7">
@@ -62,7 +62,7 @@
 
                     <!-- Is there a discount on at least one line? -->
                     <t t-set="display_discount" t-value="any([l.discount for l in o.invoice_line_ids])"/>
-                    <div class="row">
+                    <div class="row" style="font-family: 'Rockwell' !important;">
                         <div class="col-xs-1">                            
                         </div> 
                         <div class="col-xs-10"> 
@@ -74,9 +74,7 @@
                                         <th class="text-center">Unidad</th>
                                         <th>Description</th>
                                         <th class="hidden">Source Document</th>                                        
-                                        <th class="text-right">Precio unidad</th>
-                                        <th t-if="display_discount" class="text-right">Descuento(%)</th>
-                                        <th class="text-right">Impuestos</th>
+                                        <th class="text-right">Precio unidad</th>                                        
                                         <th class="text-right">Importe</th>
                                     </tr>
                                 </thead>
@@ -124,7 +122,7 @@
                         </div>    
                     </div>  
                     <div class="clearfix">
-                        <div id="total" class="row">
+                        <div id="total" class="row" style="font-family: 'Rockwell' !important;">
                             <div class="col-xs-1">                            
                             </div>
                             <div class="col-xs-6">
