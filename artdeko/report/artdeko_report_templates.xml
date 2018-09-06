@@ -375,7 +375,7 @@
                     </div>
                 </div>
             </div>
-            <div style="padding:5px 30px 5px 30px;">
+            <div style="padding:5px 30px 5px 30px;font-family: 'Rockwell' !important;">
                 <div style="border-bottom:1px solid rgb(209,65,36) !important; font-size:14px !important;">    
                     <div class="row">
                         <div class="col-xs-2">
@@ -520,7 +520,7 @@
             <t t-set="display_discount" t-value="any([l.discount for l in doc.order_line])"/>
 
             <t t-foreach="doc.order_lines_layouted()" t-as="page">
-                <div style="padding:30px;">
+                <div style="padding:30px;font-family: 'Rockwell' !important;">
                     <table class="table table-condensed">
                         <thead>
                             <tr>
@@ -592,8 +592,10 @@
             </t>
 
             <div class="clearfix">
-                <div class="row" name="total">
-                    <div class="col-xs-4 pull-right">
+                <div class="row" name="total" style="font-family: 'Rockwell' !important;">
+                    <div class="col-xs-7">                        
+                    </div>
+                    <div class="col-xs-4">
                         <table class="table table-condensed" style="min-width: 200px;max-width: 350px;">
                             <tr class="border-black" style="border-bottom:1px solid #dddddd;">
                                 <td>
@@ -636,7 +638,7 @@
                             </tr>
                         </table>
                     </div>
-                    <div class="col-xs-1 pull-right">                        
+                    <div class="col-xs-1">                        
                     </div>
                 </div>
             </div>
