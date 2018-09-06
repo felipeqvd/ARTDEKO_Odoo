@@ -82,7 +82,7 @@
         <div class="header">
             <div class="row" style="padding-top:50px;">
                 <div class="col-xs-6">
-                    <img style="padding-left:100px;" class="img img-responsive" src="/artdeko/static/src/img/logo_texto.png" width="300px"/>                    
+                    <img style="padding-left:100px;" class="img img-responsive" src="/artdeko/static/src/img/logo.png" width="300px"/>                    
                 </div>                
                 <div class="col-xs-6" name="company_address">                        
                     <div style="padding-left:100px;padding-top:30px; font-size:12px; font-weight: bold; font-family: 'latoregular' !important; letter-spacing: 3px;" t-if="company.website"><span t-esc="company.website[7:].upper()"/></div>                 

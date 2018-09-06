@@ -63,7 +63,8 @@
             report_type="qweb-pdf"
             file="artdeko.report_invoice" 
             name="artdeko.report_invoice"
-            print_report_name="'Factura - %s' % (object.name)"
+            attachment="(object.state in ('open','paid')) and ('INV'+(object.number or '').replace('/','')+'.pdf')"
+            print_report_name="(object._get_printed_report_name())"
             paperformat="paperformat_artdeko_letter"
         />        
     </data>
