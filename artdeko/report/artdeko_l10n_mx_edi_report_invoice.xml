@@ -30,7 +30,8 @@
             </t>
         </xpath>
         <xpath expr="//td[@name='certificado_sat']" position="inside">
-            <t t-if="o.l10n_mx_edi_cfdi_uuid">                
+            <t t-if="o.l10n_mx_edi_cfdi_uuid">
+                <span t-esc="xml.get('noCertificado', xml.get('NoCertificado'))"/>
             </t>
         </xpath>
         <xpath expr="//td[@name='folio_fiscal']" position="inside">
@@ -98,21 +99,33 @@
                 <div class="row" id='complement'>
                     <div class="col-xs-1">                            
                     </div>                    
-                    <div class="complement-details col-xs-8">
+                    <div class="complement-details col-xs-7">
                         <div class="digital-stamp">
-                            <span>Digital stamp of the emitter</span>
+                            <span>Sello digital del CFDI</span>
                         </div>
                         <div class="digital-stamp-content">
                             <span t-esc="xml.get('sello', xml.get('Sello', 'No identificado'))"/>
                         </div>
                         <div class="digital-stamp">
-                            <span>Digital stamp SAT</span>
+                            <span>Sello difital del SAT</span>
                         </div>
                         <div class="digital-stamp-content">
                             <span t-esc="tfd.get('selloSAT', tfd.get('SelloSAT', 'No identificado'))"/>
+                        </div>
+                        <div class="digital-stamp">
+                            <span>Cadena original del complemento del certificado digital del SAT</span>
+                        </div>
+                        <div class="digital-stamp-content">
+                            <span class="nowrap" t-esc="tfd_original_string"/>
+                        </div>
+                        <div t-if="xml.Emisor.xpath('cfdi:ExpedidoEn', namespaces=xml.nsmap)" class="digital-stamp">
+                            <span>Emitido de</span>
+                        </div>
+                        <div t-if="xml.Emisor.xpath('cfdi:ExpedidoEn', namespaces=xml.nsmap)" class="digital-stamp-content">
+                            <span t-esc="' | '.join([ '%s: %s' % (key, value) for key, value in xml.Emisor.ExpedidoEn.items()])"/>
                         </div>                        
                     </div>
-                    <div class="barcode col-xs-2">
+                    <div class="barcode col-xs-3">
                         <t t-set="sello" t-value="xml.get('Sello', 'No identificado')[-8:]"/>
                         <img t-att-src="'/report/barcode/?type=QR&amp;value=%s' % quote_plus(
                             'https://verificacfdi.facturaelectronica.sat.gob.mx/default.aspx?' + keep_query(
@@ -127,19 +140,7 @@
                 <div class="row" id='complement'>
                     <div class="col-xs-1">                            
                     </div>                    
-                    <div class="complement-details col-xs-10">                        
-                        <div class="digital-stamp">
-                            <span>Cadena original del complemento del certificado digital del SAT</span>
-                        </div>
-                        <div class="digital-stamp-content">
-                            <span class="nowrap" t-esc="tfd_original_string"/>
-                        </div>
-                        <div t-if="xml.Emisor.xpath('cfdi:ExpedidoEn', namespaces=xml.nsmap)" class="digital-stamp">
-                            <span>Issued from</span>
-                        </div>
-                        <div t-if="xml.Emisor.xpath('cfdi:ExpedidoEn', namespaces=xml.nsmap)" class="digital-stamp-content">
-                            <span t-esc="' | '.join([ '%s: %s' % (key, value) for key, value in xml.Emisor.ExpedidoEn.items()])"/>
-                        </div>
+                    <div class="complement-details col-xs-10">        
                         <div class="digital-stamp">
                             <span>Extra Info</span>
                         </div>
