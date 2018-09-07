@@ -18,10 +18,10 @@
                                     </tr>
                                     <tr>
                                         <td class="text-left">
-                                            <p t-field="o.partner_id"/>
+                                            <t t-field="o.partner_id"/>
                                         </td>
                                         <td class="text-left">
-                                            <div t-if="o.partner_id.vat"><t t-esc="o.company_id.country_id.vat_label or 'RFC'"/>: <span t-field="o.partner_id.vat"/></div>
+                                            <t t-if="o.partner_id.vat"><t t-esc="o.company_id.country_id.vat_label or 'RFC'"/>: <span t-field="o.partner_id.vat"/></t>
                                         </td>                                        
                                     </tr>
                                     <tr>
@@ -51,25 +51,55 @@
                             <table class="table table-condensed">                                
                                 <tbody>
                                     <tr>
-                                        <td class="text-center">
+                                        <td class="text-center" style="background-color:rgb(209,209,209);border-width:0px !important;">
                                             <strong>Fecha:</strong>
                                         </td>                                        
                                     </tr>
                                     <tr>
                                         <td class="text-center">
-                                            <p t-field="o.date_invoice"/>
+                                            <t t-field="o.date_invoice"/>
                                         </td>                                        
                                     </tr>
                                     <tr>
-                                        <td class="text-center">
+                                        <td class="text-center" style="background-color:rgb(209,209,209);border-width:0px !important;">
+                                            <strong>Certificao del emisor:</strong>
+                                        </td>                                        
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center" name="folio_fiscal">
+                                            <t t-field="o.date_invoice"/>
+                                        </td>                                        
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center" style="background-color:rgb(209,209,209);border-width:0px !important;">
+                                            <strong>Certificado del SAT:</strong>
+                                        </td>                                        
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center" name="folio_fiscal">
+                                            <t t-field="o.date_invoice"/>
+                                        </td>                                        
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center" style="background-color:rgb(209,209,209);border-width:0px !important;">
                                             <strong>Folio fiscal:</strong>
                                         </td>                                        
                                     </tr>
                                     <tr>
                                         <td class="text-center" name="folio_fiscal">
-                                            <p t-field="o.date_invoice"/>
+                                            <t t-field="o.date_invoice"/>
                                         </td>                                        
-                                    </tr>                                     
+                                    </tr>   
+                                    <tr>
+                                        <td class="text-center" style="background-color:rgb(209,209,209);border-width:0px !important;">
+                                            <strong>Fecha timbrado:</strong>
+                                        </td>                                        
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center" name="folio_fiscal">
+                                            <t t-field="o.date_invoice"/>
+                                        </td>                                        
+                                    </tr>                                  
                                 </tbody>
                             </table>
                         </div>
