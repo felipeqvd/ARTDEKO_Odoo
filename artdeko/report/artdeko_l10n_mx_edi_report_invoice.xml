@@ -129,7 +129,7 @@
                     </div>                    
                     <div class="complement-details col-xs-10">                        
                         <div class="digital-stamp">
-                            <span>Original chain complement of digital certification SAT</span>
+                            <span>Cadena original del complemento del certificado digital del SAT</span>
                         </div>
                         <div class="digital-stamp-content">
                             <span class="nowrap" t-esc="tfd_original_string"/>
