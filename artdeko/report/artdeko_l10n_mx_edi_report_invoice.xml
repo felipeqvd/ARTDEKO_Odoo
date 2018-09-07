@@ -49,32 +49,6 @@
                 <span t-esc="tfd.get('FechaTimbrado', '').replace('T', ' ')"/>
             </t>
         </xpath>
-        <xpath expr="//div[@name='reference']" position="after">
-            <t t-if="o.l10n_mx_edi_cfdi_uuid">
-                <t t-if="xml.Receptor.get('UsoCFDI', False)">
-                    <t t-set="usage" t-value="xml.Receptor.get('UsoCFDI')"/>
-                    <div name="usage" class="col-xs-2">
-                        <strong>Usage:</strong>
-                        <p><span t-esc="usage"/> - <span t-field="o.l10n_mx_edi_usage"/></p>
-                    </div>
-                </t>
-                <t t-if="o.l10n_mx_edi_payment_method_id">
-                    <div class="col-xs-2">
-                        <strong>Payment Way:</strong>
-                        <p t-esc="' - '.join([o.l10n_mx_edi_payment_method_id.code, o.l10n_mx_edi_payment_method_id.name])"/>
-                    </div>
-                </t>
-                <div class="col-xs-2">
-                    <strong>Payment Method:</strong>
-                    <p t-esc="xml.get('formaDePago', xml.get('MetodoPago'))"/>
-                </div>
-                <div class="col-xs-2" t-if="xml.get('NumCtaPago')">
-                    <strong>Bank Account:</strong>
-                    <p t-esc="xml.get('NumCtaPago')"/>
-                </div>
-            </t>
-        </xpath>
-
         <xpath expr="//table[@name='invoice_line_table']/thead/tr/th[1]" position="before">
             <th t-if="o.l10n_mx_edi_cfdi_uuid and xml.get('Version')">Código SAT</th>
         </xpath>
