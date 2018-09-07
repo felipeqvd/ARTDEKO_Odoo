@@ -180,7 +180,7 @@
                                             <t t-if="len(o.tax_line_ids) == 1 and o.amount_untaxed == amount_by_group[2]">
                                                 <td>
                                                     <span t-esc="amount_by_group[0]"/>
-                                                    <span>&amp;nbsp;<span>on</span>
+                                                    <span>&amp;nbsp;<span>de</span>
                                                         <t t-esc="amount_by_group[4]"/>
                                                     </span>
                                                 </td>
