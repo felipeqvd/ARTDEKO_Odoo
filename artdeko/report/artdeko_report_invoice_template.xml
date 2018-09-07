@@ -40,9 +40,9 @@
                         </div>
                         <div class="col-xs-4">
                             
-                            <t t-if="o.pricelist_id.currency_id.name == 'MXN'"><t t-set="prefijo" t-value="P"/></t>
-                            <t t-if="o.pricelist_id.currency_id.name == 'USD'"><t t-set="prefijo" t-value="D"/></t>
-                            <t t-if="o.pricelist_id.currency_id.name == 'EUR'"><t t-set="prefijo" t-value="E"/></t>
+                            <t t-if="o.currency_id.name == 'MXN'"><t t-set="prefijo" t-value="P"/></t>
+                            <t t-if="o.currency_id.name == 'USD'"><t t-set="prefijo" t-value="D"/></t>
+                            <t t-if="o.currency_id.name == 'EUR'"><t t-set="prefijo" t-value="E"/></t>
                             <h4>
                                 <span t-if="o.type == 'out_invoice' and (o.state == 'open' or o.state == 'paid')">Factura <span t-esc="prefijo"/></span>
                                 <span t-if="o.type == 'out_invoice' and o.state == 'draft'">Borrador - factura </span>
@@ -66,11 +66,11 @@
                                     </tr>
                                     <tr>
                                         <td class="text-center" style="background-color:rgb(209,209,209);border-width:0px !important;">
-                                            <strong>Certificao del emisor:</strong>
+                                            <strong>Certificado del emisor:</strong>
                                         </td>                                        
                                     </tr>
                                     <tr>
-                                        <td class="text-center" name="folio_fiscal">
+                                        <td class="text-center" name="certificado_emisor">
                                             <span t-field="o.date_invoice"/>
                                         </td>                                        
                                     </tr>
@@ -80,7 +80,7 @@
                                         </td>                                        
                                     </tr>
                                     <tr>
-                                        <td class="text-center" name="folio_fiscal">
+                                        <td class="text-center" name="certificado_sat">
                                             <span t-field="o.date_invoice"/>
                                         </td>                                        
                                     </tr>
@@ -99,7 +99,7 @@
                                         </td>                                        
                                     </tr>
                                     <tr>
-                                        <td class="text-center" name="folio_fiscal">
+                                        <td class="text-center" name="fecha_timbrado">
                                             <span t-field="o.date_invoice"/>
                                         </td>                                        
                                     </tr>                                  

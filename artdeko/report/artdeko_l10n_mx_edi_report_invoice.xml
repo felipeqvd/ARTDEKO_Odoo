@@ -19,6 +19,11 @@
                 <span t-if="o.company_id.vat != o.l10n_mx_edi_cfdi_supplier_rfc">XML VAT: <span t-esc="o.l10n_mx_edi_cfdi_supplier_rfc"></span></span>
             </t>
         </xpath>
+        <xpath expr="//td[@name='certificado_emisor']" position="inside">
+            <t t-if="o.l10n_mx_edi_cfdi_uuid">
+                <span t-esc="tfd.get('UUID')"/>
+            </t>
+        </xpath>
         <xpath expr="//td[@name='folio_fiscal']" position="inside">
             <t t-if="o.l10n_mx_edi_cfdi_uuid">
                 <span t-esc="tfd.get('UUID')"/>
