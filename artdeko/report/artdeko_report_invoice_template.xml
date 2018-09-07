@@ -12,7 +12,7 @@
                             <table class="table table-condensed">                                
                                 <tbody>
                                     <tr>
-                                        <td class="text-center" style="background-color:rgb(209,209,209);style="border-width:0px !important;" colspan="2">
+                                        <td class="text-center" style="background-color:rgb(209,209,209);border-width:0px !important;" colspan="2">
                                             <strong>Datos del cliente</strong>
                                         </td>                                        
                                     </tr>
@@ -57,6 +57,16 @@
                                     </tr>
                                     <tr>
                                         <td class="text-center">
+                                            <p t-field="o.date_invoice"/>
+                                        </td>                                        
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">
+                                            <strong>Folio fiscal:</strong>
+                                        </td>                                        
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center" name="folio_fiscal">
                                             <p t-field="o.date_invoice"/>
                                         </td>                                        
                                     </tr>                                     
