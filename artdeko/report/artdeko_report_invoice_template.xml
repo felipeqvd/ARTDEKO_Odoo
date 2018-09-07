@@ -18,7 +18,7 @@
                                     </tr>
                                     <tr>
                                         <td class="text-left">
-                                            <t t-field="o.partner_id"/>
+                                            <span t-field="o.partner_id"/>
                                         </td>
                                         <td class="text-left">
                                             <t t-if="o.partner_id.vat"><t t-esc="o.company_id.country_id.vat_label or 'RFC'"/>: <span t-field="o.partner_id.vat"/></t>
@@ -57,7 +57,7 @@
                                     </tr>
                                     <tr>
                                         <td class="text-center">
-                                            <t t-field="o.date_invoice"/>
+                                            <span t-field="o.date_invoice"/>
                                         </td>                                        
                                     </tr>
                                     <tr>
@@ -67,7 +67,7 @@
                                     </tr>
                                     <tr>
                                         <td class="text-center" name="folio_fiscal">
-                                            <t t-field="o.date_invoice"/>
+                                            <span t-field="o.date_invoice"/>
                                         </td>                                        
                                     </tr>
                                     <tr>
@@ -77,7 +77,7 @@
                                     </tr>
                                     <tr>
                                         <td class="text-center" name="folio_fiscal">
-                                            <t t-field="o.date_invoice"/>
+                                            <span t-field="o.date_invoice"/>
                                         </td>                                        
                                     </tr>
                                     <tr>
@@ -87,7 +87,7 @@
                                     </tr>
                                     <tr>
                                         <td class="text-center" name="folio_fiscal">
-                                            <t t-field="o.date_invoice"/>
+                                            <span t-field="o.date_invoice"/>
                                         </td>                                        
                                     </tr>   
                                     <tr>
@@ -97,7 +97,7 @@
                                     </tr>
                                     <tr>
                                         <td class="text-center" name="folio_fiscal">
-                                            <t t-field="o.date_invoice"/>
+                                            <span t-field="o.date_invoice"/>
                                         </td>                                        
                                     </tr>                                  
                                 </tbody>
