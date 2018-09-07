@@ -39,7 +39,7 @@
                             <div t-if="o.partner_id.vat" class="mt16"><t t-esc="o.company_id.country_id.vat_label or 'TIN'"/>: <span t-field="o.partner_id.vat"/></div>
                         </div>
                         <div class="col-xs-4">
-                            <t t-set="prefijo" t-value=" "/>
+                            
                             <t t-if="o.pricelist_id.currency_id.name == 'MXN'"><t t-set="prefijo" t-value="P"/></t>
                             <t t-if="o.pricelist_id.currency_id.name == 'USD'"><t t-set="prefijo" t-value="D"/></t>
                             <t t-if="o.pricelist_id.currency_id.name == 'EUR'"><t t-set="prefijo" t-value="E"/></t>
@@ -52,7 +52,7 @@
                                 <span t-if="o.type == 'in_invoice'">Factura - proveedor </span>
                                 <span t-field="o.number"/>
                             </h4>
-                            <table class="table table-condensed">                                
+                            <table>                                
                                 <tbody>
                                     <tr>
                                         <td class="text-center" style="background-color:rgb(209,209,209);border-width:0px !important;">
