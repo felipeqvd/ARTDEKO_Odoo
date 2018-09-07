@@ -40,34 +40,7 @@
                         </div>
                         <div class="col-xs-1">                            
                         </div>
-                    </div>                    
-
-                    <div class="row mt32 mb32">
-                        <div class="col-xs-1">                            
-                        </div>
-                        <div class="col-xs-2" t-if="o.name">
-                            <strong>Description:</strong>
-                            <p t-field="o.name"/>
-                        </div>                        
-                        <div class="col-xs-2" t-if="o.date_due and o.type == 'out_invoice' and (o.state == 'open' or o.state == 'paid')">
-                            <strong>Due Date:</strong>
-                            <p t-field="o.date_due"/>
-                        </div>
-                        <div class="col-xs-2" t-if="o.origin">
-                            <strong>Source:</strong>
-                            <p t-field="o.origin"/>
-                        </div>
-                        <div class="col-xs-2" t-if="o.partner_id.ref">
-                            <strong>Customer Code:</strong>
-                            <p t-field="o.partner_id.ref"/>
-                        </div>
-                        <div name="reference" class="col-xs-2" t-if="o.reference">
-                            <strong>Reference:</strong>
-                            <p t-field="o.reference"/>
-                        </div>
-                        <div class="col-xs-1">                            
-                        </div>
-                    </div>
+                    </div>            
 
                     <!-- Is there a discount on at least one line? -->
                     <t t-set="display_discount" t-value="any([l.discount for l in o.invoice_line_ids])"/>
@@ -186,6 +159,32 @@
                     <p t-if="o.fiscal_position_id.note">
                         <span t-field="o.fiscal_position_id.note"/>
                     </p>
+                    <div class="row mt32 mb32">
+                        <div class="col-xs-1">                            
+                        </div>
+                        <div class="col-xs-2" t-if="o.name">
+                            <strong>Description:</strong>
+                            <p t-field="o.name"/>
+                        </div>                        
+                        <div class="col-xs-2" t-if="o.date_due and o.type == 'out_invoice' and (o.state == 'open' or o.state == 'paid')">
+                            <strong>Due Date:</strong>
+                            <p t-field="o.date_due"/>
+                        </div>
+                        <div class="col-xs-2" t-if="o.origin">
+                            <strong>Source:</strong>
+                            <p t-field="o.origin"/>
+                        </div>
+                        <div class="col-xs-2" t-if="o.partner_id.ref">
+                            <strong>Customer Code:</strong>
+                            <p t-field="o.partner_id.ref"/>
+                        </div>
+                        <div name="reference" class="col-xs-2" t-if="o.reference">
+                            <strong>Reference:</strong>
+                            <p t-field="o.reference"/>
+                        </div>
+                        <div class="col-xs-1">                            
+                        </div>
+                    </div>
                 </div>
             </t>
         </template>
