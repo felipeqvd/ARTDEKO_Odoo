@@ -11,8 +11,8 @@
                         <div name="invoice_address" class="col-xs-7">
                             <table class="table table-condensed">                                
                                 <tbody>
-                                    <tr>
-                                        <td class="text-center" style="background-color:rgb(209,209,209);">
+                                    <tr style="border-width:0px !important;">
+                                        <td class="text-center" style="background-color:rgb(209,209,209);" colspan="2">
                                             <strong>Datos del cliente</strong>
                                         </td>                                        
                                     </tr>
