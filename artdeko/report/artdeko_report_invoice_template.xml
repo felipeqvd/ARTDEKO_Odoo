@@ -44,12 +44,13 @@
                             <t t-if="o.currency_id.name == 'USD'"><t t-set="prefijo" t-value="D"/></t>
                             <t t-if="o.currency_id.name == 'EUR'"><t t-set="prefijo" t-value="E"/></t>
                             <h4>
-                                <span t-if="o.type == 'out_invoice' and (o.state == 'open' or o.state == 'paid')">Factura <span t-esc="prefijo"/></span>
+                                <span t-if="o.type == 'out_invoice' and (o.state == 'open' or o.state == 'paid')">Factura </span>
                                 <span t-if="o.type == 'out_invoice' and o.state == 'draft'">Borrador - factura </span>
                                 <span t-if="o.type == 'out_invoice' and o.state == 'cancel'">Factura cancelada </span>
                                 <span t-if="o.type == 'out_refund'">Nota crédito NC</span>
                                 <span t-if="o.type == 'in_refund'">Nota crédito - proveedor NC</span>
                                 <span t-if="o.type == 'in_invoice'">Factura - proveedor </span>
+                                <span t-esc="prefijo"/>
                                 <span t-field="o.number"/>
                             </h4>
                             <table>                                

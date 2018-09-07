@@ -21,12 +21,22 @@
         </xpath>
         <xpath expr="//td[@name='certificado_emisor']" position="inside">
             <t t-if="o.l10n_mx_edi_cfdi_uuid">
+                <span t-esc="xml.get('noCertificado', xml.get('NoCertificado'))"/>
+            </t>
+        </xpath>
+        <xpath expr="//td[@name='certificado_sat']" position="inside">
+            <t t-if="o.l10n_mx_edi_cfdi_uuid">
                 <span t-esc="tfd.get('UUID')"/>
             </t>
         </xpath>
         <xpath expr="//td[@name='folio_fiscal']" position="inside">
             <t t-if="o.l10n_mx_edi_cfdi_uuid">
                 <span t-esc="tfd.get('UUID')"/>
+            </t>
+        </xpath>
+        <xpath expr="//td[@name='fecha_timbrado']" position="inside">
+            <t t-if="o.l10n_mx_edi_cfdi_uuid">
+                <span t-esc="tfd.get('FechaTimbrado', '').replace('T', ' ')"/>
             </t>
         </xpath>
         <xpath expr="//div[@name='reference']" position="after">
