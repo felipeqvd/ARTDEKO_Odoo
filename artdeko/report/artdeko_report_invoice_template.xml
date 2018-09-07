@@ -35,14 +35,13 @@
                                 </tbody>
                             </table>
                             <address t-field="o.partner_id"
-                                t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}' />
-                            <div t-if="o.partner_id.vat" class="mt16"><t t-esc="o.company_id.country_id.vat_label or 'TIN'"/>: <span t-field="o.partner_id.vat"/></div>
+                                t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}' />                            
                         </div>
                         <div class="col-xs-4">
                             
-                            <t t-if="o.currency_id.name == 'MXN'"><t t-set="prefijo" t-value="P"/></t>
-                            <t t-if="o.currency_id.name == 'USD'"><t t-set="prefijo" t-value="D"/></t>
-                            <t t-if="o.currency_id.name == 'EUR'"><t t-set="prefijo" t-value="E"/></t>
+                            <t t-if="o.currency_id == 'MXN'"><t t-set="prefijo" t-value="P"/></t>
+                            <t t-if="o.currency_id == 'USD'"><t t-set="prefijo" t-value="D"/></t>
+                            <t t-if="o.currency_id == 'EUR'"><t t-set="prefijo" t-value="E"/></t>
                             <h4>
                                 <span t-if="o.type == 'out_invoice' and (o.state == 'open' or o.state == 'paid')">Factura </span>
                                 <span t-if="o.type == 'out_invoice' and o.state == 'draft'">Borrador - factura </span>
@@ -147,16 +146,7 @@
                                             <span t-field="l.price_subtotal"
                                                 t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
                                         </td>
-                                    </tr>
-                                    <tr t-foreach="range(max(5-len(o.invoice_line_ids),0))" t-as="l">
-                                        <td t-translation="off">&amp;nbsp;</td>
-                                        <td class="hidden"></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td t-if="display_discount"></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
+                                    </tr>                                    
                                 </tbody>
                             </table>
                         </div>
@@ -177,6 +167,8 @@
                                         </td>
                                     </tr>
                                 </table>
+                                <span>Forma de pago: </span><span name="forma_pago"></span>
+                                <span>Método de pago: </span><span name="metodo_pago"></span>                                
                             </div>
                             <div class="col-xs-4">
                                 <table class="table table-condensed" style="min-width: 250px;max-width: 400px;">
