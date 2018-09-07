@@ -19,14 +19,18 @@
                 <span t-if="o.company_id.vat != o.l10n_mx_edi_cfdi_supplier_rfc">XML VAT: <span t-esc="o.l10n_mx_edi_cfdi_supplier_rfc"></span></span>
             </t>
         </xpath>
+        <xpath expr="//td[@name='fecha_emision']" position="inside">
+            <t t-if="o.l10n_mx_edi_cfdi_uuid">
+                <span t-esc="xml.get('fecha', xml.get('Fecha', '')).replace('T', ' ')"/>
+            </t>
+        </xpath>
         <xpath expr="//td[@name='certificado_emisor']" position="inside">
             <t t-if="o.l10n_mx_edi_cfdi_uuid">
                 <span t-esc="xml.get('noCertificado', xml.get('NoCertificado'))"/>
             </t>
         </xpath>
         <xpath expr="//td[@name='certificado_sat']" position="inside">
-            <t t-if="o.l10n_mx_edi_cfdi_uuid">
-                <span t-esc="tfd.get('UUID')"/>
+            <t t-if="o.l10n_mx_edi_cfdi_uuid">                
             </t>
         </xpath>
         <xpath expr="//td[@name='folio_fiscal']" position="inside">
@@ -92,16 +96,9 @@
         <xpath expr="//p[@t-if='o.fiscal_position_id.note']" position="after">
             <t t-if="o.l10n_mx_edi_cfdi_uuid">
                 <div class="row" id='complement'>
-                    <div class="barcode col-xs-3">
-                        <t t-set="sello" t-value="xml.get('Sello', 'No identificado')[-8:]"/>
-                        <img t-att-src="'/report/barcode/?type=QR&amp;value=%s' % quote_plus(
-                            'https://verificacfdi.facturaelectronica.sat.gob.mx/default.aspx?' + keep_query(
-                                re=o.l10n_mx_edi_cfdi_supplier_rfc, rr=o.l10n_mx_edi_cfdi_customer_rfc,
-                                tt=o.l10n_mx_edi_cfdi_amount, id=o.l10n_mx_edi_cfdi_uuid)
-                                + '&amp;fe=%s' % quote_plus(
-                                    sello, 'utf-8', 'strict', '=/').replace('%2B', '+'))"/>
-                    </div>
-                    <div class="complement-details col-xs-9">
+                    <div class="col-xs-1">                            
+                    </div>                    
+                    <div class="complement-details col-xs-8">
                         <div class="digital-stamp">
                             <span>Digital stamp of the emitter</span>
                         </div>
@@ -113,7 +110,24 @@
                         </div>
                         <div class="digital-stamp-content">
                             <span t-esc="tfd.get('selloSAT', tfd.get('SelloSAT', 'No identificado'))"/>
-                        </div>
+                        </div>                        
+                    </div>
+                    <div class="barcode col-xs-2">
+                        <t t-set="sello" t-value="xml.get('Sello', 'No identificado')[-8:]"/>
+                        <img t-att-src="'/report/barcode/?type=QR&amp;value=%s' % quote_plus(
+                            'https://verificacfdi.facturaelectronica.sat.gob.mx/default.aspx?' + keep_query(
+                                re=o.l10n_mx_edi_cfdi_supplier_rfc, rr=o.l10n_mx_edi_cfdi_customer_rfc,
+                                tt=o.l10n_mx_edi_cfdi_amount, id=o.l10n_mx_edi_cfdi_uuid)
+                                + '&amp;fe=%s' % quote_plus(
+                                    sello, 'utf-8', 'strict', '=/').replace('%2B', '+'))"/>
+                    </div>
+                    <div class="col-xs-1">                            
+                    </div>
+                </div>
+                <div class="row" id='complement'>
+                    <div class="col-xs-1">                            
+                    </div>                    
+                    <div class="complement-details col-xs-10">                        
                         <div class="digital-stamp">
                             <span>Original chain complement of digital certification SAT</span>
                         </div>
@@ -140,8 +154,10 @@
                             <span> | Fiscal Folio:</span> <span t-esc="tfd.get('UUID')"/>
                         </div>
                         <div class="digital-stamp-content text-center">
-                            <strong>This document is a printed representation of a CFDI</strong>
+                            <strong>Este documento en una representación impresa de un CFDI</strong>
                         </div>
+                    </div>                    
+                    <div class="col-xs-1">                            
                     </div>
                 </div>
             </t>

@@ -61,7 +61,7 @@
                                         </td>                                        
                                     </tr>
                                     <tr>
-                                        <td class="text-center">
+                                        <td class="text-center" name="fecha_emision">
                                             <span t-field="o.date_invoice"/>
                                         </td>                                        
                                     </tr>
@@ -71,8 +71,7 @@
                                         </td>                                        
                                     </tr>
                                     <tr>
-                                        <td class="text-center" name="certificado_emisor">
-                                            <span t-field="o.date_invoice"/>
+                                        <td class="text-center" name="certificado_emisor">                                            
                                         </td>                                        
                                     </tr>
                                     <tr>
@@ -81,8 +80,7 @@
                                         </td>                                        
                                     </tr>
                                     <tr>
-                                        <td class="text-center" name="certificado_sat">
-                                            <span t-field="o.date_invoice"/>
+                                        <td class="text-center" name="certificado_sat">                                            
                                         </td>                                        
                                     </tr>
                                     <tr>
@@ -100,8 +98,7 @@
                                         </td>                                        
                                     </tr>
                                     <tr>
-                                        <td class="text-center" name="fecha_timbrado">
-                                            <span t-field="o.date_invoice"/>
+                                        <td class="text-center" name="fecha_timbrado">                                            
                                         </td>                                        
                                     </tr>                                  
                                 </tbody>
