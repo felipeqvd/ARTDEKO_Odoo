@@ -32,6 +32,8 @@
         'report/artdeko_report.xml',
         'report/artdeko_report_templates.xml',
         'report/artdeko_report_layouts.xml',
+        'report/artdeko_report_invoice_template.xml',
+        'report/artdeko_l10n_mx_edi_report_invoice.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

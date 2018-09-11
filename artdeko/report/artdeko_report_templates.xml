@@ -5,7 +5,7 @@
         <t t-set="doc" t-value="doc.with_context({'lang':doc.partner_id.lang})" />
         <div class="page">
             <div class="oe_structure"/>
-            <div class="row">
+            <div class="row" style="font-family: 'Rockwell' !important;">
                 <div class="col-xs-1">                        
                 </div>
                 <div class="col-xs-10 text-right">
@@ -22,7 +22,7 @@
                 <div class="col-xs-1">                        
                 </div>                              
             </div>
-            <div class="row" style="padding:10px">                
+            <div class="row" style="padding:10px;font-family: 'Rockwell' !important;">                
                 <div class="col-xs-11 col-xs-offset-1">
                     <div t-field="doc.partner_id"
                         t-options='{"widget": "contact", "fields": ["name", "email", "phone"], "no_marker": True}' />
@@ -37,7 +37,7 @@
             <t t-set="display_discount" t-value="any([l.discount for l in doc.order_line])"/>
 
             <t t-foreach="doc.order_lines_layouted()" t-as="page">
-                <div style="padding:30px;">    
+                <div style="padding:30px;font-family: 'Rockwell' !important;">    
                     <table class="table table-condensed">
                         <thead>
                             <tr>
@@ -114,8 +114,10 @@
             </t>
 
             <div class="clearfix">
-                <div class="row" name="total">
-                    <div class="col-xs-4 pull-right" style="padding-right:30px;">
+                <div class="row" name="total" style="padding-right:30px;">
+                    <div class="col-xs-7">                        
+                    </div>
+                    <div class="col-xs-5" style="padding-right:30px;font-family: 'Rockwell' !important;">
                         <table class="table table-condensed" style="min-width: 200px;max-width: 350px;">
                             <tr style="border-bottom:1px solid #dddddd; border-top:2px solid rgb(209,65,36) !important;">
                                 <td>
@@ -163,7 +165,7 @@
             
                        
             <p style="page-break-before:always;"> </p>
-            <div class="row">
+            <div class="row" style="font-family: 'Rockwell' !important;">
                 <div class="col-xs-1">                        
                 </div>
                 <div class="col-xs-10">
@@ -183,7 +185,7 @@
                 <div class="col-xs-1">                        
                 </div>                              
             </div>
-            <div class="row">
+            <div class="row" style="font-family: 'Rockwell' !important;">
                 <div class="col-xs-1">                        
                 </div>
                 <div class="col-xs-10">
@@ -201,7 +203,7 @@
                 <div class="col-xs-1">                        
                 </div>                              
             </div>
-            <div class="row">
+            <div class="row" style="font-family: 'Rockwell' !important;">
                 <div class="col-xs-1">                        
                 </div>
                 <div class="col-xs-10">
@@ -218,7 +220,7 @@
                 </div>                              
             </div>
             <p style="page-break-before:always;"> </p>
-            <div class="row">
+            <div class="row" style="font-family: 'Rockwell' !important;">
                 <div class="col-xs-1">                        
                 </div>
                 <div class="col-xs-10">                    
@@ -227,7 +229,7 @@
                 <div class="col-xs-1">                        
                 </div>                              
             </div>
-            <div class="row">
+            <div class="row" style="font-family: 'Rockwell' !important;">
                 <div class="col-xs-2">                        
                 </div>
                 <div class="col-xs-8">
@@ -266,7 +268,7 @@
                 <div class="col-xs-2">                        
                 </div>                              
             </div>
-            <div class="row">
+            <div class="row" style="font-family: 'Rockwell' !important;">
                 <div class="col-xs-1">                        
                 </div>
                 <div class="col-xs-10">
@@ -301,7 +303,7 @@
         <t t-set="doc" t-value="doc.with_context({'lang':doc.partner_id.lang})" />
         <div class="page">
             <div class="oe_structure"/>            
-            <div class="row">
+            <div class="row" style="font-family: 'Rockwell' !important;">
                 <div class="col-xs-1">                        
                 </div>
                 <div class="col-xs-10 text-right">
@@ -317,146 +319,325 @@
                 </div>
                 <div class="col-xs-1">                        
                 </div>                              
-            </div>            
-            <div class="row">
-                <div class="col-xs-6">
-                    <t t-if="doc.partner_shipping_id == doc.partner_invoice_id
-                             and doc.partner_invoice_id != doc.partner_id
-                             or doc.partner_shipping_id != doc.partner_invoice_id">
-                        <strong t-if="doc.partner_shipping_id == doc.partner_invoice_id">Invoicing and shipping address:</strong>
-                        <strong t-if="doc.partner_shipping_id != doc.partner_invoice_id">Invoicing address:</strong>
-                        <div t-field="doc.partner_invoice_id"
-                        t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True, "phone_icons": True}'/>
-                        <div t-if="doc.partner_shipping_id != doc.partner_invoice_id" class="mt8">
-                            <strong>Shipping address:</strong>
-                            <div t-field="doc.partner_shipping_id"
-                                t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True, "phone_icons": True}'/>
+            </div>
+            <div style="padding:5px 30px 5px 30px;font-family: 'Rockwell' !important;">
+                <div style="border-bottom:1px solid rgb(209,65,36) !important;">    
+                    <div class="row">
+                        <div class="col-xs-5">
+                            <p>
+                                <span style="font-size:24px;font-weight: bold;" t-esc="doc.company_id.name"/>
+                            </p>                        
                         </div>
-                    </t>
-                </div>
-                <div class="col-xs-5 col-xs-offset-1">
-                    <div t-field="doc.partner_id"
-                        t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}' />
-                    <p t-if="doc.partner_id.vat"><t t-esc="doc.company_id.country_id.vat_label or 'TIN'"/>: <span t-field="doc.partner_id.vat"/></p>
+                        <div class="col-xs-7">                    
+                            <p>
+                                <t t-if="doc.company_id.street_name">
+                                   <span t-esc="doc.company_id.street_name.upper()"/> 
+                                </t>
+                                <t t-if="doc.company_id.street2">
+                                    <span t-esc="doc.company_id.street2.upper()"/> - 
+                                </t>                        
+                                <t t-if="doc.company_id.street_number2">
+                                    <span t-esc="doc.company_id.street_number2.upper()"/> 
+                                </t>
+                                <t t-if="doc.company_id.l10n_mx_edi_colony">
+                                    <span t-esc="doc.company_id.l10n_mx_edi_colony.upper()"/>
+                                </t>
+                            </p>                                            
+                        </div>                                    
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-5">
+                            <h4>
+                                <span t-esc="doc.company_id.vat"/>
+                            </h4>
+                            <p id="fiscal_position_remark" t-if="doc.fiscal_position_id">                               
+                                <span t-field="doc.fiscal_position_id"/>
+                            </p>                           
+                        </div>
+                        <div class="col-xs-3">                    
+                            <p>
+                                <t t-if="doc.company_id.city">
+                                    <span t-esc="doc.company_id.city"/><br></br> 
+                                </t>
+                                <t t-if="doc.company_id.l10n_mx_edi_locality">
+                                    <span t-esc="doc.company_id.l10n_mx_edi_locality"/><br></br>
+                                </t>
+                                <t t-if="doc.company_id.country_id">
+                                    <span t-esc="doc.company_id.country_id.name"/>
+                                </t>                        
+                            </p>                                            
+                        </div>
+                        <div class="col-xs-4">                    
+                            <p>
+                                <t t-if="doc.company_id.zip">
+                                    <span t-esc="doc.company_id.zip"/><br></br> 
+                                </t>
+                                <t t-if="doc.company_id.state_id">
+                                    <span t-esc="doc.company_id.state_id.name"/>
+                                </t>
+                            </p>                                            
+                        </div>                                    
+                    </div>
                 </div>
             </div>
+            <div style="padding:5px 30px 5px 30px;font-family: 'Rockwell' !important;">
+                <div style="border-bottom:1px solid rgb(209,65,36) !important; font-size:14px !important;">    
+                    <div class="row">
+                        <div class="col-xs-2">
+                            <p>
+                                <strong>Cliente:</strong>
+                            </p>                        
+                        </div>
+                        <div class="col-xs-10">
+                            <p>
+                                <span t-field="doc.partner_id"/>
+                            </p>                        
+                        </div>                                                     
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-2">
+                            <p>
+                                <strong><t t-esc="doc.partner_id.country_id.vat_label or 'RFC'"/>:</strong>
+                            </p>                        
+                        </div>
+                        <div class="col-xs-10">
+                            <p>
+                                <t t-if="doc.partner_id.vat">
+                                    <p t-if="doc.partner_id.vat"><span t-field="doc.partner_id.vat"/></p>
+                                </t>
+                            </p>                        
+                        </div>                                                     
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-2">
+                            <p>
+                                <strong>Domicilio:</strong>
+                            </p>                        
+                        </div>
+                        <div class="col-xs-6">
+                            <p>                           
+                                <t t-if="doc.partner_id.street_name">
+                                   <span t-esc="doc.partner_id.street_name"/> 
+                                </t>
+                                <t t-if="doc.partner_id.street2">
+                                    <span t-esc="doc.partner_id.street2"/> - 
+                                </t>                        
+                                <t t-if="doc.partner_id.street_number2">
+                                    <br></br><span t-esc="doc.partner_id.street_number2"/> 
+                                </t>
+                                <t t-if="doc.partner_id.l10n_mx_edi_colony">
+                                    <span t-esc="doc.partner_id.l10n_mx_edi_colony"/>
+                                </t>                            
+                            </p>                        
+                        </div>
+                        <div class="col-xs-2">
+                            <p>
+                                <strong>Municipio:</strong>
+                            </p>                        
+                        </div>
+                        <div class="col-xs-2">
+                            <p>                           
 
-            
-
-            <div class="row mt32 mb32" id="informations">
-                <div t-if="doc.client_order_ref" class="col-xs-3">
-                    <strong>Your Reference:</strong>
-                    <p t-field="doc.client_order_ref"/>
+                            </p>                        
+                        </div>                                                     
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-2">
+                            <p>
+                                <strong>Teléfono:</strong>
+                            </p>                        
+                        </div>
+                        <div class="col-xs-2">
+                            <p>                 
+                                <t t-if="doc.partner_id.phone">
+                                    <span t-esc="doc.partner_id.phone"/>
+                                </t>                            
+                            </p>                        
+                        </div>
+                        <div class="col-xs-2">
+                            <p>
+                                <strong>Colonia:</strong>
+                            </p>                        
+                        </div>
+                        <div class="col-xs-2">
+                            <p>                
+                                <t t-if="doc.partner_id.l10n_mx_edi_colony">
+                                    <span t-esc="doc.partner_id.l10n_mx_edi_colony"/>
+                                </t>                            
+                            </p>                        
+                        </div>
+                        <div class="col-xs-2">
+                            <p>
+                                <strong>CP:</strong>
+                            </p>                        
+                        </div>
+                        <div class="col-xs-2">
+                            <p>                
+                                <t t-if="doc.partner_id.zip">
+                                    <span t-esc="doc.partner_id.zip"/>
+                                </t>                            
+                            </p>                        
+                        </div>                                    
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-2">
+                            <p>
+                                <strong>Ciudad:</strong>
+                            </p>                        
+                        </div>
+                        <div class="col-xs-2">
+                            <p>                 
+                                <t t-if="doc.partner_id.city">
+                                    <span t-esc="doc.partner_id.city"/>
+                                </t>                            
+                            </p>                        
+                        </div>
+                        <div class="col-xs-2">
+                            <p>
+                                <strong>Estado:</strong>
+                            </p>                        
+                        </div>
+                        <div class="col-xs-2">
+                            <p>                
+                                <t t-if="doc.partner_id.state_id.name">
+                                    <span t-esc="doc.partner_id.state_id.name"/>
+                                </t>                            
+                            </p>                        
+                        </div>
+                        <div class="col-xs-2">
+                            <p>
+                                <strong>País:</strong>
+                            </p>                        
+                        </div>
+                        <div class="col-xs-2">
+                            <p>                
+                                <t t-if="doc.partner_id.country_id.name">
+                                    <span t-esc="doc.partner_id.country_id.name"/>
+                                </t>                            
+                            </p>                        
+                        </div>                                    
+                    </div>
                 </div>
-                <div t-if="doc.confirmation_date and doc.state not in ['draft','sent']" class="col-xs-3">
-                    <strong>Date Ordered:</strong>
-                    <p t-field="doc.confirmation_date"/>
-                </div>
-                <div t-if="doc.date_order and doc.state in ['draft','sent']" class="col-xs-3">
-                    <strong>Quotation Date:</strong>
-                    <p t-field="doc.date_order"/>
-                </div>
-                <div t-if="doc.user_id.name" class="col-xs-3">
-                    <strong>Salesperson:</strong>
-                    <p t-field="doc.user_id"/>
-                </div>
-                <div name="payment_term" t-if="doc.payment_term_id" class="col-xs-3">
-                    <strong>Payment Terms:</strong>
-                    <p t-field="doc.payment_term_id"/>
-                </div>
-                <div t-if="doc.validity_date and doc.state in ['draft', 'sent']" class="col-xs-3">
-                    <strong>Expiration Date:</strong>
-                    <p t-field="doc.validity_date"/>
-                </div>
-            </div>
-
+            </div> 
+           
+           
             <!-- Is there a discount on at least one line? -->
             <t t-set="display_discount" t-value="any([l.discount for l in doc.order_line])"/>
 
             <t t-foreach="doc.order_lines_layouted()" t-as="page">
-                <table class="table table-condensed">
-                    <thead>
-                        <tr>
-                            <th class="text-center">Code</th>
-                            <th>Description</th>
-                            <th class="text-right">Quantity</th>                            
-                            <th class="text-right">Unit Price</th>
-                            <th t-if="display_discount" class="text-right" groups="sale.group_discount_per_so_line">Disc.(%)</th>                            
-                            <th class="text-right" groups="sale.group_show_price_subtotal">Amount</th>
-                            <th class="text-right price_tax_included" groups="sale.group_show_price_total">Total Price</th>
-                        </tr>
-                   </thead>
-                   <tbody class="sale_tbody">
-                        <t t-foreach="page" t-as="layout_category">
+                <div style="padding:30px;font-family: 'Rockwell' !important;">
+                    <table class="table table-condensed">
+                        <thead>
+                            <tr>
+                                <th class="text-right">Cantidad</th>                            
+                                <th class="text-right">Unidad</th>
+                                <th class="text-center">Código</th>
+                                <th>Description</th>
+                                <th class="text-right">Costo unidad</th>
+                                <th t-if="display_discount" class="text-right" groups="sale.group_discount_per_so_line">Descuento(%)</th>                            
+                                <th class="text-right" groups="sale.group_show_price_subtotal">Importe</th>                                
+                            </tr>
+                       </thead>
+                       <tbody class="sale_tbody">
+                            <t t-foreach="page" t-as="layout_category">
 
-                            <t t-if="layout_category_size > 1 or page_size > 1" groups="sale.group_sale_layout">
-                                <tr class="active">
-                                    <td colspan="7" style="font-weight: bold; border-bottom: 1px solid black;">&amp;bull;
-                                        <t t-esc="layout_category['name']"/>
-                                    </td>
-                                </tr>
+                                <t t-if="layout_category_size > 1 or page_size > 1" groups="sale.group_sale_layout">
+                                    <tr class="active">
+                                        <td colspan="7" style="font-weight: bold; border-bottom: 1px solid black;">&amp;bull;
+                                            <t t-esc="layout_category['name']"/>
+                                        </td>
+                                    </tr>
+                                </t>
+
+                                <!-- Lines associated -->
+                                <t t-foreach="layout_category['lines']" t-as="l">
+                                    <tr>
+                                        <td class="text-right">
+                                            <span t-field="l.product_uom_qty"/>                                            
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-field="l.product_uom" groups="product.group_uom"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <span t-field="l.product_id.l10n_mx_edi_code_sat_id.code"/>
+                                        </td>
+                                        <td><span t-field="l.name"/></td>
+                                                                            
+                                        <td class="text-right">
+                                            <span t-field="l.price_unit"/>
+                                        </td>
+                                        <td t-if="display_discount" class="text-right" groups="sale.group_discount_per_so_line">
+                                            <span t-field="l.discount"/>
+                                        </td>                                    
+                                        <td class="text-right" groups="sale.group_show_price_subtotal">
+                                            <span t-field="l.price_subtotal"
+                                                t-options='{"widget": "monetary", "display_currency": doc.pricelist_id.currency_id}'/>
+                                        </td>                                        
+                                    </tr>
+                                </t>
+
+                                <t t-if="(layout_category_size > 1 or page_size > 1) and layout_category['subtotal']" groups="sale.group_sale_layout">
+                                    <tr class="text-right">
+                                        <td colspan="6">
+                                            <strong>Subtotal: </strong>
+                                            <t t-set="subtotal" t-value="sum(line.price_subtotal for line in layout_category['lines'])"/>
+                                            <span t-esc="subtotal" t-options="{'widget': 'monetary', 'display_currency': doc.pricelist_id.currency_id}"/>
+                                        </td>
+                                    </tr>
+                                </t>
+
                             </t>
-
-                            <!-- Lines associated -->
-                            <t t-foreach="layout_category['lines']" t-as="l">
-                                <tr>
-                                    <td class="text-center">
-                                        <span t-field="l.product_id.l10n_mx_edi_code_sat_id.code"/>
-                                    </td>
-                                    <td><span t-field="l.name"/></td>
-                                    <td class="text-right">
-                                        <span t-field="l.product_uom_qty"/>
-                                        <span t-field="l.product_uom" groups="product.group_uom"/>
-                                    </td>                                    
-                                    <td class="text-right">
-                                        <span t-field="l.price_unit"/>
-                                    </td>
-                                    <td t-if="display_discount" class="text-right" groups="sale.group_discount_per_so_line">
-                                        <span t-field="l.discount"/>
-                                    </td>                                    
-                                    <td class="text-right" groups="sale.group_show_price_subtotal">
-                                        <span t-field="l.price_subtotal"
-                                            t-options='{"widget": "monetary", "display_currency": doc.pricelist_id.currency_id}'/>
-                                    </td>
-                                    <td class="text-right" groups="sale.group_show_price_total">
-                                        <span t-field="l.price_total"
-                                            t-options='{"widget": "monetary", "display_currency": doc.pricelist_id.currency_id}'/>
-                                    </td>
-                                </tr>
-                            </t>
-
-                            <t t-if="(layout_category_size > 1 or page_size > 1) and layout_category['subtotal']" groups="sale.group_sale_layout">
-                                <tr class="text-right">
-                                    <td colspan="6">
-                                        <strong>Subtotal: </strong>
-                                        <t t-set="subtotal" t-value="sum(line.price_subtotal for line in layout_category['lines'])"/>
-                                        <span t-esc="subtotal" t-options="{'widget': 'monetary', 'display_currency': doc.pricelist_id.currency_id}"/>
-                                    </td>
-                                </tr>
-                            </t>
-
-                        </t>
-                    </tbody>
-                </table>
-
+                        </tbody>
+                    </table>
+                </div>
                 <t t-if="page_index &lt; page_size - 1" groups="sale.group_sale_layout">
                     <p style="page-break-before:always;"> </p>
                 </t>
             </t>
-
+            
             <div class="clearfix">
-                <div class="row" name="total">
-                    <div class="col-xs-4 pull-right">
+                <div class="row" name="total" style="padding:30px; font-family: 'Rockwell' !important;">
+                    <div class="col-xs-7">
                         <table class="table table-condensed" style="min-width: 200px;max-width: 350px;">
+                            <tr>
+                                <th class="text-center">Importe en letras</th>                                               
+                            </tr>
+                            <tr class="border-black" style="border-bottom:1px solid #dddddd;">                                
+                                <td class="text-center">
+                                    <span t-esc="doc.sale_amount_to_text()"/>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-xs-5">
+                        <table class="table table-condensed" style="min-width: 200px;max-width: 350px;">
+                            <tr t-if="display_discount" class="border-black" style="border-bottom:1px solid #dddddd;">
+                                <td>
+                                    <strong>Subtotal 1 &#40;<span t-field="doc.pricelist_id.currency_id.name"></span>&#41;</strong>
+                                </td>
+                                <td class="text-right">
+                                    <span t-field="doc.amount_undiscounted"
+                                        t-options='{"widget": "monetary", "display_currency": doc.pricelist_id.currency_id}'/>
+                                </td>
+                            </tr>
+                            <tr t-if="display_discount" class="border-black" style="border-bottom:1px solid #dddddd;">
+                                <td>
+                                    <strong>Descuentos &#40;<span t-field="doc.pricelist_id.currency_id.name"></span>&#41;</strong>
+                                </td>
+                                <td class="text-right">
+                                    <span t-esc="doc.amount_undiscounted - doc.amount_untaxed"
+                                        t-options='{"widget": "monetary", "display_currency": doc.pricelist_id.currency_id}'/>
+                                </td>
+                            </tr>
                             <tr class="border-black" style="border-bottom:1px solid #dddddd;">
                                 <td>
-                                    <strong>Subtotal &#40;<span t-field="doc.pricelist_id.currency_id.name"></span>&#41;</strong>
+                                    <strong>Subtotal <t t-if="display_discount">2</t> &#40;<span t-field="doc.pricelist_id.currency_id.name"></span>&#41;</strong>
                                 </td>
                                 <td class="text-right">
                                     <span t-field="doc.amount_untaxed"
                                         t-options='{"widget": "monetary", "display_currency": doc.pricelist_id.currency_id}'/>
                                 </td>
-                            </tr>
+                            </tr>                            
                             <t t-foreach="doc._get_tax_amount_by_group()" t-as="amount_by_group">
                                 <tr style="border-bottom:1px solid #dddddd;">
                                     <t t-if="amount_by_group[3] == 1 and doc.amount_untaxed == amount_by_group[2]">
@@ -488,15 +669,9 @@
                                 </td>
                             </tr>
                         </table>
-                    </div>
+                    </div>                    
                 </div>
             </div>
-            
-            <p id="fiscal_position_remark" t-if="doc.fiscal_position_id and doc.fiscal_position_id.note">
-                <strong>Fiscal Position Remark:</strong>
-                <span t-field="doc.fiscal_position_id.note"/>
-            </p>
-            <div class="oe_structure"/>            
         </div>
     </t>
 </template> 
