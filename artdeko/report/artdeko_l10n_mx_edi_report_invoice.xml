@@ -36,7 +36,7 @@
         </xpath>
         <xpath expr="//td[@name='certificado_sat']" position="inside">
             <t t-if="o.l10n_mx_edi_cfdi_uuid">
-                <span t-esc="tfd.get('noCertificadoSAT', '')"/>
+                <span t-esc="tfd.get('noCertificadoSAT', tfd.get('NoCertificadoSAT'))"/>
             </t>
         </xpath>
         <xpath expr="//td[@name='folio_fiscal']" position="inside">
