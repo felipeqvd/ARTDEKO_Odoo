@@ -303,18 +303,11 @@
         <t t-set="doc" t-value="doc.with_context({'lang':doc.partner_id.lang})" />
         <div class="page">
             <div class="oe_structure"/>
-            <div class="row" style="padding-top:50px;">
-                <div class="col-xs-6">
+            <div class="row" style="padding-top:50px;font-family: 'Rockwell' !important;">
+                <div class="col-xs-5">
                     <img style="padding-left:100px;" class="img img-responsive" src="/artdeko/static/src/img/logo.png" width="300px"/>                    
                 </div>                
-                <div class="col-xs-6" name="company_address">                        
-                    <div style="padding-left:100px;padding-top:30px; font-size:12px; font-weight: bold; font-family: 'latoregular' !important; letter-spacing: 3px;" t-if="company.website"><span t-esc="company.website[7:].upper()"/></div>                 
-                </div>
-            </div>            
-            <div class="row" style="font-family: 'Rockwell' !important;">
-                <div class="col-xs-1">                        
-                </div>
-                <div class="col-xs-10 text-right">
+                <div class="col-xs-5 text-right">
                     <h3>
                         <span>Orden de compra No. </span>                
                         <span t-field="doc.name"/>
@@ -323,9 +316,7 @@
                         <strong>Fecha: </strong><span t-field="doc.date_order" t-options='{"widget": "date"}'/>
                     </p>               
                 </div>
-                <div class="col-xs-1">                        
-                </div>                              
-            </div>
+            </div>            
             <div style="padding:5px 30px 5px 30px;font-family: 'Rockwell' !important;">
                 <div style="border-bottom:1px solid rgb(209,65,36) !important;">    
                     <div class="row">
