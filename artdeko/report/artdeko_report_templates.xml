@@ -303,13 +303,11 @@
         <t t-set="doc" t-value="doc.with_context({'lang':doc.partner_id.lang})" />
         <div class="page">
             <div class="oe_structure"/>
-            <div class="row" style="font-family: 'Rockwell' !important;">
-                <div class="col-xs-1">                  
-                </div>
-                <div class="col-xs-5">
-                    <img style="padding-left:100px;" class="img img-responsive" src="/artdeko/static/src/img/logo.png" width="500px"/>                    
+            <div class="row" style="font-family: 'Rockwell' !important;">                
+                <div class="col-xs-6">
+                    <img style="display: block;margin-left: auto;margin-right: auto;" class="img img-responsive" src="/artdeko/static/src/img/logo.png" width="500px"/>                    
                 </div>                
-                <div class="col-xs-5 text-right">
+                <div class="col-xs-6 text-right">
                     <h3 style="text-decoration: underline;">
                         <span>Orden de compra No. </span>                
                         <span t-field="doc.name"/>
@@ -317,9 +315,7 @@
                     <p style="font-size:10px;">
                         <strong>Fecha: </strong><span t-field="doc.date_order" t-options='{"widget": "date"}'/>
                     </p>               
-                </div>
-                <div class="col-xs-1">                  
-                </div>
+                </div>                
             </div>            
             <div style="padding:5px 30px 5px 30px;font-family: 'Rockwell' !important;">                   
                 <div class="row">
@@ -336,7 +332,7 @@
                 </div>
             </div>
             <div style="padding:5px 30px 5px 30px;font-family: 'Rockwell' !important;">
-                <div style="padding:5px; border:1px solid black !important; font-size:14px !important;">    
+                <div style="padding:5px; border:1px solid black !important; font-size:16px !important;">    
                     <div class="row">
                         <div class="col-xs-2">
                             <p>
@@ -358,7 +354,7 @@
                         <div class="col-xs-10">
                             <p>
                                 <t t-if="doc.partner_id.vat">
-                                    <p t-if="doc.partner_id.vat"><span t-field="doc.partner_id.vat"/></p>
+                                    <span t-field="doc.partner_id.vat"/>
                                 </t>
                             </p>                        
                         </div>                                                     
@@ -479,9 +475,9 @@
            <!-- <t t-set="display_discount" t-value="any([l.discount for l in doc.order_line])"/>-->
            
             <div style="padding:30px;font-family: 'Rockwell' !important;">
-                <table class="table table-bordered" style="border:1px solid black;">
+                <table class="table table-bordered">
                     <thead>
-                        <tr style="background-color: #f2f2f2;">
+                        <tr style="background-color: rgb(166,166,166);">
                             <th class="text-right">Cantidad</th>                            
                             <th class="text-right">Unidad</th>
                             <th class="text-center">Código</th>
