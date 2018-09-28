@@ -18,6 +18,7 @@ class PurchaseOrder(models.Model):
         # M.N. = Moneda Nacional (National Currency)
         # M.E. = Moneda Extranjera (Foreign Currency)
         #currency_type = 'M.N' if currency == 'MXN' else 'M.E.'
+        currency_type = 'M.N'
         # Split integer and decimal part
         amount_i, amount_d = divmod(self.amount_total, 1)
         amount_d = round(amount_d, 2)
