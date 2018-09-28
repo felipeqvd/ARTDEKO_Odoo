@@ -16,6 +16,21 @@
             <field name="header_spacing">35</field>
             <field name="dpi">90</field>
         </record>
+        <record id="paperformat_artdeko_letter2" model="report.paperformat">
+            <field name="name">Artdeko Letter</field>
+            <field name="default" eval="True" />
+            <field name="format">Letter</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">30</field>
+            <field name="margin_bottom">10</field>
+            <field name="margin_left">5</field>
+            <field name="margin_right">5</field>
+            <field name="header_line" eval="False" />
+            <field name="header_spacing">0</field>
+            <field name="dpi">90</field>
+        </record>
         <report 
             id="action_report_saleorder_quotation_artdeko"
             string="Cotización"
@@ -54,7 +69,7 @@
             file="artdeko.report_purchaseorder" 
             name="artdeko.report_purchaseorder"
             print_report_name="'Orden de compra - %s' % (object.name)"
-            paperformat="paperformat_artdeko_letter"
+            paperformat="paperformat_artdeko_letter2"
         />
         <record id="paperformat_artdeko_invoice_letter" model="report.paperformat">
             <field name="name">Artdeko Invoice Letter</field>
