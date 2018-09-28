@@ -536,7 +536,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr t-foreach="o.order_line" t-as="l">
+                        <tr t-foreach="doc.order_line" t-as="l">
                             <td class="text-right">
                                 <span t-field="l.product_uom_qty"/>                                            
                             </td>
