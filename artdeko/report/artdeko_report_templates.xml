@@ -561,10 +561,7 @@
                         </tr>                        
                     </tbody>
                 </table>
-            </div>
-            <t t-if="page_index &lt; page_size - 1">
-                <p style="page-break-before:always;"> </p>
-            </t>           
+            </div>                      
             
             <div class="clearfix">
                 <div class="row" name="total" style="padding:30px; font-family: 'Rockwell' !important;">
