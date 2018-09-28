@@ -569,7 +569,7 @@
                                 <td><strong>Total &#40;<span t-field="doc.currency_id.name"></span>&#41;</strong></td>
                                 <td class="text-right">
                                     <span t-field="doc.amount_total"
-                                        t-options='{"widget": "monetary", "display_currency": doc.pricelist_id.currency_id}'/>
+                                        t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/>
                                 </td>
                             </tr>
                         </table>
