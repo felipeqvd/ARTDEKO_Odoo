@@ -20,11 +20,12 @@ class PurchaseOrder(models.Model):
         #currency_type = 'M.N' if currency == 'MXN' else 'M.E.'
         currency_type = 'M.N'
         # Split integer and decimal part
-        amount_i, amount_d = divmod(self.amount_total, 1)
-        amount_d = round(amount_d, 2)
-        amount_d = int(round(amount_d * 100, 2))
+        #amount_i, amount_d = divmod(self.amount_total, 1)
+        #amount_d = round(amount_d, 2)
+        #amount_d = int(round(amount_d * 100, 2))
         #words = self.order.currency_id.with_context(lang=self.partner_id.lang or 'es_ES').amount_to_text(amount_i).upper()
-        words = amount_to_text(amount_i).upper()
-        purchase_order_words = '%(words)s %(amount_d)02d/100 %(curr_t)s' % dict(
-            words=words, amount_d=amount_d, curr_t=currency_type)
+        #words = amount_to_text(amount_i).upper()
+        #purchase_order_words = '%(words)s %(amount_d)02d/100 %(curr_t)s' % dict(
+        #    words=words, amount_d=amount_d, curr_t=currency_type)
+        purchase_order_words = 'Valor en letras'
         return purchase_order_words
