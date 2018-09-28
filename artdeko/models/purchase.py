@@ -13,14 +13,14 @@ class PurchaseOrder(models.Model):
         :returns: Amount transformed to words mexican format for invoices
         :rtype: str
         """
-        self.ensure_one()
+        #self.ensure_one()
         #currency = self.order.currency_id.name.upper()
         # M.N. = Moneda Nacional (National Currency)
         # M.E. = Moneda Extranjera (Foreign Currency)
         #currency_type = 'M.N' if currency == 'MXN' else 'M.E.'
         currency_type = 'M.N'
         # Split integer and decimal part
-        amount_i, amount_d = divmod(self.amount_total, 1)
+        amount_i, amount_d = divmod(self.order.amount_total, 1)
         amount_d = round(amount_d, 2)
         amount_d = int(round(amount_d * 100, 2))
         #words = self.order.currency_id.with_context(lang=self.partner_id.lang or 'es_ES').amount_to_text(amount_i).upper()
