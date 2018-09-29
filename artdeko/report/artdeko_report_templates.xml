@@ -308,10 +308,10 @@
                     <img style="display: block;margin-left: auto;margin-right: auto;" class="img img-responsive" src="/artdeko/static/src/img/logo.png" width="280px"/>                    
                 </div>                
                 <div class="col-xs-6 text-right">
-                    <p3 style="text-decoration: underline;font-weight: bold;font-size:20px;">
+                    <p style="text-decoration: underline;font-weight: bold;font-size:20px;">
                         <span>Orden de Compra No. </span>                
                         <span t-field="doc.name"/>
-                    </p3>                    
+                    </p>                    
                     <p style="font-size:16px;">
                         <strong>Fecha: </strong><span t-field="doc.date_order" t-options='{"widget": "date"}'/>
                     </p>               
@@ -331,8 +331,8 @@
                     </div>                                    
                 </div>
             </div>
-            <div style="padding:5px 30px 5px 30px;font-family: 'Rockwell' !important;">
-                <div style="padding:5px; border:1px solid black !important;vertical-align:sub;">    
+            <div style="padding:5px 0px 5px 0px;font-family: 'Rockwell' !important;">
+                <div style="padding:5px; border:1px solid black !important;">    
                     <div class="row">
                         <div class="col-xs-2">
                             <p>
@@ -423,7 +423,7 @@
             </div>            
            
             <!-- Is there a discount on at least one line? -->
-           <!-- <t t-set="display_discount" t-value="any([l.discount for l in doc.order_line])"/>-->
+            <!-- <t t-set="display_discount" t-value="any([l.discount for l in doc.order_line])"/>-->
            
             <div style="padding:30px;font-family: 'Rockwell' !important;">
                 <table class="table table-bordered">
