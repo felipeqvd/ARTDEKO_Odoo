@@ -305,13 +305,13 @@
             <div class="oe_structure"/>
             <div class="row" style="font-family: 'Rockwell' !important;">                
                 <div class="col-xs-6">
-                    <img style="display: block;margin-left: auto;margin-right: auto;" class="img img-responsive" src="/artdeko/static/src/img/logo.png" width="350px"/>                    
+                    <img style="display: block;margin-left: auto;margin-right: auto;" class="img img-responsive" src="/artdeko/static/src/img/logo.png" width="280px"/>                    
                 </div>                
                 <div class="col-xs-6 text-right">
-                    <h3 style="text-decoration: underline;font-weight: bold;">
-                        <span>Orden de compra No. </span>                
+                    <p3 style="text-decoration: underline;font-weight: bold;font-size:20px;">
+                        <span>Orden de Compra No. </span>                
                         <span t-field="doc.name"/>
-                    </h3>                    
+                    </p3>                    
                     <p style="font-size:16px;">
                         <strong>Fecha: </strong><span t-field="doc.date_order" t-options='{"widget": "date"}'/>
                     </p>               
@@ -332,7 +332,7 @@
                 </div>
             </div>
             <div style="padding:5px 30px 5px 30px;font-family: 'Rockwell' !important;">
-                <div style="padding:5px; border:1px solid black !important; font-size:16px !important;">    
+                <div style="padding:5px; border:1px solid black !important;vertical-align:sub;">    
                     <div class="row">
                         <div class="col-xs-2">
                             <p>
@@ -405,7 +405,7 @@
                             </p>                        
                         </div>                                    
                     </div>
-                    <div class="row">
+                    <div class="row" >
                         <div class="col-xs-2">
                             <p>
                                 <strong>Teléfono:</strong>
@@ -432,10 +432,10 @@
                             <th class="text-center">Cantidad</th>                            
                             <th class="text-center">Unidad</th>
                             <th class="text-center">Código</th>
-                            <th class="text-center">Description</th>
+                            <th class="text-center">Descripción</th>
                             <th class="text-center">Costo unidad</th>
                             <!--<th t-if="display_discount" class="text-right" groups="sale.group_discount_per_so_line">Descuento(%)</th>-->                            
-                            <th class="text-right" groups="sale.group_show_price_subtotal">Importe</th>                                
+                            <th class="text-right">Importe</th>                                
                         </tr>
                     </thead>
                     <tbody>
@@ -452,7 +452,8 @@
                             <td><span t-field="l.name"/></td>
 
                             <td class="text-right">
-                                <span t-field="l.price_unit"/>
+                                <span t-field="l.price_unit"
+                                    t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/>
                             </td>
                             <!--<td t-if="display_discount" class="text-right" groups="sale.group_discount_per_so_line">
                                 <span t-field="l.discount"/>
@@ -467,7 +468,7 @@
             </div>                      
             
             <div class="clearfix">
-                <div class="row" name="total" style="padding:30px; font-family: 'Rockwell' !important;">
+                <div class="row" name="total" style="padding:15px; font-family: 'Rockwell' !important;">
                     <div class="col-xs-7">
                         <table class="table table-bordered" style="min-width: 200px;max-width: 350px;">
                             <tr style="background-color: rgb(166,166,166);">
@@ -531,10 +532,10 @@
                     </div>
                     <div class="col-xs-10">
                         <p>
-                            <span style="font-size:18px;text-decoration: underline;">OBSERVACIONES:</span>
+                            <span style="font-size:16px;text-decoration: underline;">OBSERVACIONES:</span>
                         </p> 
                         <p>
-                            <span style="font-size:18px;" t-esc="doc.notes"/>
+                            <span style="font-size:16px;" t-esc="doc.notes"/>
                         </p> 
                     </div>
                     <div class="col-xs-1">                        
