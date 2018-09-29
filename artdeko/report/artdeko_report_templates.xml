@@ -425,7 +425,7 @@
             <!-- Is there a discount on at least one line? -->
             <!-- <t t-set="display_discount" t-value="any([l.discount for l in doc.order_line])"/>-->
            
-            <div style="padding:30px;font-family: 'Rockwell' !important;">
+            <div style="padding:15px 0px 0px 0px;font-family: 'Rockwell' !important;">
                 <table class="table table-bordered">
                     <thead>
                         <tr style="background-color: rgb(166,166,166);">
@@ -468,7 +468,7 @@
             </div>                      
             
             <div class="clearfix">
-                <div class="row" name="total" style="padding:15px; font-family: 'Rockwell' !important;">
+                <div class="row" name="total" style="padding:15px 0px 0px 0px; font-family: 'Rockwell' !important;">
                     <div class="col-xs-7">
                         <table class="table table-bordered" style="min-width: 200px;max-width: 350px;">
                             <tr style="background-color: rgb(166,166,166);">
@@ -527,7 +527,7 @@
                         </table>
                     </div>                    
                 </div>
-                <div class="row" name="total" style="padding:30px; font-family: 'Rockwell' !important;">
+                <div class="row" name="total" style="padding:15px 0px 0px 0px; font-family: 'Rockwell' !important;">
                     <div class="col-xs-1">                        
                     </div>
                     <div class="col-xs-10">
