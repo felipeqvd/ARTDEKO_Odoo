@@ -305,19 +305,19 @@
             <div class="oe_structure"/>
             <div class="row" style="font-family: 'Rockwell' !important;">                
                 <div class="col-xs-6">
-                    <img style="display: block;margin-left: auto;margin-right: auto;" class="img img-responsive" src="/artdeko/static/src/img/logo.png" width="500px"/>                    
+                    <img style="display: block;margin-left: auto;margin-right: auto;" class="img img-responsive" src="/artdeko/static/src/img/logo.png" width="400px"/>                    
                 </div>                
                 <div class="col-xs-6 text-right">
                     <h3 style="text-decoration: underline;">
                         <span>Orden de compra No. </span>                
                         <span t-field="doc.name"/>
                     </h3>                    
-                    <p style="font-size:10px;">
+                    <p style="font-size:16px;">
                         <strong>Fecha: </strong><span t-field="doc.date_order" t-options='{"widget": "date"}'/>
                     </p>               
                 </div>                
             </div>            
-            <div style="padding:5px 30px 5px 30px;font-family: 'Rockwell' !important;">                   
+            <div style="padding:15px 30px 5px 30px;font-family: 'Rockwell' !important;">                   
                 <div class="row">
                     <div class="col-xs-5 text-center">
                         <p>
@@ -573,6 +573,22 @@
                                 </td>
                             </tr>
                         </table>
+                    </div>                    
+                </div>
+                <div class="row" name="total" style="padding:30px; font-family: 'Rockwell' !important;">
+                    <div class="col-xs-2">
+                        
+                    </div>
+                    <div class="col-xs-8">
+                        <p>
+                            <span style="font-size:18px;text-decoration: underline;">OBSERVACIONES:</span>
+                        </p> 
+                        <p>
+                            <span style="font-size:18px;" t-esc="doc.notes"/>
+                        </p> 
+                    </div>
+                    <div class="col-xs-2">
+                        
                     </div>                    
                 </div>
             </div>
