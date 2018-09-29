@@ -527,20 +527,22 @@
                         </table>
                     </div>                    
                 </div>
-                <div class="row" name="total" style="padding:15px 0px 0px 0px; font-family: 'Rockwell' !important;">
-                    <div class="col-xs-1">                        
+                <t t-if="doc.notes">
+                    <div class="row" name="total" style="padding:15px 0px 0px 0px; font-family: 'Rockwell' !important;">
+                        <div class="col-xs-1">                        
+                        </div>
+                        <div class="col-xs-10">
+                            <p>
+                                <span style="font-size:16px;text-decoration: underline;">OBSERVACIONES:</span>
+                            </p> 
+                            <p>
+                                <span style="font-size:16px;" t-esc="doc.notes"/>
+                            </p> 
+                        </div>
+                        <div class="col-xs-1">                        
+                        </div>                    
                     </div>
-                    <div class="col-xs-10">
-                        <p>
-                            <span style="font-size:16px;text-decoration: underline;">OBSERVACIONES:</span>
-                        </p> 
-                        <p>
-                            <span style="font-size:16px;" t-esc="doc.notes"/>
-                        </p> 
-                    </div>
-                    <div class="col-xs-1">                        
-                    </div>                    
-                </div>
+                </t>
             </div>
         </div>
     </t>
