@@ -9,13 +9,12 @@
                 <div class="col-xs-1">                        
                 </div>
                 <div class="col-xs-10 text-right">
-                    <h3>
+                    <p style="text-decoration: underline;font-weight: bold;font-size:20px;">
                         <span t-if="doc.state in ['draft','sent']">Cotización No. </span>                
                         <span t-field="doc.name"/>
-                    </h3>
+                    </p>
                     <t t-if="doc.date_order and doc.state in ['draft','sent']">
-                        <p>
-                            <strong>Fecha de cotización: </strong><span t-field="doc.date_order" t-options='{"widget": "date"}'/>
+                        <p style="font-size:16px;">Fecha de cotización: <span t-field="doc.date_order" t-options='{"widget": "date"}'/>
                         </p>    
                     </t>    
                 </div>
@@ -25,7 +24,7 @@
             <div class="row" style="padding:10px;font-family: 'Rockwell' !important;">                
                 <div class="col-xs-11 col-xs-offset-1">
                     <div t-field="doc.partner_id"
-                        t-options='{"widget": "contact", "fields": ["name", "email", "phone"], "no_marker": True}' />
+                        t-options='{"widget": "contact", "fields": ["name", "partner_id", "email", "phone"], "no_marker": True}' />
                     <div t-if="doc.client_order_ref">
                         <strong>Referencia:</strong>
                         <p t-field="doc.client_order_ref"/>
@@ -64,7 +63,7 @@
 
                                 <!-- Lines associated -->
                                 <t t-foreach="layout_category['lines']" t-as="l">
-                                    <tr style="border-top:2px solid rgb(209,65,36) !important;">
+                                    <tr style="border-top:1px solid black !important;">
                                         <td class="text-center">
                                             <span t-field="l.product_id.l10n_mx_edi_code_sat_id.code"/>
                                         </td>
@@ -94,7 +93,7 @@
                                 </t>
 
                                 <t t-if="(layout_category_size > 1 or page_size > 1) and layout_category['subtotal']" groups="sale.group_sale_layout">
-                                    <tr class="text-right" style="border-top:2px solid rgb(209,65,36) !important;">
+                                    <tr class="text-right" style="border-top:1px solid black !important;">
                                         <td colspan="6">
                                             <strong>Subtotal: </strong>
                                             <t t-set="subtotal" t-value="sum(line.price_subtotal for line in layout_category['lines'])"/>
@@ -119,7 +118,7 @@
                     </div>
                     <div class="col-xs-5" style="padding-right:30px;font-family: 'Rockwell' !important;">
                         <table class="table table-condensed" style="min-width: 200px;max-width: 350px;">
-                            <tr style="border-bottom:1px solid #dddddd; border-top:2px solid rgb(209,65,36) !important;">
+                            <tr style="border-bottom:1px solid #dddddd; border-top:1px solid black !important;">
                                 <td>
                                     <strong>Subtotal &#40;<span t-field="doc.pricelist_id.currency_id.name"></span>&#41;</strong>
                                 </td>
@@ -151,7 +150,7 @@
                                     </t>
                                 </tr>
                             </t>
-                            <tr style="border-top:2px solid rgb(209,65,36) !important;">
+                            <tr style="border-top:1px solid black !important;">
                                 <td><strong>Total &#40;<span t-field="doc.pricelist_id.currency_id.name"></span>&#41;</strong></td>
                                 <td class="text-right">
                                     <span t-field="doc.amount_total"
@@ -169,7 +168,7 @@
                 <div class="col-xs-1">                        
                 </div>
                 <div class="col-xs-10">
-                    <p style="text-decoration: underline;">CONDICIONES GENERALES DE MENUDEO</p>
+                    <p style="text-decoration: underline;">CONDICIONES GENERALES</p>
                     <p><span style="text-decoration: underline;">Vigencia de la cotización:</span> <span t-field="doc.validity_date"/>
                     </p>
                     <ul>
