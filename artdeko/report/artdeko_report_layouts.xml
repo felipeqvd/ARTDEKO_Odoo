@@ -31,7 +31,7 @@
         <t t-if="not o or not 'company_id' in o">
             <t t-set="company" t-value="res_company"/>
         </t>
-        <div class="header">
+        <div class="header" style="opacity:0.6;">
             <div class="row" style="padding-top:50px;">
                 <div class="col-xs-6">
                     <img style="padding-left:100px;" class="img img-responsive" src="/artdeko/static/src/img/logo_texto.png" width="300px"/>                    
@@ -46,7 +46,7 @@
             <t t-raw="0" />
         </div>
         
-        <div class="footer">
+        <div class="footer" style="opacity:0.6;">
             <div class="row" style="padding-top:5px;padding-bottom:40px;">
                 <div class="col-xs-2">                        
                 </div>
