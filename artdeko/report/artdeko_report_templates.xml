@@ -244,16 +244,23 @@
                     <p style="text-align: center;"><strong>CUENTAS BANCARIAS</strong><br></br></p>
                     <p style="text-align: center;"><span t-esc="doc.company_id.name"/><br></br></p>
                     <p style="text-align: center;"><span t-esc="doc.company_id.vat"/><br></br></p>
-                    <table class="table">
+                    <table style="width:100%">
                         <thead>
                             <tr style="background-color: rgb(166,166,166);">
-                                <th class="text-center">PESOS</th>                                                         
+                                <th class="text-center">PARA RECIBIR PAGOS DE CUENTAS NACIONALES</th>                                                         
+                            </tr>
+                        </thead>                        
+                    </table>
+                    <table style="width:100%">
+                        <thead>
+                            <tr style="background-color: rgb(166,166,166);">
+                                <th class="text-center"  style="border-bottom: 1px solid black;">PESOS</th>                                                         
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="text-center">
-                                    <table class="table">
+                                <td class="text-center" style="width:100%; border-bottom: 1px solid black; border-left: 1px solid black;  border-right: 1px solid black;">
+                                    <table style="width:100%">
                                         <thead>
                                             <tr>
                                                 <th class="text-center">Banco</th>
@@ -281,34 +288,69 @@
                             </tr>                        
                         </tbody>
                     </table>
-                    <table class="table table-condensed">
+                    <table style="width:100%">
                         <thead>
-                            <tr>
-                                <th class="text-center">BANCO</th>
-                                <th class="text-center">MONEDA</th>
-                                <th class="text-center">CUENTA</th>
-                                <th class="text-center">CLABE</th>                                
+                            <tr style="background-color: rgb(166,166,166);">
+                                <th class="text-center"  style="border-bottom: 1px solid black;">DÓLARES</th>                                                         
                             </tr>
                         </thead>
-                        <tbody class="sale_tbody">
+                        <tbody>
                             <tr>
-                                <td class="text-center">SANTANDER</td>
-                                <td class="text-center">MXN</td>
-                                <td class="text-center">65504603357</td>
-                                <td class="text-center">014691655046033577</td>
+                                <td class="text-center" style="width:100%; border-bottom: 1px solid black; border-left: 1px solid black;  border-right: 1px solid black;">
+                                    <table style="width:100%">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-center">Banco</th>
+                                                <th class="text-center">No. Cta</th>
+                                                <th class="text-center">Clabe Spei</th>
+                                                <th class="text-center">Moneda</th>                                                         
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-left">Santander</td>
+                                                <td class="text-left">82500666324</td>
+                                                <td class="text-left">14691825006663241</td>
+                                                <td class="text-left">USD</td>
+                                            </tr>     
+                                            <tr>
+                                                <td class="text-left">Monex</td>
+                                                <td class="text-left">1054725</td>
+                                                <td class="text-left">112180000010547259</td>
+                                                <td class="text-left">USD</td>
+                                            </tr>                   
+                                        </tbody>
+                                    </table>
+                                </td>                                
+                            </tr>                        
+                        </tbody>
+                    </table>
+                    <table style="width:100%">
+                        <thead>
+                            <tr style="background-color: rgb(166,166,166);">
+                                <th class="text-center"  style="border-bottom: 1px solid black;">EUROS</th>                                                         
                             </tr>
+                        </thead>
+                        <tbody>
                             <tr>
-                                <td class="text-center">SANTANDER</td>
-                                <td class="text-center">USD</td>
-                                <td class="text-center">82500666324</td>
-                                <td class="text-center">014691825006663241</td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">BANCO MONEX SA DE CV<br></br>Institución de banca múltiple</td>
-                                <td class="text-center">EURO</td>
-                                <td class="text-center"> - </td>
-                                <td class="text-center">112180000010547251</td>
-                            </tr>                            
+                                <td class="text-center" style="width:100%; border-bottom: 1px solid black; border-left: 1px solid black;  border-right: 1px solid black;">
+                                    <table style="width:100%">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-center">Beneficiary´s Bank<br></br>Address</th>
+                                                <td class="text-left">Banco Monex, SA<br></br>Reforma 284<br></br>06600 Mexico, DF</td>                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th class="text-center">Beneficiary:</th>
+                                                <td class="text-left">Cuenta clabe del cliente:<br></br>Nombre:<br></br>Domicilio:</td>
+                                                <td class="text-left">112180000010547251<br></br>ARTDEKO SA DE CV<br></br>CANCUN QROO 77500</td>
+                                            </tr>        
+                                        </tbody>
+                                    </table>
+                                </td>                                
+                            </tr>                        
                         </tbody>
                     </table>
                 </div>
