@@ -236,21 +236,51 @@
                 <div class="col-xs-1">                        
                 </div>                              
             </div>
-            <p style="page-break-before:always;"> </p>
-            <div class="row" style="font-family: 'Rockwell' !important;">
-                <div class="col-xs-1">                        
-                </div>
-                <div class="col-xs-10">                    
-                    <p style="text-decoration: underline;">Datos bancarios:</p>
-                </div>
-                <div class="col-xs-1">                        
-                </div>                              
-            </div>
+            <p style="page-break-before:always;"> </p>            
             <div class="row" style="font-family: 'Rockwell' !important;">
                 <div class="col-xs-2">                        
                 </div>
                 <div class="col-xs-8">
-                    <p style="text-align: center;"><strong t-esc="doc.company_id.name"/><strong> - RFC: </strong><strong t-esc="doc.company_id.vat"/><br></br></p>
+                    <p style="text-align: center;"><strong>CUENTAS BANCARIAS</strong><br></br></p>
+                    <p style="text-align: center;"><span t-esc="doc.company_id.name"/><br></br></p>
+                    <p style="text-align: center;"><span t-esc="doc.company_id.vat"/><br></br></p>
+                    <table class="table">
+                        <thead>
+                            <tr style="background-color: rgb(166,166,166);">
+                                <th class="text-center">PESOS</th>                                                         
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-center">Banco</th>
+                                                <th class="text-center">No. Cta</th>
+                                                <th class="text-center">Clabe Spei</th>
+                                                <th class="text-center">Moneda</th>                                                         
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-left">Santander</td>
+                                                <td class="text-left">65504603357</td>
+                                                <td class="text-left">014691655046033577</td>
+                                                <td class="text-left">MN</td>
+                                            </tr>     
+                                            <tr>
+                                                <td class="text-left">HSBC</td>
+                                                <td class="text-left">4023343874</td>
+                                                <td class="text-left">021691040233438745</td>
+                                                <td class="text-left">MN</td>
+                                            </tr>                   
+                                        </tbody>
+                                    </table>
+                                </td>                                
+                            </tr>                        
+                        </tbody>
+                    </table>
                     <table class="table table-condensed">
                         <thead>
                             <tr>
