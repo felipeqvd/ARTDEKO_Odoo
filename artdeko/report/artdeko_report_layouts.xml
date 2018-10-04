@@ -100,26 +100,14 @@
         <t t-if="not o or not 'company_id' in o">
             <t t-set="company" t-value="res_company"/>
         </t>
-        <div class="header">
-            <div class="row" style="padding-top:30px;">
-                <div class="col-xs-4">
-                    <img style="padding-left:100px;" class="img img-responsive" src="/artdeko/static/src/img/logo.png" width="300px"/>                    
-                </div>
-                <div class="col-xs-4" style="text-align: center;font-size:12px;font-weight: bold; font-family: 'Rockwell' !important;">
-                    <p><span t-field="company.name"/></p>
-                    <p><t t-esc="company.country_id.vat_label or 'RFC'"/>: <span t-field="company.vat"/></p>                    
-                </div>                
-                <div class="col-xs-4">                    
-                </div>
-            </div>
+        <div class="header">            
         </div>
-
+        
         <div class="article o_report_layout_standard">
             <t t-raw="0" />
         </div>
         
-        <div class="footer">
-            
+        <div class="footer">            
         </div>
     </template>
 </odoo>
