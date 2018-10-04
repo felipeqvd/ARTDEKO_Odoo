@@ -246,14 +246,15 @@
                     <p style="text-align: center;"><span t-esc="doc.company_id.vat"/><br></br></p>
                     <table style="width:100%">
                         <thead>
-                            <tr style="background-color: rgb(166,166,166);">
+                            <tr style="background-color: rgb(200,200,200);">
                                 <th class="text-center">PARA RECIBIR PAGOS DE CUENTAS NACIONALES</th>                                                         
                             </tr>
                         </thead>                        
                     </table>
+                    <p></p>
                     <table style="width:100%">
                         <thead>
-                            <tr style="background-color: rgb(166,166,166);">
+                            <tr style="background-color: rgb(200,200,200);">
                                 <th class="text-center"  style="border-bottom: 1px solid black;">PESOS</th>                                                         
                             </tr>
                         </thead>
@@ -288,9 +289,10 @@
                             </tr>                        
                         </tbody>
                     </table>
+                    <p></p>
                     <table style="width:100%">
                         <thead>
-                            <tr style="background-color: rgb(166,166,166);">
+                            <tr style="background-color: rgb(200,200,200);">
                                 <th class="text-center"  style="border-bottom: 1px solid black;">DÓLARES</th>                                                         
                             </tr>
                         </thead>
@@ -325,25 +327,26 @@
                             </tr>                        
                         </tbody>
                     </table>
+                    <p></p>
                     <table style="width:100%">
                         <thead>
-                            <tr style="background-color: rgb(166,166,166);">
+                            <tr style="background-color: rgb(200,200,200);">
                                 <th class="text-center"  style="border-bottom: 1px solid black;">EUROS</th>                                                         
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td class="text-center" style="width:100%; border-bottom: 1px solid black; border-left: 1px solid black;  border-right: 1px solid black;">
-                                    <table style="width:100%">
+                                    <table style="width:100%;">
                                         <thead>
                                             <tr>
-                                                <th class="text-center">Beneficiary´s Bank<br></br>Address</th>
-                                                <td class="text-left">Banco Monex, SA<br></br>Reforma 284<br></br>06600 Mexico, DF</td>                                                
+                                                <th class="text-center" style="vertical-align:center;border-bottom: 1px solid black;">Beneficiary´s Bank<br></br>Address</th>
+                                                <td class="text-left" style="border-bottom: 1px solid black;border-left: 1px solid black;">Banco Monex, SA<br></br>Reforma 284<br></br>06600 Mexico, DF</td>                                                
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <th class="text-center">Beneficiary:</th>
+                                                <th class="text-center" style="vertical-align:center;border-right: 1px solid black;">Beneficiary:</th>
                                                 <td class="text-left">Cuenta clabe del cliente:<br></br>Nombre:<br></br>Domicilio:</td>
                                                 <td class="text-left">112180000010547251<br></br>ARTDEKO SA DE CV<br></br>CANCUN QROO 77500</td>
                                             </tr>        
