@@ -79,7 +79,8 @@
                                             <span t-field="l.discount"/>
                                         </td>
                                         <td t-if="display_discount" class="text-right" style="border-top:1px solid black !important;">
-                                            <t t-esc="l.discount * l.price_unit * l.product_uom_qty/100"/>
+                                            <t t-esc="l.discount * l.price_unit * l.product_uom_qty/100" 
+                                               t-options='{"widget": "monetary", "display_currency": doc.pricelist_id.currency_id}'/>
                                         </td>                                    
                                         <td class="text-right" groups="sale.group_show_price_subtotal" style="border-top:1px solid black !important;">
                                             <span t-field="l.price_subtotal"
