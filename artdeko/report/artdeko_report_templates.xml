@@ -45,7 +45,8 @@
                                 <th class="text-right">Cantidad</th>
                                 <th class="text-center">Imagen</th>
                                 <th class="text-right">Precio unidad</th>
-                                <th t-if="display_discount" class="text-right" groups="sale.group_discount_per_so_line">Descuento(%)</th>                            
+                                <th t-if="display_discount" class="text-right" groups="sale.group_discount_per_so_line">Descuento(%)</th> 
+                                <th t-if="display_discount" class="text-right">Importe<br></br>descuento</th>                            
                                 <th class="text-right" groups="sale.group_show_price_subtotal">Subtotal</th>
                                 <th class="text-right price_tax_included" groups="sale.group_show_price_total">Total</th>
                             </tr>
@@ -80,6 +81,9 @@
                                         </td>
                                         <td t-if="display_discount" class="text-right" groups="sale.group_discount_per_so_line">
                                             <span t-field="l.discount"/>
+                                        </td>
+                                        <td t-if="display_discount" class="text-right">
+                                            <t t-esc="l.discount * l.price_unit /100"/>
                                         </td>                                    
                                         <td class="text-right" groups="sale.group_show_price_subtotal">
                                             <span t-field="l.price_subtotal"
@@ -340,13 +344,13 @@
                                     <table style="width:100%;">
                                         <thead>
                                             <tr>
-                                                <th class="text-center" style="vertical-align:center;border-bottom: 1px solid black;">Beneficiary´s Bank<br></br>Address</th>
-                                                <td class="text-left" style="border-bottom: 1px solid black;border-left: 1px solid black;">Banco Monex, SA<br></br>Reforma 284<br></br>06600 Mexico, DF</td>                                                
+                                                <th class="text-center" style="vertical-align:middle;border-bottom: 1px solid black;">Beneficiary´s Bank<br></br>Address</th>
+                                                <td class="text-left" style="border-bottom: 1px solid black;border-left: 1px solid black;" colspan="2">Banco Monex, SA<br></br>Reforma 284<br></br>06600 Mexico, DF</td>                                                
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <th class="text-center" style="vertical-align:center;border-right: 1px solid black;">Beneficiary:</th>
+                                                <th class="text-center" style="vertical-align:middle;border-right: 1px solid black;">Beneficiary:</th>
                                                 <td class="text-left">Cuenta clabe del cliente:<br></br>Nombre:<br></br>Domicilio:</td>
                                                 <td class="text-left">112180000010547251<br></br>ARTDEKO SA DE CV<br></br>CANCUN QROO 77500</td>
                                             </tr>        
