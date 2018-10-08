@@ -4,9 +4,8 @@
 from odoo import api, fields, models
 
 class PurchaseOrder(models.Model):
-    _inherit = 'sale.order'
+    _inherit = 'purchase.order'
 
-    @api.multi
-    def purchase_amount_to_text(self):        
-        purchase_order_words = 'Valor en letras'
-        return purchase_order_words
+    # Add a new column to the res.partner model, by default partners are not
+    # instructors
+    instructor = fields.Boolean("Instructor", default=False)
