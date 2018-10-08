@@ -7,10 +7,7 @@
             <field name="arch" type="xml">
                 <xpath expr="//form[1]/sheet[1]/notebook[1]/page[1]/field[@name='order_line']/tree[1]/field[@name='price_unit']" position="after">
                   <field name="discount" string="Discount"/>
-                </xpath>
-                <xpath expr="//form[1]/sheet[1]/notebook[1]/page[1]/field[@name='order_line']/form[1]/sheet[1]/group[1]/group[1]/field[@name='price_unit']" position="after">
-                  <field name="discount" string="Discount" placeholder="%"/>
-                </xpath>
+                </xpath>                
             </field>
         </record>
     </data>
