@@ -26,3 +26,9 @@ class PurchaseOrder(models.Model):
         purchase_order_words = '%(words)s %(amount_d)02d/100 %(curr_t)s' % dict(
             words=words, amount_d=amount_d, curr_t=currency_type)
         return purchase_order_words
+    
+class PurchaseOrderLine(models.Model):
+    _inherit = 'purchase.order.line'
+    # Adicionar campo para descuentos
+    # discount
+    discount = fields.Float(string='Discount (%)', digits=dp.get_precision('Discount'), default=0.0)
