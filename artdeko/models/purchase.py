@@ -4,7 +4,7 @@
 from odoo import api, fields, models
 
 class PurchaseOrder(models.Model):
-    _inherit = 'purchase.order'
+    _inherit = 'sale.order'
 
     @api.multi
     def purchase_amount_to_text(self):        
