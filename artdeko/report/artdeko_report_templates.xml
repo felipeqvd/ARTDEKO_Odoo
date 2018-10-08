@@ -551,7 +551,7 @@
                             </tr>
                             <tr class="border-black" style="border-bottom:1px solid #dddddd;">                                
                                 <td class="text-center">
-                                    <!--<span t-esc="doc.purchase_amount_to_text()"/>-->
+                                    <span t-esc="doc.purchase_amount_to_text()"/>
                                 </td>
                             </tr>
                         </table>
