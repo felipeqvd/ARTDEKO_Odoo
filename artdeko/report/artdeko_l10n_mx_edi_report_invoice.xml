@@ -25,8 +25,9 @@
             </t>
         </xpath>
         <xpath expr="//span[@name='uso']" position="inside">
-            <t t-if="o.l10n_mx_edi_usage">
-                <span t-field="o.l10n_mx_edi_usage"/>
+            <t t-if="xml.Receptor.get('UsoCFDI', False)">
+                <t t-set="usage" t-value="xml.Receptor.get('UsoCFDI')"/>
+                <span t-esc="usage"/> - <span t-field="o.l10n_mx_edi_usage"/>
             </t>
         </xpath>       
         <xpath expr="//td[@name='fecha_emision']" position="inside">
