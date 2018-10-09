@@ -245,7 +245,8 @@
                                     </tr>
                                 </table>
                                 <span>Forma de pago: </span><span name="forma_pago"></span><br></br>
-                                <span>Método de pago: </span><span name="metodo_pago"></span>                                
+                                <span>Método de pago: </span><span name="metodo_pago"></span>
+                                <span>Uso: </span><span name="uso"></span>                                
                             </div>
                             <div class="col-xs-4">
                                 <table class="table table-condensed" style="min-width: 250px;max-width: 400px;">
