@@ -31,4 +31,4 @@ class PurchaseOrderLine(models.Model):
     _inherit = 'purchase.order.line'
     # Adicionar campo para descuentos
     # discount
-    discount = fields.Float(string='Discount (%)', digits=dp.get_precision('Discount'), default=0.0)
+    discount = fields.Float(string='Discount (%)', default=0.0)
