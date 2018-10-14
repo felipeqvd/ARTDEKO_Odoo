@@ -3,6 +3,7 @@
 
 from odoo import api, fields, models
 from odoo.addons import decimal_precision as dp
+from odoo.tools.float_utils import float_is_zero, float_compare
 
 class PurchaseOrder(models.Model):
     _inherit = 'purchase.order'
@@ -33,3 +34,30 @@ class PurchaseOrderLine(models.Model):
     # Adicionar campo para descuentos
     # discount
     discount = fields.Float(string='Descuento (%)', digits=dp.get_precision('Discount'), default=0.0)
+    
+    @api.model
+    @api.depends('product_qty', 'price_unit', 'taxes_id')    
+    def _compute_amount(self):
+        for line in self:
+            taxes = line.taxes_id.compute_all(line.price_unit, line.order_id.currency_id, line.product_qty, product=line.product_id, partner=line.order_id.partner_id)
+            line.update({
+                'price_tax': sum(t.get('amount', 0.0) for t in taxes.get('taxes', [])),
+                'price_total': taxes['total_included'],
+                'price_subtotal': taxes['total_excluded'],
+            })
+            
+    @api.model
+    def _compute_amount(self, values):
+        record = super(PurchaseOrderLine, self)._compute_amount(values) 
+        for line in self:
+            taxes = line.taxes_id.compute_all(line.price_unit, line.order_id.currency_id, line.product_qty, product=line.product_id, partner=line.order_id.partner_id)
+            line.update({
+                'price_tax': sum(t.get('amount', 0.0) for t in taxes.get('taxes', [])),
+                'price_total': taxes['total_included'],
+                'price_subtotal': taxes['total_excluded'],
+            })
+            
+        record['passed_override_write_function'] = True
+        # Return the record so that the changes are applied and everything is stored.
+	return record
+    
