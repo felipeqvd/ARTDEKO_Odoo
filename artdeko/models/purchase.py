@@ -28,20 +28,35 @@ class PurchaseOrder(models.Model):
         purchase_order_words = '%(words)s %(amount_d)02d/100 %(curr_t)s' % dict(
             words=words, amount_d=amount_d, curr_t=currency_type)
         return purchase_order_words
+    # Adicionar campo para descuentos
+    # amount_discounted    
+    amount_discounted = fields.Float(string='Descuentos', digits=dp.get_precision('Product Price'), default=0.0)
+    # Incluir descuentos en los cálculos
+    @api.model
+    def _amount_all(self):
+        super(PurchaseOrder, self)._amount_all()
+        for order in self:
+            for line in order.order_line:
+                amount_discounted += line.amount_discount_line
+            order.update({
+                'amount_discounted': order.currency_id.round(amount_discounted),                
+            })
     
 class PurchaseOrderLine(models.Model):
     _inherit = 'purchase.order.line'
     # Adicionar campo para descuentos
     # discount
     discount = fields.Float(string='Descuento (%)', digits=dp.get_precision('Discount'), default=0.0)
+    amount_discount_line = fields.Float(string='Importe descuento', digits=dp.get_precision('Product Price'), default=0.0)
     # Incluir el descuento en los cálculos
     @api.model
     def _compute_amount(self):
         super(PurchaseOrderLine, self)._compute_amount()
         for line in self:
-            discount_amount = (line.discount * line.price_unit)/100
-            taxes = line.taxes_id.compute_all(line.price_unit - discount_amount, line.order_id.currency_id, line.product_qty, product=line.product_id, partner=line.order_id.partner_id)
+            amount_discount = (line.discount * line.price_unit)/100
+            taxes = line.taxes_id.compute_all(line.price_unit - amount_discount, line.order_id.currency_id, line.product_qty, product=line.product_id, partner=line.order_id.partner_id)
             line.update({
+                'amount_discount_line': amount_discount * line.product_qty,
                 'price_tax': sum(t.get('amount', 0.0) for t in taxes.get('taxes', [])),
                 'price_total': taxes['total_included'],
                 'price_subtotal': taxes['total_excluded'],
