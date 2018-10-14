@@ -36,7 +36,7 @@ class PurchaseOrderLine(models.Model):
     discount = fields.Float(string='Descuento (%)', digits=dp.get_precision('Discount'), default=0.0)
     # Incluir el descuento en los cálculos
     @api.model
-    def _compute_amount(self, values):        
+    def _compute_amount(self):        
         for line in self:
             discount_amount = (line.discount * line.price_unit)/100
             taxes = line.taxes_id.compute_all(line.price_unit - discount_amount, line.order_id.currency_id, line.product_qty, product=line.product_id, partner=line.order_id.partner_id)
@@ -45,4 +45,4 @@ class PurchaseOrderLine(models.Model):
                 'price_total': taxes['total_included'],
                 'price_subtotal': taxes['total_excluded'],
             })
-        super(PurchaseOrderLine, self)._compute_amount(values)
+        super(PurchaseOrderLine, self)._compute_amount()
