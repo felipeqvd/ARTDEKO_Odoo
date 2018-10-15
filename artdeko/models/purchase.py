@@ -48,7 +48,7 @@ class PurchaseOrderLine(models.Model):
     # Adicionar campo para descuentos
     # discount
     discount = fields.Float(string='Descuento (%)', digits=dp.get_precision('Discount'), default=0.0)
-    amount_discount_line = fields.Float(string='Importe descuento', digits=dp.get_precision('Product Price'), default=0.0)
+    amount_discount_line = fields.Monetary(compute='_compute_amount', string='Importe descuento', store=True)
     # Incluir el descuento en los cálculos
     @api.model
     def _compute_amount(self):
