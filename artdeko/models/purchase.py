@@ -55,9 +55,10 @@ class PurchaseOrderLine(models.Model):
         super(PurchaseOrderLine, self)._compute_amount()
         for line in self:
             amount_discount = (line.discount * line.price_unit)/100
+            amount_discount_line = amount_discount * line.product_qty
             taxes = line.taxes_id.compute_all(line.price_unit - amount_discount, line.order_id.currency_id, line.product_qty, product=line.product_id, partner=line.order_id.partner_id)
             line.update({
-                'amount_discount_line': amount_discount * line.product_qty,
+                'amount_discount_line': amount_discount_line,
                 'price_tax': sum(t.get('amount', 0.0) for t in taxes.get('taxes', [])),
                 'price_total': taxes['total_included'],
                 'price_subtotal': taxes['total_excluded'],
