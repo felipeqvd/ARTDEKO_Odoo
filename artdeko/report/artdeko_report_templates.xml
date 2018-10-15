@@ -548,7 +548,7 @@
                                 <span t-field="l.discount"/>
                             </td>
                             <td t-if="display_discount" class="text-right">
-                                <t t-esc="l.discount * l.price_unit * l.product_qty/100" 
+                                <span t-field="l.amount_discount_line" 
                                    t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/>
                             </td>                                                               
                             <td class="text-right">
