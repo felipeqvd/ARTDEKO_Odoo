@@ -29,8 +29,8 @@ class PurchaseOrder(models.Model):
             words=words, amount_d=amount_d, curr_t=currency_type)
         return purchase_order_words
     # Adicionar campo para descuentos
-    # amount_discounted    
-    amount_discounted = fields.Float(string='Descuentos', digits=dp.get_precision('Product Price'), default=0.0)
+    # amount_discounted 
+    amount_discounted = fields.Monetary(string='Descuentos', store=True, readonly=True, compute='_amount_all')
     # Incluir descuentos en los cálculos
     @api.model
     def _amount_all(self):
