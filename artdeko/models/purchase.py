@@ -36,6 +36,7 @@ class PurchaseOrder(models.Model):
     def _amount_all(self):
         super(PurchaseOrder, self)._amount_all()
         for order in self:
+            amount_discounted = 0.0
             for line in order.order_line:
                 amount_discounted += line.amount_discount_line
             order.update({
