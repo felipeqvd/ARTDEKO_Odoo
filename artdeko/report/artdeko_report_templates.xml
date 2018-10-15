@@ -581,7 +581,7 @@
                                     <strong>Subtotal 1 &#40;<span t-field="doc.currency_id.name"></span>&#41;</strong>
                                 </td>
                                 <td class="text-right">
-                                    <span t-esc="doc.amount_discounted + amount_untaxed"
+                                    <span t-esc="doc.amount_discounted + doc.amount_untaxed"
                                         t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/>
                                 </td>
                             </tr>
