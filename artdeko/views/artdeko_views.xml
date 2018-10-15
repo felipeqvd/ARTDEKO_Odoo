@@ -23,10 +23,10 @@
                         string="Solicitar compra" class="btn-primary" type="object"
                         attrs="{'invisible': [('state', 'not in', ['sent'])]}"/>
                     <button name="action_new_purchase" id="action_new_purchase"
-                        string="Crear orden de compra" class="btn-primary" type="object"/>
+                        string="Crear orden de compra" class="btn-primary" type="object" states="sale"/>
                     <button name="action_invoice_request" id="action_invoice_request"
                         string="Solicitar facturación" class="btn-primary" type="object"
-                        attrs="{'invisible': [('state', 'not in', ['sent'])]}"/>
+                        attrs="{'invisible': [('state', 'not in', ['draft'])]}"/>
                 </xpath>
                 <field name="note" position="attributes">
                     <attribute name="placeholder">Observaciones</attribute>
