@@ -23,8 +23,7 @@
                         string="Solicitar compra" class="btn-primary" type="object"
                         attrs="{'invisible': [('state', 'not in', ['sent'])]}"/>
                     <button name="action_new_purchase" id="action_new_purchase"
-                        string="Crear orden de compra" class="btn-primary" type="object"
-                        attrs="{'invisible': [('state', 'not in', ['sent'])]}"/>
+                        string="Crear orden de compra" class="btn-primary" type="object"/>
                     <button name="action_invoice_request" id="action_invoice_request"
                         string="Solicitar facturación" class="btn-primary" type="object"
                         attrs="{'invisible': [('state', 'not in', ['sent'])]}"/>
