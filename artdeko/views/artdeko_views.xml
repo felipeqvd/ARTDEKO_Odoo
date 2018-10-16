@@ -32,6 +32,11 @@
                                     'price_unit': 1,
                                     'product_qty': 1,
                                 }
+                                ),(0, 1, {                                 
+                                    'product_uom': 1,
+                                    'price_unit': 1,
+                                    'product_qty': 1,
+                                }
                                 )]}"/>
                     <button name="action_new_purchase" id="action_new_purchase"
                         string="Crear orden de compra" class="btn-primary" type="object" 
