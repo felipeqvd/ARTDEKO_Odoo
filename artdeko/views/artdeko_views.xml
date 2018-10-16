@@ -19,8 +19,8 @@
             <field name="inherit_id" ref="sale.view_order_form"/>
             <field name="arch" type="xml">
                 <xpath expr="//form[1]/header[1]/button[3]" position="after">
-                    <button name="action_invoice_create" id="action_purchase_request"
-                        string="Solicitar compra" class="btn-primary" type="object"
+                    <button name="purchase_action_purchase_new" type="action"
+                        string="Solicitar compra" class="btn-primary"
                         attrs="{'invisible': [('state', 'not in', ['sale'])]}"/>
                     <button name="action_new_purchase" id="action_new_purchase"
                         string="Crear orden de compra" class="btn-primary" type="object" 
@@ -33,6 +33,11 @@
                     <attribute name="placeholder">Observaciones</attribute>
                 </field>                
             </field>
+        </record>
+        <record id="purchase_action_purchase_new" model="ir.actions.act_window">
+            <field name="name">Orden de compra</field>
+            <field name="res_model">purchase.order</field>
+            <field name="view_mode">form,tree,graph</field>            
         </record>
     </data>
 </odoo>
