@@ -19,7 +19,7 @@
             <field name="inherit_id" ref="sale.view_order_form"/>
             <field name="arch" type="xml">
                 <xpath expr="//form[1]/header[1]/button[3]" position="after">
-                    <button name="purchase_action_purchase_new" type="action"
+                    <button name="%(purchase_action_purchase_new)d" type="action"
                         string="Solicitar compra" class="btn-primary"
                         attrs="{'invisible': [('state', 'not in', ['sale'])]}"/>
                     <button name="action_new_purchase" id="action_new_purchase"
