@@ -42,7 +42,7 @@ class SaleOrder(models.Model):
         self.ensure_one()       
         line3 = []
         for line in self.order_line:
-            line1 = {'product_id': line.product_id,'product_uom': line.product_uom,'price_unit': line.price_unit,'product_qty': line.product_uom_qty,}            
+            line1 = {'product_id': line.product_id,'price_unit': line.price_unit,'product_qty': line.product_uom_qty,}            
             line2 = (0,0,line1)
             line3.append(line2)        
         purchase_lines['context'] = {'default_order_line': line3,}
