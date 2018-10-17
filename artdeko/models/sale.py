@@ -28,7 +28,7 @@ class SaleOrder(models.Model):
         return sale_order_words
     
     @api.multi
-    def _prepare_purchase_lines2(self):
+    def prepare_purchase_lines2(self):
         """
         Prepare the dict of values to create the new purchase line from sales order line.
 
