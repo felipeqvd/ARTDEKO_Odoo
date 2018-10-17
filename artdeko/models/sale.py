@@ -49,7 +49,7 @@ class SaleOrder(models.Model):
         for line in self.order_line:
             # Reset date, price and quantity since _onchange_quantity will provide default values
             date_planned = datetime.today().strftime(DEFAULT_SERVER_DATETIME_FORMAT)
-            price_unit = product_qty = 0.0
+            price_unit = 0.0
             product_uom = line.product_id.uom_po_id or line.product_id.uom_id
             product_lang = line.product_id.with_context(
                 lang=line.order_partner_id.lang,
@@ -65,7 +65,7 @@ class SaleOrder(models.Model):
             else:
                 taxes_id = fpos.map_tax(line.product_id.supplier_taxes_id)
             
-            line1 = {'product_id': line.product_id.id,'price_unit': price_unit,'product_qty': product_qty,}            
+            line1 = {'product_id': line.product_id.id,'date_planned': date_planned,'price_unit': price_unit,'product_qty': line.product_uom_qty,}            
             line2 = (0,0,line1)
             line3.append(line2)        
         purchase_lines['context'] = {'default_order_line': line3,}
