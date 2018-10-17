@@ -65,7 +65,7 @@ class SaleOrder(models.Model):
             else:
                 taxes_id = fpos.map_tax(line.product_id.supplier_taxes_id)
             
-            line1 = {'product_id': line.product_id.id,'product_uom': product_uom,'price_unit': price_unit,'product_qty': product_qty,}            
+            line1 = {'product_id': line.product_id.id,'price_unit': price_unit,'product_qty': product_qty,}            
             line2 = (0,0,line1)
             line3.append(line2)        
         purchase_lines['context'] = {'default_order_line': line3,}
