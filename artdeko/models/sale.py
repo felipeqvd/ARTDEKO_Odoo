@@ -51,21 +51,8 @@ class SaleOrder(models.Model):
             date_planned = datetime.today().strftime(DEFAULT_SERVER_DATETIME_FORMAT)
             price_unit = 0.0
             product_uom = line.product_id.uom_po_id or line.product_id.uom_id
-            product_lang = line.product_id.with_context(
-                lang=line.order_partner_id.lang,
-                partner_id=line.order_partner_id.id,
-            )
-            name = product_lang.display_name
-            if product_lang.description_purchase:
-                name += '\n' + product_lang.description_purchase
-            fpos = line.order_id.fiscal_position_id
-            if line.env.uid == SUPERUSER_ID:
-                company_id = line.env.user.company_id.id
-                taxes_id = fpos.map_tax(line.product_id.supplier_taxes_id.filtered(lambda r: r.company_id.id == company_id))
-            else:
-                taxes_id = fpos.map_tax(line.product_id.supplier_taxes_id)
-            
-            line1 = {'product_id': line.product_id.id,'date_planned': date_planned,'price_unit': price_unit,'product_qty': line.product_uom_qty,}            
+                        
+            line1 = {'product_id': line.product_id.id,'product_uom': product_uom.id,'date_planned': date_planned,'price_unit': price_unit,'product_qty': line.product_uom_qty,}            
             line2 = (0,0,line1)
             line3.append(line2)        
         purchase_lines['context'] = {'default_order_line': line3,}
