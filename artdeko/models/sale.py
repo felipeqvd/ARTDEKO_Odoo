@@ -52,7 +52,7 @@ class SaleOrder(models.Model):
             price_unit = 0.0
             product_uom = line.product_id.uom_po_id or line.product_id.uom_id
                         
-            line1 = {'product_id': line.product_id.id,'product_uom': product_uom.id,'date_planned': date_planned,'price_unit': price_unit,'product_qty': line.product_uom_qty,}            
+            line1 = {'product_id': line.product_id.id,'name': line.name,'product_uom': product_uom.id,'date_planned': date_planned,'price_unit': price_unit,'product_qty': line.product_uom_qty,}            
             line2 = (0,0,line1)
             line3.append(line2)        
         purchase_lines['context'] = {'default_order_line': line3,}
