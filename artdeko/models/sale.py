@@ -28,39 +28,21 @@ class SaleOrder(models.Model):
         return sale_order_words
     
     @api.multi
-    def prepare_purchase_lines2(self):
+    def prepare_purchase_lines_from_sale_order(self):
         """
         Prepare the dict of values to create the new purchase line from sales order line.
-
-        :param qty: float quantity to invoice
         """
-        self.ensure_one()
-        res = {}        
-        res = {
+        purchase_lines = {}        
+        purchase_lines = {
             'name': 'Orden de compra',
             'type': 'ir.actions.act_window',
             'res_model': 'purchase.order',
             'view_mode': 'form,tree,graph',
             'context': {'default_order_line': [(0, 0, {'product_uom': 1,'price_unit': 1,'product_qty': 1,}),(0, 1, {'product_uom': 1,'price_unit': 1,'product_qty': 1,})]},
         }
-        return res
+        line1 = {'product_uom': 1,'price_unit': 1,'product_qty': 1,}
+        line2 = (0,0,line1)
+        line3 = [line2,line2]
+        purchase_lines['context'] = line3
+        return purchase_lines
     
-class SaleOrderLine(models.Model):
-    _inherit = 'sale.order.line'
-
-    @api.multi
-    def _prepare_purchase_lines(self):
-        """
-        Prepare the dict of values to create the new purchase line from sales order line.
-
-        :param qty: float quantity to invoice
-        """
-        self.ensure_one()
-        res = {}        
-        res = {
-            'name': 'Orden de compra',
-            'res_model': 'purchase.order',
-            'view_mode': 'form,tree,graph',
-            'context': {'default_order_line': [(0, 0, {'product_uom': 1,'price_unit': 1,'product_qty': 1,}),(0, 1, {'product_uom': 1,'price_unit': 1,'product_qty': 1,})]},
-        }
-        return res
