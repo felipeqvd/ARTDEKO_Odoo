@@ -43,6 +43,6 @@ class SaleOrder(models.Model):
         line1 = {'product_uom': 1,'price_unit': 1,'product_qty': 1,}
         line2 = (0,0,line1)
         line3 = [line2,line2]
-        purchase_lines['context'] = line3
+        purchase_lines['context'] = {'default_order_line': line3,}
         return purchase_lines
     
