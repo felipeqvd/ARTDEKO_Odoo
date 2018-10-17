@@ -26,3 +26,40 @@ class SaleOrder(models.Model):
         sale_order_words = '%(words)s %(amount_d)02d/100 %(curr_t)s' % dict(
             words=words, amount_d=amount_d, curr_t=currency_type)
         return sale_order_words
+    
+    @api.multi
+    def _prepare_purchase_lines2(self):
+        """
+        Prepare the dict of values to create the new purchase line from sales order line.
+
+        :param qty: float quantity to invoice
+        """
+        self.ensure_one()
+        res = {}        
+        res = {
+            'name': 'Orden de compra',
+            'res_model': 'purchase.order',
+            'view_mode': 'form,tree,graph',
+            'context': {'default_order_line': [(0, 0, {'product_uom': 1,'price_unit': 1,'product_qty': 1,}),(0, 1, {'product_uom': 1,'price_unit': 1,'product_qty': 1,})]},
+        }
+        return res
+    
+class SaleOrderLine(models.Model):
+    _inherit = 'sale.order.line'
+
+    @api.multi
+    def _prepare_purchase_lines(self):
+        """
+        Prepare the dict of values to create the new purchase line from sales order line.
+
+        :param qty: float quantity to invoice
+        """
+        self.ensure_one()
+        res = {}        
+        res = {
+            'name': 'Orden de compra',
+            'res_model': 'purchase.order',
+            'view_mode': 'form,tree,graph',
+            'context': {'default_order_line': [(0, 0, {'product_uom': 1,'price_unit': 1,'product_qty': 1,}),(0, 1, {'product_uom': 1,'price_unit': 1,'product_qty': 1,})]},
+        }
+        return res

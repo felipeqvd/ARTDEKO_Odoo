@@ -24,20 +24,9 @@
             <field name="inherit_id" ref="sale.view_order_form"/>
             <field name="arch" type="xml">
                 <xpath expr="//form[1]/header[1]/button[3]" position="after">
-                    <button name="%(purchase_action_purchase_new)d" type="action"
+                    <button name="_prepare_purchase_lines2" type="action"
                         string="Solicitar compra" class="btn-primary"
-                        attrs="{'invisible': [('state', 'not in', ['sale'])]}"
-                        context="{'default_order_line': [(0, 0, {                                 
-                                    'product_uom': 1,
-                                    'price_unit': 1,
-                                    'product_qty': 1,
-                                }
-                                ),(0, 1, {                                 
-                                    'product_uom': 1,
-                                    'price_unit': 1,
-                                    'product_qty': 1,
-                                }
-                                )]}"/>
+                        attrs="{'invisible': [('state', 'not in', ['sale'])]}"/>
                     <button name="action_new_purchase" id="action_new_purchase"
                         string="Crear orden de compra" class="btn-primary" type="object" 
                         attrs="{'invisible': [('state', 'not in', ['sale'])]}"/>
