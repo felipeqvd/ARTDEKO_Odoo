@@ -52,8 +52,8 @@ class SaleOrder(models.Model):
             price_unit = product_qty = 0.0
             product_uom = line.product_id.uom_po_id or line.product_id.uom_id
             product_lang = line.product_id.with_context(
-                lang=line.partner_id.lang,
-                partner_id=line.partner_id.id,
+                lang=line.order_partner_id.lang,
+                partner_id=line.order_partner_id.id,
             )
             name = product_lang.display_name
             if product_lang.description_purchase:
