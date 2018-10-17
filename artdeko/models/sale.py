@@ -37,12 +37,14 @@ class SaleOrder(models.Model):
             'name': 'Orden de compra',
             'type': 'ir.actions.act_window',
             'res_model': 'purchase.order',
-            'view_mode': 'form,tree,graph',
-            'context': {'default_order_line': [(0, 0, {'product_uom': 1,'price_unit': 1,'product_qty': 1,}),(0, 1, {'product_uom': 1,'price_unit': 1,'product_qty': 1,})]},
+            'view_mode': 'form,tree,graph',            
         }
-        line1 = {'product_uom': 1,'price_unit': 1,'product_qty': 1,}
-        line2 = (0,0,line1)
-        line3 = [line2,line2]
+        for order in self:
+            line3 = []
+            for line in order.order_line:
+                line1 = {'product_id': line.product_id,}            
+                line2 = (0,0,line1)
+                line3.append(line2)        
         purchase_lines['context'] = {'default_order_line': line3,}
         return purchase_lines
     
