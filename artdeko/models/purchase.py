@@ -42,6 +42,30 @@ class PurchaseOrder(models.Model):
             order.update({
                 'amount_discounted': order.currency_id.round(amount_discounted),                
             })
+    # Poner los precios del proveedor
+    @api.model
+    @api.onchange('partner_id', 'company_id')
+    def onchange_partner_id(self):
+        super(PurchaseOrder, self).onchange_partner_id()
+        for order in self:            
+            for line in order.order_line:
+                seller = line.product_id._select_seller(
+                    partner_id=line.partner_id,
+                    quantity=line.product_qty,
+                    date=line.order_id.date_order and line.order_id.date_order[:10],
+                    uom_id=line.product_uom)
+
+                if seller or not line.date_planned:
+                    line.date_planned = line._get_date_planned(seller).strftime(DEFAULT_SERVER_DATETIME_FORMAT)
+
+                price_unit = line.env['account.tax']._fix_tax_included_price_company(seller.price, line.product_id.supplier_taxes_id, line.taxes_id, line.company_id) if seller else 0.0
+                if price_unit and seller and line.order_id.currency_id and seller.currency_id != line.order_id.currency_id:
+                    price_unit = seller.currency_id.compute(price_unit, line.order_id.currency_id)
+
+                if seller and line.product_uom and seller.product_uom != line.product_uom:
+                    price_unit = seller.product_uom._compute_price(price_unit, line.product_uom)
+
+                line.price_unit = price_unit                  
     
 class PurchaseOrderLine(models.Model):
     _inherit = 'purchase.order.line'
