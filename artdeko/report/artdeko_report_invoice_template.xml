@@ -101,7 +101,7 @@
                                 </div>
                                 <div class="col-xs-10">
                                     <p>
-                                        <span t-field="o.partner_id"/>
+                                        <span t-field="o.partner_id.parent_id.name"/>
                                     </p>                        
                                 </div>                                                     
                             </div>
