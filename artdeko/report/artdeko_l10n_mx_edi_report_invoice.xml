@@ -23,6 +23,9 @@
             <t t-if="o.l10n_mx_edi_cfdi_uuid">
                 <span t-esc="xml.get('formaDePago', xml.get('MetodoPago'))"/>
             </t>
+            <t t-else="">
+                <span t-field="o.payment_term_id.name"/>
+            </t>
         </xpath>
         <xpath expr="//span[@name='uso']" position="inside">
             <t t-if="o.l10n_mx_edi_cfdi_uuid">
