@@ -1,9 +1,12 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models
+from datetime import datetime
+from odoo import api, fields, models, SUPERUSER_ID, _
+from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT
 from odoo.addons import decimal_precision as dp
 from odoo.tools.float_utils import float_is_zero, float_compare
+from odoo.tools.misc import formatLang
 
 class PurchaseOrder(models.Model):
     _inherit = 'purchase.order'
