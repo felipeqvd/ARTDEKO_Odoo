@@ -20,10 +20,11 @@
             <field name="arch" type="xml">
                 <xpath expr="//form[1]/header[1]/button[3]" position="after">
                     <button name="prepare_purchase_lines_from_sale_order" type="object"
-                        string="Solicitar compra" class="btn-primary"
-                        attrs="{'invisible': [('state', 'not in', ['sale'])]}"/>
+                        string="Crear orden de compra" class="btn-primary"
+                        attrs="{'invisible': [('state', 'not in', ['sale'])]}"
+                        groups="['52']"/>
                     <button name="action_new_purchase" id="action_new_purchase"
-                        string="Crear orden de compra" class="btn-primary" type="object" 
+                        string="Solicitar compra" class="btn-primary" type="object" 
                         attrs="{'invisible': [('state', 'not in', ['sale'])]}"/>
                     <button name="action_invoice_request" id="action_invoice_request"
                         string="Solicitar facturación" class="btn-primary" type="object"
