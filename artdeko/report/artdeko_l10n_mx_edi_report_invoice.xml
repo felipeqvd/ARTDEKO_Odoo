@@ -21,7 +21,7 @@
         </xpath>          
         <xpath expr="//span[@name='metodo_pago']" position="inside">
             <t t-if="o.l10n_mx_edi_cfdi_uuid">
-                <span t-esc="xml.get('formaDePago', xml.get('MetodoPago'))"/>
+                <span t-esc="xml.get('formaDePago', xml.get('MetodoPago'))"/> - <span t-field="o.payment_term_id.note"/>
             </t>
             <t t-else="">
                 <span t-field="o.payment_term_id.name"/>
