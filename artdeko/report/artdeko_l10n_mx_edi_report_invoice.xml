@@ -38,25 +38,40 @@
             <t t-if="o.l10n_mx_edi_cfdi_uuid">
                 <span t-esc="xml.get('fecha', xml.get('Fecha', '')).replace('T', ' ')"/>
             </t>
+            <t t-else="">
+                <span t-field="o.date_invoice"/>
+            </t>
         </xpath>
         <xpath expr="//td[@name='certificado_emisor']" position="inside">
             <t t-if="o.l10n_mx_edi_cfdi_uuid">
                 <span t-esc="xml.get('noCertificado', xml.get('NoCertificado'))"/>
+            </t>
+            <t t-else="">
+                Requiere firma
             </t>
         </xpath>
         <xpath expr="//td[@name='certificado_sat']" position="inside">
             <t t-if="o.l10n_mx_edi_cfdi_uuid">
                 <span t-esc="tfd.get('noCertificadoSAT', tfd.get('NoCertificadoSAT'))"/>
             </t>
+            <t t-else="">
+                Requiere firma
+            </t>
         </xpath>
         <xpath expr="//td[@name='folio_fiscal']" position="inside">
             <t t-if="o.l10n_mx_edi_cfdi_uuid">
                 <span t-esc="tfd.get('UUID')"/>
             </t>
+            <t t-else="">
+                Requiere firma
+            </t>
         </xpath>
         <xpath expr="//td[@name='fecha_timbrado']" position="inside">
             <t t-if="o.l10n_mx_edi_cfdi_uuid">
                 <span t-esc="tfd.get('FechaTimbrado', '').replace('T', ' ')"/>
+            </t>
+            <t t-else="">
+                Requiere firma
             </t>
         </xpath>
         <xpath expr="//table[@name='invoice_line_table']/thead/tr/th[1]" position="before">
