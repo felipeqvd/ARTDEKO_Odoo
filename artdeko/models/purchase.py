@@ -78,6 +78,7 @@ class PurchaseOrderLine(models.Model):
     amount_discount_line = fields.Monetary(compute='_compute_amount', string='Importe descuento', store=True)
     # Incluir el descuento en los cálculos
     @api.model
+    @api.depends('product_qty', 'price_unit', 'taxes_id', 'discount')
     def _compute_amount(self):
         super(PurchaseOrderLine, self)._compute_amount()
         for line in self:
