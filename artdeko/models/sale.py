@@ -65,8 +65,8 @@ class SaleOrder(models.Model):
         """
         purchase_request = {}        
         purchase_request = {
-            'name': 'Solicitar orden de compra',
-            'type': 'ir.actions.act_window',
+            'name': 'mail.activity.view.form.popup',
+            'type': 'ir.ui.view',
             'res_model': 'mail.activity',
             'view_mode': 'form',
             'view_type': 'form',
