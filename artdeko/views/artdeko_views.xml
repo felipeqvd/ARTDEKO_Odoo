@@ -26,7 +26,9 @@
                     <button name="action_new_purchase_request" type="object"
                         string="Solicitar compra" class="btn-primary"  
                         attrs="{'invisible': [('state', 'not in', ['sale'])]}"/>
-                    
+                    <button name="action_invoice_request" type="object"
+                        string="Solicitar facturación" class="btn-primary" 
+                        attrs="{'invisible': [('state', 'not in', ['sale'])]}"/>
                 </xpath>
                 <field name="note" position="attributes">
                     <attribute name="placeholder">Observaciones</attribute>

@@ -66,6 +66,20 @@ class SaleOrder(models.Model):
         purchase_request = {}        
         purchase_request = {
             'name': 'Solicitar orden de compra',
+            'type': 'ir.ui.view',
+            'res_model': 'mail.activity',
+            'view_mode': 'form',            
+        }        
+        return purchase_request
+    
+    @api.multi
+    def action_new_purchase_request(self):
+        """
+        Request purchase.
+        """
+        purchase_request = {}        
+        purchase_request = {
+            'name': 'Solicitar orden de compra',
             'type': 'ir.actions.act_window',
             'res_model': 'mail.activity',
             'view_mode': 'form',            
