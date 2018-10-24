@@ -74,7 +74,8 @@ class SaleOrder(models.Model):
             'context': {
                 'default_res_id': self.id,
                 'default_res_model': 'sale.order',
-                'default_activity_type_id': 'Generar Orden de Compra',
+                'default_summary': 'Solicitud de Orden de Compra',
+                'default_note': 'Por favor realizar la compra de los productos de la presente cotización',
             },
         }        
         return purchase_request
