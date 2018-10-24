@@ -71,6 +71,7 @@ class SaleOrder(models.Model):
             'view_mode': 'form',
             'view_type': 'form',
             'target': 'new',
+            'view_id': 'mail_activity_view_form_popup',
         }        
         return purchase_request
     
