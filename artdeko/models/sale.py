@@ -74,6 +74,7 @@ class SaleOrder(models.Model):
             'context': {
                 'default_res_id': self.id,
                 'default_res_model': 'sale.order',
+                'default_activity_type_id': 'Generar Orden de Compra',
             },
         }        
         return purchase_request
