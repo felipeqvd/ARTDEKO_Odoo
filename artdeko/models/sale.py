@@ -69,7 +69,7 @@ class SaleOrder(models.Model):
             'res_model': 'mail.activity',
             'view_mode': 'form',
             'view_type': 'form',
-            'views': [[false, 'form']],
+            'views': [[False, 'form']],
             'target': 'new',
         }        
         return purchase_request
