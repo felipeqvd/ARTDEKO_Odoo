@@ -71,6 +71,10 @@ class SaleOrder(models.Model):
             'view_type': 'form',
             'views': [[False, 'form']],
             'target': 'new',
+            'context': {
+                'default_res_id': self.id,
+                'default_res_model': 'sale.order',
+            },
         }        
         return purchase_request
     
