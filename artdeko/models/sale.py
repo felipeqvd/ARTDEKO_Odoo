@@ -75,7 +75,7 @@ class SaleOrder(models.Model):
         return purchase_request
     
     @api.multi
-    def action_new_purchase_request(self):
+    def action_invoice_request(self):
         """
         Request purchase.
         """

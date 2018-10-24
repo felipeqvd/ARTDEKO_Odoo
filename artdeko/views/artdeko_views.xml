@@ -22,10 +22,7 @@
                     <button name="prepare_purchase_lines_from_sale_order" type="object"
                         string="Crear orden de compra" class="btn-primary" 
                         attrs="{'invisible': [('state', 'not in', ['sale'])]}"
-                        groups="purchase.group_purchase_manager"/>
-                    <button t-if="schedule_activity_btn" class="btn btn-sm btn-link o_chatter_button_schedule_activity" title="Log or schedule an activity">
-                        <i class="fa fa-clock-o"/> <t t-if="isMobile">Activity</t><t t-else="">Schedule activity</t>
-                    </button>
+                        groups="purchase.group_purchase_manager"/>                    
                     <button name="action_new_purchase_request" type="object"
                         string="Solicitar compra" class="btn-primary"  
                         attrs="{'invisible': [('state', 'not in', ['sale'])]}"/>
