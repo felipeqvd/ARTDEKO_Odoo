@@ -23,7 +23,10 @@
                         string="Crear orden de compra" class="btn-primary" 
                         attrs="{'invisible': [('state', 'not in', ['sale'])]}"
                         groups="purchase.group_purchase_manager"/>
-                    <button string="Solicitar compra" class="btn-primary o_chatter_button_schedule_activity"/>                    
+                    <button name="action_new_purchase_request" type="object"
+                        string="Solicitar compra" class="btn-primary"  
+                        attrs="{'invisible': [('state', 'not in', ['sale'])]}"/>
+                    
                 </xpath>
                 <field name="note" position="attributes">
                     <attribute name="placeholder">Observaciones</attribute>
