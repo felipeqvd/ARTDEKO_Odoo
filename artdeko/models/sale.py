@@ -58,8 +58,7 @@ class SaleOrder(models.Model):
         purchase_lines['context'] = {'default_order_line': line3,}
         return purchase_lines
     
-    @api.multi
-    @api.depends('mail')
+    @api.multi    
     def action_new_purchase_request(self):
         """
         Request purchase.
@@ -100,7 +99,7 @@ class SaleOrder(models.Model):
                 'default_res_id': self.id,
                 'default_res_model': 'sale.order',
                 'default_summary': 'Solicitud de Factura',
-                'default_note': 'Por favor realizar la factura de la presente cotización &nbsp Por favor realizar la factura de la presente cotización ',
+                'default_note': 'Por favor realizar la factura de la presente cotización',
             },
         }        
         return invoice_request

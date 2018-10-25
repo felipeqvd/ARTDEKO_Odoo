@@ -3,3 +3,4 @@
 from . import models
 from . import sale
 from . import purchase
+from . import crm_lead
