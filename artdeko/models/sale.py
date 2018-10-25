@@ -87,12 +87,21 @@ class SaleOrder(models.Model):
         """
         Request purchase.
         """
-        purchase_request = {}        
-        purchase_request = {
-            'name': 'Solicitar orden de compra',
+        invoice_request = {}        
+        invoice_request = {
             'type': 'ir.actions.act_window',
             'res_model': 'mail.activity',
-            'view_mode': 'form',            
+            'view_mode': 'form',
+            'view_type': 'form',
+            'views': [[False, 'form']],
+            'target': 'new',
+            'context': {
+                'default_activity_type_id': 10,
+                'default_res_id': self.id,
+                'default_res_model': 'sale.order',
+                'default_summary': 'Solicitud de Factura',
+                'default_note': 'Por favor realizar la factura de la presente cotización &nbsp Por favor realizar la factura de la presente cotización ',
+            },
         }        
-        return purchase_request
+        return invoice_request
     
