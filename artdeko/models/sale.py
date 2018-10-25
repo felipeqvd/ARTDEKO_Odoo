@@ -72,7 +72,7 @@ class SaleOrder(models.Model):
             'views': [[False, 'form']],
             'target': 'new',
             'context': {
-                'default_activity_type_id': '6',
+                'default_activity_type_id': 6,
                 'default_res_id': self.id,
                 'default_res_model': 'sale.order',
                 'default_summary': 'Solicitud de Orden de Compra',
