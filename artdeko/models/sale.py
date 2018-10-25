@@ -59,6 +59,7 @@ class SaleOrder(models.Model):
         return purchase_lines
     
     @api.multi
+    @api.depends('mail')
     def action_new_purchase_request(self):
         """
         Request purchase.
@@ -72,7 +73,7 @@ class SaleOrder(models.Model):
             'views': [[False, 'form']],
             'target': 'new',
             'context': {
-                'default_activity_type_id': artdeko.mail_activity_purchase_request,
+                'default_activity_type_id': mail.mail_activity_data_call,
                 'default_res_id': self.id,
                 'default_res_model': 'sale.order',
                 'default_summary': 'Solicitud de Orden de Compra',
