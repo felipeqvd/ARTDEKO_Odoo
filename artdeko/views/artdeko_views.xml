@@ -40,7 +40,7 @@
             <field name="model">crm.lead</field>
             <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
             <field name="arch" type="xml">
-                <xpath expr="//button[@name='action_set_won']" position="after">
+                <xpath expr="//button[@name='action_set_won_rainbowman']" position="before">
                     <button name="action_new_quotation_request" type="object"
                         string="Solicitar cotización" class="btn-primary"/>                    
                 </xpath>                
