@@ -32,7 +32,10 @@
                 </xpath>
                 <field name="note" position="attributes">
                     <attribute name="placeholder">Observaciones</attribute>
-                </field>                
+                </field>
+                <button name="print_quotation" position="attributes">
+                    <attribute invisible="True"></attribute>
+                </button>                
             </field>
         </record>
         <record id="crm_case_form_view_oppor" model="ir.ui.view">
