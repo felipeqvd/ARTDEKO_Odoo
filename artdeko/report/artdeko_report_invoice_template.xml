@@ -3,7 +3,7 @@
     <data>
         <template id="report_invoice_document">
             <t t-call="artdeko.invoice_layout">
-                <t t-set="o" t-value="o.with_context({'lang':o.partner_shipping_id.lang})" />
+                <t t-set="o" t-value="o.with_context({'lang':o.partner_id.lang})" />
                 <div class="page">
                     <div class="row" style="font-family: 'Rockwell' !important;">
                         <div class="col-xs-1">                            
@@ -101,11 +101,11 @@
                                 </div>
                                 <div class="col-xs-10">
                                     <p>
-                                        <t t-if="o.partner_shipping_id.parent_id.name">
-                                            <span t-field="o.partner_shipping_id.parent_id.name"/>
+                                        <t t-if="o.partner_id.parent_id.name">
+                                            <span t-field="o.partner_id.parent_id.name"/>
                                         </t>
                                         <t t-else="">
-                                            <span t-field="o.partner_shipping_id"/>
+                                            <span t-field="o.partner_id"/>
                                         </t>                                        
                                     </p>                        
                                 </div>                                                     
@@ -113,13 +113,13 @@
                             <div class="row">
                                 <div class="col-xs-2">
                                     <p>
-                                        <strong><t t-esc="o.partner_shipping_id.country_id.vat_label or 'RFC'"/>:</strong>
+                                        <strong><t t-esc="o.partner_id.country_id.vat_label or 'RFC'"/>:</strong>
                                     </p>                        
                                 </div>
                                 <div class="col-xs-10">
                                     <p>
-                                        <t t-if="o.partner_shipping_id.vat">
-                                            <span t-field="o.partner_shipping_id.vat"/>
+                                        <t t-if="o.partner_id.vat">
+                                            <span t-field="o.partner_id.vat"/>
                                         </t>
                                     </p>                        
                                 </div>                                                     
@@ -132,26 +132,26 @@
                                 </div>
                                 <div class="col-xs-10">
                                     <p>                           
-                                        <t t-if="o.partner_shipping_id.street_name">
-                                           <span t-esc="o.partner_shipping_id.street_name"/> 
+                                        <t t-if="o.partner_id.street_name">
+                                           <span t-esc="o.partner_id.street_name"/> 
                                         </t>
-                                        <t t-if="o.partner_shipping_id.street2">
-                                            <span t-esc="o.partner_shipping_id.street2"/> - 
+                                        <t t-if="o.partner_id.street2">
+                                            <span t-esc="o.partner_id.street2"/> - 
                                         </t>                        
-                                        <t t-if="o.partner_shipping_id.street_number2">
-                                            <span t-esc="o.partner_shipping_id.street_number2"/> 
+                                        <t t-if="o.partner_id.street_number2">
+                                            <span t-esc="o.partner_id.street_number2"/> 
                                         </t>
-                                        <t t-if="o.partner_shipping_id.l10n_mx_edi_colony">
-                                            , <span t-esc="o.partner_shipping_id.l10n_mx_edi_colony"/>
+                                        <t t-if="o.partner_id.l10n_mx_edi_colony">
+                                            , <span t-esc="o.partner_id.l10n_mx_edi_colony"/>
                                         </t>
-                                        <t t-if="o.partner_shipping_id.city">
-                                            , <span t-esc="o.partner_shipping_id.city"/>
+                                        <t t-if="o.partner_id.city">
+                                            , <span t-esc="o.partner_id.city"/>
                                         </t>
-                                        <t t-if="o.partner_shipping_id.state_id.name">
-                                            , <span t-esc="o.partner_shipping_id.state_id.name"/>
+                                        <t t-if="o.partner_id.state_id.name">
+                                            , <span t-esc="o.partner_id.state_id.name"/>
                                         </t>
-                                        <t t-if="o.partner_shipping_id.country_id.name">
-                                            , <span t-esc="o.partner_shipping_id.country_id.name"/>
+                                        <t t-if="o.partner_id.country_id.name">
+                                            , <span t-esc="o.partner_id.country_id.name"/>
                                         </t>                            
                                     </p>                        
                                 </div>                                                                            
@@ -164,8 +164,8 @@
                                 </div>
                                 <div class="col-xs-10">
                                     <p>                
-                                        <t t-if="o.partner_shipping_id.zip">
-                                            <span t-esc="o.partner_shipping_id.zip"/>
+                                        <t t-if="o.partner_id.zip">
+                                            <span t-esc="o.partner_id.zip"/>
                                         </t>                            
                                     </p>                        
                                 </div>                                    
@@ -178,8 +178,8 @@
                                 </div>
                                 <div class="col-xs-10">
                                     <p>                 
-                                        <t t-if="o.partner_shipping_id.phone">
-                                            <span t-esc="o.partner_shipping_id.phone"/>
+                                        <t t-if="o.partner_id.phone">
+                                            <span t-esc="o.partner_id.phone"/>
                                         </t>                            
                                     </p>                        
                                 </div>                                                
@@ -336,7 +336,7 @@
         <template id="report_invoice">
             <t t-call="web.html_container">
                 <t t-foreach="docs" t-as="o">
-                    <t t-call="artdeko.report_invoice_document" t-lang="o.partner_shipping_id.lang"/>
+                    <t t-call="artdeko.report_invoice_document" t-lang="o.partner_id.lang"/>
                 </t>
             </t>
         </template>
@@ -344,7 +344,7 @@
         <template id="report_invoice_with_payments">
             <t t-call="web.html_container">
                 <t t-foreach="docs" t-as="o">
-                    <t t-call="artdeko.report_invoice_document_with_payments" t-lang="o.partner_shipping_id.lang"/>
+                    <t t-call="artdeko.report_invoice_document_with_payments" t-lang="o.partner_id.lang"/>
                 </t>
             </t>
         </template>

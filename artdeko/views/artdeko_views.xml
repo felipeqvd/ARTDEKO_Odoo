@@ -68,7 +68,20 @@
                 </xpath>
                 <xpath expr="//button[@name='invoice_print'][2]" position="attributes">
                     <attribute name="invisible">True</attribute>
-                </xpath>               
+                </xpath>
+                <xpath expr="//field[@name='partner_shipping_id']" position="after">
+                    <field name="ref_partner_id" string="Cliente referencia"/>
+                </xpath>
+            </field>
+        </record> 
+        <record id="invoice_tree" model="ir.ui.view">
+            <field name="name">account.invoice.tree.inherited.artdeko</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='partner_id']" position="after">
+                    <field name="ref_partner_id" string="Cliente referencia"/>
+                </xpath>
             </field>
         </record>        
     </data>
