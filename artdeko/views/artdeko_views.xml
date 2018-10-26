@@ -34,7 +34,7 @@
                     <attribute name="placeholder">Observaciones</attribute>
                 </field>
                 <xpath expr="//button[@name='print_quotation']" position="attributes">
-                    <attribute invisible="True"></attribute>
+                    <attribute name="invisible">True</attribute>
                 </xpath>                
             </field>
         </record>
