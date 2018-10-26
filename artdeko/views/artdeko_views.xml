@@ -57,6 +57,19 @@
                         string="Solicitar cotización" class="btn-primary"/>                    
                 </xpath>                
             </field>
+        </record> 
+        <record id="invoice_form" model="ir.ui.view">
+            <field name="name">account.invoice.form.inherited.artdeko</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='invoice_print'][1]" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+                <xpath expr="//button[@name='invoice_print'][2]" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>               
+            </field>
         </record>        
     </data>
 </odoo>
