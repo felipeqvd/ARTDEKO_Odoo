@@ -55,7 +55,10 @@
                 <xpath expr="//button[@name='action_set_won_rainbowman']" position="before">
                     <button name="action_new_quotation_request" type="object"
                         string="Solicitar cotización" class="btn-primary"/>                    
-                </xpath>                
+                </xpath>
+                <field name="comment" position="attributes">
+                    <attribute name="placeholder">Observaciones</attribute>
+                </field>                
             </field>
         </record> 
         <record id="invoice_form" model="ir.ui.view">
