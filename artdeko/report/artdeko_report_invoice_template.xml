@@ -82,7 +82,19 @@
                                     <tr>
                                         <td class="text-center" name="fecha_timbrado">                                            
                                         </td>                                        
-                                    </tr>                                  
+                                    </tr>
+                                    <t t-if="o.origin"> 
+                                        <tr>
+                                            <td class="text-center" style="background-color:rgb(209,209,209);border-width:0px !important;">
+                                                <strong>Documento origen:</strong>
+                                            </td>                                        
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">
+                                                <span t-field="o.origin"/>                                            
+                                            </td>                                        
+                                        </tr>
+                                    </t>
                                 </tbody>
                             </table>
                         </div>
