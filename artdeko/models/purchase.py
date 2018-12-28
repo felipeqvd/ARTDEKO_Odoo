@@ -68,7 +68,9 @@ class PurchaseOrder(models.Model):
                 if seller and line.product_uom and seller.product_uom != line.product_uom:
                     price_unit = seller.product_uom._compute_price(price_unit, line.product_uom)
 
-                line.price_unit = price_unit                  
+                line.price_unit = price_unit
+    #Conectar purchase oreder con sale order
+    sale_order = fields.Many2one('sale.order.name', 'Venta')
     
 class PurchaseOrderLine(models.Model):
     _inherit = 'purchase.order.line'
