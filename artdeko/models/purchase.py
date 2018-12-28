@@ -70,7 +70,7 @@ class PurchaseOrder(models.Model):
 
                 line.price_unit = price_unit
     #Conectar purchase oreder con sale order
-    sale_order = fields.Many2one('sale.order.name', 'Venta')
+    sale_order = fields.Many2one('sale.order', 'Venta')
     
 class PurchaseOrderLine(models.Model):
     _inherit = 'purchase.order.line'
