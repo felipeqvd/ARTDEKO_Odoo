@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="paperformat_artdeko_letter" model="report.paperformat">
+            <field name="name">Artdeko Letter</field>
+            <field name="default" eval="True" />
+            <field name="format">Letter</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">40</field>
+            <field name="margin_bottom">55</field>
+            <field name="margin_left">0</field>
+            <field name="margin_right">0</field>
+            <field name="header_line" eval="False" />
+            <field name="header_spacing">35</field>
+            <field name="dpi">90</field>
+        </record>
+        <record id="paperformat_artdeko_letter2" model="report.paperformat">
+            <field name="name">Artdeko Letter</field>
+            <field name="default" eval="True" />
+            <field name="format">Letter</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">30</field>
+            <field name="margin_bottom">10</field>
+            <field name="margin_left">10</field>
+            <field name="margin_right">10</field>
+            <field name="header_line" eval="False" />
+            <field name="header_spacing">0</field>
+            <field name="dpi">90</field>
+        </record>
+        <report 
+            id="action_report_saleorder_quotation_artdeko"
+            string="Cotización"
+            model="sale.order" 
+            report_type="qweb-pdf"
+            file="artdeko.report_saleorder_quotation" 
+            name="artdeko.report_saleorder_quotation"
+            print_report_name="'Cotización - %s' % (object.name)"
+            paperformat="paperformat_artdeko_letter"
+        />
+        <!--<report 
+            id="action_report_saleorder_quotation_artdeko2"
+            string="Cotizacion2"
+            model="sale.order" 
+            report_type="qweb-html"
+            file="artdeko.report_saleorder_quotation" 
+            name="artdeko.report_saleorder_quotation"
+            print_report_name="'Cotización - %s' % (object.name)"
+            paperformat="paperformat_artdeko_letter"
+        /> 
+         <report 
+            id="action_report_saleorder_order_artdeko2"
+            string="Orden de compra2"
+            model="sale.order" 
+            report_type="qweb-html"
+            file="artdeko.report_saleorder_order" 
+            name="artdeko.report_saleorder_order"
+            print_report_name="'Orden de compra - %s' % (object.name)"
+            paperformat="paperformat_artdeko_letter"
+        /> -->       
+        <report 
+            id="action_report_purchaseorder_artdeko"
+            string="Orden de compra"
+            model="purchase.order" 
+            report_type="qweb-pdf"
+            file="artdeko.report_purchaseorder" 
+            name="artdeko.report_purchaseorder"
+            print_report_name="'Orden de compra - %s' % (object.name)"
+            paperformat="paperformat_artdeko_letter2"
+        />
+        <record id="paperformat_artdeko_invoice_letter" model="report.paperformat">
+            <field name="name">Artdeko Invoice Letter</field>
+            <field name="default" eval="True" />
+            <field name="format">Letter</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">20</field>
+            <field name="margin_bottom">0</field>
+            <field name="margin_left">0</field>
+            <field name="margin_right">0</field>
+            <field name="header_line" eval="False" />
+            <field name="header_spacing">20</field>
+            <field name="dpi">90</field>
+        </record> 
+        <report 
+            id="action_report_invoice_artdeko"
+            string="Factura Artdeko"
+            model="account.invoice" 
+            report_type="qweb-pdf"
+            file="artdeko.report_invoice" 
+            name="artdeko.report_invoice"
+            attachment="(object.state in ('open','paid')) and ('INV'+(object.number or '').replace('/','')+'.pdf')"
+            print_report_name="(object._get_printed_report_name())"
+            paperformat="paperformat_artdeko_invoice_letter"
+        />        
+    </data>
+</odoo>
