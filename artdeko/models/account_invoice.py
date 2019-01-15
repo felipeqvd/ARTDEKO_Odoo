@@ -28,7 +28,7 @@ class AccountInvoice(models.Model):
             else:
                 return 'Pago en una sola exhibición'
         elif version == '3.3':            
-            if len(term_ids.ids) > 1:
+            if self.date_due != self.date_invoice:
                 return 'PPD'
             else:
                 return 'PUE'

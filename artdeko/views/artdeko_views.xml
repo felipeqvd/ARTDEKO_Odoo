@@ -39,6 +39,16 @@
                         string="Solicitar facturación" class="btn-primary" 
                         attrs="{'invisible': [('state', 'not in', ['sale'])]}"/>
                 </xpath>
+                <xpath expr="//button[@name='action_view_invoice']" position="after">
+                    <field name="receipt_ids" invisible="1"/>
+                    <button type="object"
+                        name="action_view_receipt"
+                        class="oe_stat_button"
+                        icon="fa-thumbs-o-up"
+                        attrs="{'invisible': [('receipt_count', '=', 0)]}" groups="base.group_user">
+                        <field name="receipt_count" widget="statinfo" string="Recepciones"/>
+                    </button>
+                </xpath>                
                 <field name="note" position="attributes">
                     <attribute name="placeholder">Observaciones</attribute>
                 </field>
